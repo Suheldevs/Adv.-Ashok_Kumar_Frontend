@@ -13,7 +13,6 @@ const Home = ()=>{
         <ServicesSection/>
         <TestimonialSection/>
         <BlogSection/>
-        <Footer/>
         </>
     )
 }

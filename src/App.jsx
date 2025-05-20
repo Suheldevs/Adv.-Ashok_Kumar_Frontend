@@ -7,11 +7,16 @@ import Gallery from './pages/Gallery'
 import PageNotFound from './pages/PageNotFound'
 import BlogPage from './pages/BlogPage'
 import ContactUs from './pages/ContactUs'
+import Footer from './components/Footer'
+import ServicesPage from './pages/ServicePage'
+import ServiceDetail from './pages/ServiceDetailPage'
+import ScrollToTop from './components/ScrollToTop'
 function App() {
   return (
     <>
 
     <Header/>
+    <ScrollToTop/>
    <Routes>
     <Route path='*' element={<PageNotFound/>}/>
     <Route path='/' element={<Home/>}/>
@@ -19,7 +24,10 @@ function App() {
     <Route path='/blog' element={<BlogPage/>}/>
     {/* <Route path='/blog/:slug' element={<BlogPage/>}/> */}
     <Route path='/contact' element={<ContactUs/>}/>
+    <Route path='/services' element={<ServicesPage/>}/>
+    <Route path='/services/:slug' element={<ServiceDetail/>}/>
    </Routes>
+   <Footer/>
        </>
   )
 }

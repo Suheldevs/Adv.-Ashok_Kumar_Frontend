@@ -1,10 +1,14 @@
 import { Phone, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import InquiryModal from "./InquiryModal";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +38,9 @@ const navItem = [
 
   
   return (
+    <>
+     <InquiryModal isOpen={isModalOpen} closeModal={closeModal} />
+   
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900 bg-opacity-95' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -79,6 +86,7 @@ const navItem = [
             
             <button 
               className="px-6 py-2 text-gray-900 font-semibold rounded-md"
+               onClick={openModal}
               style={{ backgroundColor: goldColor }}
             >
               BOOK CONSULTATION
@@ -128,5 +136,6 @@ const navItem = [
         </div>
       </div>
     </header>
+     </>
   );
 }
