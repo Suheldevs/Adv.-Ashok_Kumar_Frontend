@@ -1,5 +1,6 @@
 import { Phone, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,6 +23,16 @@ export default function Header() {
   
   const goldColor = "#ebb661";
   
+const navItem = [
+  { label: 'Home', link: '/' },
+  { label: 'About', link: '/about' },
+  { label: 'Services', link: '/services' },
+  { label: 'Gallery', link: '/gallery' },
+  { label: 'Blog', link: '/blog' },
+  { label: 'Contact Us', link: '/contact' }
+];
+
+  
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900 bg-opacity-95' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
@@ -40,15 +51,15 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
             <ul className="flex space-x-8">
-              {['Home', 'About', 'Services', 'Gallery', 'Blog', 'Contact Us'].map((item) => (
+              {navItem.map((item) => (
                 <li key={item}>
-                  <a 
-                    href={`#${item.toLowerCase().replace(' ', '-')}`} 
+                  <Link 
+                    to={item.link} 
                     className="text-white text-sm font-medium uppercase tracking-wider hover:text-opacity-70 transition-all duration-300 hover:border-b-2 pb-1"
                     style={{ hoverBorderColor: goldColor }}
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
