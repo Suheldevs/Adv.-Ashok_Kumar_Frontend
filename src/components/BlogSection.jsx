@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 const BlogSection = () => {
   const dispatch = useDispatch();
   const { blogData, error, status } = useSelector((state) => state.data);
-
+ const goldColor = "#ebb661";
   useEffect(() => {
     dispatch(fetchBlogData());
   }, [dispatch]);
@@ -63,9 +63,15 @@ const BlogSection = () => {
   return (
     <div className="lg:py-14 md:py-12 py-10">
       <div className="container mx-auto px-4">
-        <h1 className="lg:text-5xl text-2xl font-semibold lora text-center lg:mb-12 mb-6">
-          Our Latest Insights
-        </h1>
+        <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 relative inline-block">
+              <span className="relative z-10">Our Latest Insights</span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Explore the key legal domains where we offer expert representation, rooted in years of judicial wisdom and advocacy excellence.
+            </p>
+          </div>
         <Slider {...settings}>
           {Array.isArray(blogData) && blogData.length > 0 ? (
             blogData.map((post) => (

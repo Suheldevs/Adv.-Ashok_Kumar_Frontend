@@ -76,48 +76,24 @@ const ServiceDetail = () => {
   return (
     <>
      <Breadcrumb
-        title="Our Legal Services"
+        title={service.title}
         items={[
           { label: "Home", link: "/" },
-          { label: "Services", link: "/services" },
+          { label: `Services`, link: `/services` },
         ]}
       />
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="relative">
-        <div 
-          className="w-full h-96 bg-cover bg-center"
-          style={{ backgroundImage: `url(${service.image})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
-          <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-            <div className="max-w-3xl">
-              <button 
+      
+
+      {/* Content Section */}
+      <div className="container mx-auto px-4 py-12">
+         <button 
                 onClick={() => router.back()} 
-                className="flex items-center text-white mb-6 hover:text-amber-300 transition-colors"
+                className="flex items-center  mb-6 hover:underline transition-colors"
               >
                 <ArrowLeft size={20} className="mr-2" />
                 Back to Services
               </button>
-              <div 
-                className="inline-block p-2 rounded-full mb-4"
-                style={{ backgroundColor: "rgba(235, 182, 97, 0.2)" }}
-              >
-                <div className="bg-amber-50 p-2 rounded-full" style={{ borderColor: "#ebb661" }}>
-                  <div className="text-amber-600">
-                    {service.icon}
-                  </div>
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{service.title}</h1>
-              <p className="text-xl text-amber-100 max-w-2xl">{service.description}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Content Section */}
-      <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">

@@ -5,10 +5,11 @@ import InquiryModal from "./InquiryModal";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {

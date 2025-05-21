@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
   return (
@@ -18,14 +19,14 @@ const ServiceCard = ({ service }) => {
       <div className="p-5 flex flex-col flex-grow">
         <h3 className="text-lg font-bold mb-2 text-gray-800">{service.title}</h3>
         <div className="mt-auto pt-4 flex justify-between items-center">
-          <a 
+          <Link
             href={`/services/${service.slug}`} 
             className="flex items-center text-sm font-medium transition-colors duration-300"
             style={{ color: "#ebb661" }}
           >
             Learn More
             <ChevronRight size={16} className="ml-1" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@ export default function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-
+ const goldColor = "#ebb661";
   // Check screen size on mount and window resize
   useEffect(() => {
     const checkScreenSize = () => {
@@ -116,16 +116,15 @@ export default function TestimonialSection() {
   return (
     <section className="bg-gradient-to-br from-blue-50 to-amber-50 py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            Client Testimonials
-          </h2>
-          <div className="w-20 h-1 bg-amber-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Hear from clients who have benefited from Judge Ashok Kumar's
-            extensive legal expertise and commitment to justice.
-          </p>
-        </div>
+       <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 relative inline-block">
+              <span className="relative z-10">Client Testimonials</span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Hear from clients who have benefited from Judge Ashok Kumar's extensive legal expertise and commitment to justice.
+            </p>
+          </div>
 
         {/* Desktop view with multiple testimonials */}
         <div className="hidden lg:block">

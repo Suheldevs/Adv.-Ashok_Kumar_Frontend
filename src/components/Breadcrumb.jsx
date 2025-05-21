@@ -10,10 +10,10 @@ function Breadcrumb({ title, items }) {
       {/* Background image container with fixed height */}
       <div
         className="relative h-[300px] md:h-[350px]  w-full bg-center bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url(${bread})` }}
+        style={{ backgroundImage: `url('https://img.freepik.com/premium-photo/close-up-businessman-writes-report-paper_201468-2168.jpg?uid=R183076985&ga=GA1.1.550663172.1736244937&semt=ais_hybrid&w=740')` }}
       >
         {/* Enhanced overlay with darker gradient for better contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/60"></div>
         
         {/* Centered Content Container */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-12">

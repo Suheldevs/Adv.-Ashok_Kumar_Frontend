@@ -12,6 +12,8 @@ import ServicesPage from './pages/ServicePage'
 import ServiceDetail from './pages/ServiceDetailPage'
 import ScrollToTop from './components/ScrollToTop'
 import AboutPage from './pages/AboutPage'
+import Disclaimer from './pages/DisclaimerPage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 function App() {
   return (
     <>
@@ -28,6 +30,8 @@ function App() {
     <Route path='/contact' element={<ContactUs/>}/>
     <Route path='/services' element={<ServicesPage/>}/>
     <Route path='/services/:slug' element={<ServiceDetail/>}/>
+    <Route path='/disclaimer' element={<Disclaimer/>}/>
+    <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
    </Routes>
    <Footer/>
        </>

@@ -117,9 +117,17 @@ export default function ServicesSection() {
     //   </div>
     // </section>
 
-    <div className="bg-gray-100">
-      <div className="py-14 container mx-auto px-4 ">
-        <div className="text-4xl text-center mb-10">Our Services</div>
+    <div className="bg-gray-100 py-14">
+      <div className=" container mx-auto px-4 ">
+         <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 relative inline-block">
+              <span className="relative z-10">Our Legal Services</span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Offering expert legal counsel shaped by years on the bench — from litigation to advisory, our services uphold justice with clarity and dedication.
+            </p>
+          </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {serviceData.map((service) => (
             <ServiceCard key={service.id} service={service} />

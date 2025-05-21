@@ -6,9 +6,9 @@ export default function AboutUs() {
   const goldTheme = "#ebb661";
   
   return (
-    <div className="bg-gray-50 font-sans">
+    <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative py-16 px-4 md:px-8 bg-gray-900 text-white overflow-hidden">
+      <section className="relative py-16 pt-36 px-4 md:px-8 bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-transparent to-transparent"></div>
         <div className="relative max-w-6xl mx-auto">
@@ -121,7 +121,7 @@ export default function AboutUs() {
    <WhyChooseUs/>
 
   {/* Stats Section */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>33+</div>
               <p className="text-gray-600">Years in Judiciary</p>
