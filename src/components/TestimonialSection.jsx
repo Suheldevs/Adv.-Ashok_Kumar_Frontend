@@ -107,21 +107,21 @@ export default function TestimonialSection() {
           key={i}
           size={16}
           className={`${
-            i < rating ? "text-yellow-500 fill-yellow-500" : "text-gray-300"
+            i < rating ? "text-yellow-500 fill-yellow-500" : "text-neutral-300"
           }`}
         />
       ));
   };
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-amber-50 py-16">
+    <section className="bg-gradient-to-br from-gray-50 to-neutral-50 py-16">
       <div className="container mx-auto px-4">
        <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 relative inline-block">
               <span className="relative z-10">Client Testimonials</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-neutral-600 max-w-2xl mx-auto text-lg">
             Hear from clients who have benefited from Judge Ashok Kumar's extensive legal expertise and commitment to justice.
             </p>
           </div>
@@ -153,7 +153,7 @@ export default function TestimonialSection() {
               <span
                 key={index}
                 className={`block w-2 h-2 rounded-full ${
-                  index === currentIndex ? "bg-amber-600" : "bg-gray-300"
+                  index === currentIndex ? "bg-amber-600" : "bg-neutral-300"
                 }`}
               ></span>
             ))}
@@ -178,7 +178,7 @@ function TestimonialCard({ testimonial, renderStars }) {
       </div>
       <div className="mt-4">
         <div className="flex mb-4">{renderStars(testimonial.rating)}</div>
-        <p className="text-gray-600 italic mb-6">"{testimonial.content}"</p>
+        <p className="text-neutral-600 italic mb-6">"{testimonial.content}"</p>
         <div className="flex items-center">
           <img
             src={testimonial.image}
@@ -186,7 +186,7 @@ function TestimonialCard({ testimonial, renderStars }) {
             className="w-12 h-12 rounded-full mr-4 object-cover"
           />
           <div>
-            <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+            <h4 className="font-bold text-neutral-900">{testimonial.name}</h4>
             <p className="text-amber-600 text-sm">{testimonial.position}</p>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const PageNotFound = () => {
   return (
-    <div className="min-h-[92vh] -mt-10 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 px-4">
+    <div className="min-h-[92vh] -mt-10 flex items-center justify-center bg-gradient-to-br from-neutral-50 to-neutral-100 px-4">
       <div className="max-w-lg w-full">
         <div className="text-center">
           {/* Animated Error Icon */}
@@ -17,11 +17,11 @@ const PageNotFound = () => {
             404
           </h1>
           
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-neutral-700 mb-3">
             Page Not Found
           </h2>
           
-          <p className="text-gray-500 mb-8">
+          <p className="text-neutral-500 mb-8">
             The page you are looking for doesn't exist or has been moved.
           </p>
           
@@ -37,7 +37,7 @@ const PageNotFound = () => {
             
             <Link 
             to='/'
-              className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-red-600 border border-gray-200 py-3 px-6 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 bg-white hover:bg-neutral-50 text-red-600 border border-neutral-200 py-3 px-6 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 w-full sm:w-auto"
              
             >
               <Home size={20} />

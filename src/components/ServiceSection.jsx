@@ -11,15 +11,15 @@ export default function ServicesSection() {
     //       {/* Left Column - About Services */}
     //       <div className="lg:col-span-6">
     //         <div className="mb-6">
-    //           <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">Our Services</h2>
+    //           <h2 className="text-4xl font-serif font-bold text-neutral-900 mb-4">Our Services</h2>
     //           <div className="w-24 h-1 mb-10" style={{ backgroundColor: goldColor }}></div>
     //         </div>
 
-    //         <h3 className="text-2xl font-serif font-semibold text-gray-800 mb-6">
+    //         <h3 className="text-2xl font-serif font-semibold text-neutral-800 mb-6">
     //           Expert Legal Solutions for Complex Challenges
     //         </h3>
 
-    //         <div className="space-y-6 text-gray-600">
+    //         <div className="space-y-6 text-neutral-600">
     //           <p>
     //             <strong>For More than 33 years of service in Judiciary</strong>, Mr. Ashok Kumar has decided to help people in legal services by giving the knowledge he had earned in this field for more than three decades of his life.
     //           </p>
@@ -36,21 +36,21 @@ export default function ServicesSection() {
     //             Our approach is client-focused, result-oriented, and based on decades of practical courtroom experience. We pride ourselves on transparent communication, ethical practice, and dedication to seeking justice for our clients regardless of the complexity of their case.
     //           </p>
 
-    //           <div className="bg-gray-50 p-6 rounded-lg border-l-4 mt-8" style={{ borderColor: goldColor }}>
-    //             <h4 className="font-bold text-gray-900 mb-2">Need Legal Assistance?</h4>
-    //             <p className="text-gray-600 mb-4">
+    //           <div className="bg-neutral-50 p-6 rounded-lg border-l-4 mt-8" style={{ borderColor: goldColor }}>
+    //             <h4 className="font-bold text-neutral-900 mb-2">Need Legal Assistance?</h4>
+    //             <p className="text-neutral-600 mb-4">
     //               If you have a doubt or an query on any legal process or need our service, feel free to contact any time:
     //             </p>
 
     //             <div className="space-y-2">
     //               <div className="flex items-center">
-    //                 <span className="font-semibold text-gray-700 mr-2">Phone:</span>
-    //                 <a href="tel:+917844830212" className="text-gray-700 hover:text-gray-900">7844830212, 9453578200</a>
+    //                 <span className="font-semibold text-neutral-700 mr-2">Phone:</span>
+    //                 <a href="tel:+917844830212" className="text-neutral-700 hover:text-neutral-900">7844830212, 9453578200</a>
     //               </div>
 
     //               <div className="flex items-center">
-    //                 <span className="font-semibold text-gray-700 mr-2">Email:</span>
-    //                 <a href="mailto:justiceforallindia25@gmail.com" className="text-gray-700 hover:text-gray-900">justiceforallindia25@gmail.com</a>
+    //                 <span className="font-semibold text-neutral-700 mr-2">Email:</span>
+    //                 <a href="mailto:justiceforallindia25@gmail.com" className="text-neutral-700 hover:text-neutral-900">justiceforallindia25@gmail.com</a>
     //               </div>
     //             </div>
     //           </div>
@@ -59,8 +59,8 @@ export default function ServicesSection() {
 
     //       {/* Right Column - Services List */}
     //       <div className="lg:col-span-6">
-    //         <div className="bg-gray-50 p-8 rounded-lg">
-    //           <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
+    //         <div className="bg-neutral-50 p-8 rounded-lg">
+    //           <h3 className="text-2xl font-serif font-bold text-neutral-900 mb-6">
     //             Legal Services We Provide
     //           </h3>
 
@@ -68,11 +68,11 @@ export default function ServicesSection() {
     //             {services.map((service, index) => (
     //               <div
     //                 key={index}
-    //                 className="flex items-center justify-between border-b border-gray-200 py-4 group hover:border-gray-400 transition-colors duration-300"
+    //                 className="flex items-center justify-between border-b border-neutral-200 py-4 group hover:border-neutral-400 transition-colors duration-300"
     //               >
     //                 <div className="flex items-center">
     //                   <div className="w-2 h-12 mr-4 group-hover:h-16 transition-all duration-300 rounded-r" style={{ backgroundColor: goldColor }}></div>
-    //                   <span className="text-gray-800 font-medium">{service}</span>
+    //                   <span className="text-neutral-800 font-medium">{service}</span>
     //                 </div>
     //                 <div
     //                   className="w-8 h-8 flex items-center justify-center rounded-full transition-colors duration-300 group-hover:text-white"
@@ -97,7 +97,7 @@ export default function ServicesSection() {
     //         </div>
 
     //         {/* Testimonial Box */}
-    //         <div className="mt-8 p-6 bg-gray-900 rounded-lg text-white">
+    //         <div className="mt-8 p-6 bg-neutral-900 rounded-lg text-white">
     //           <div className="flex items-start mb-4">
     //             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-3">
     //               <path d="M10 11L7 14L10 17" stroke={goldColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -117,14 +117,18 @@ export default function ServicesSection() {
     //   </div>
     // </section>
 
-    <div className="bg-gray-100 py-14">
+    <div className="bg-neutral-900 lg:py-14 py-10">
       <div className=" container mx-auto px-4 ">
-         <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 relative inline-block">
+         <div className="text-center text-white  mb-10">
+            <h2 className="text-4xl font-bold mb-4 relative inline-block">
               <span className="relative z-10">Our Legal Services</span>
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40"
+               style={{ backgroundColor: goldColor }}
+               >
+                
+               </span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-neutral-300 max-w-2xl mx-auto text-lg">
               Offering expert legal counsel shaped by years on the bench — from litigation to advisory, our services uphold justice with clarity and dedication.
             </p>
           </div>

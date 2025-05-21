@@ -29,7 +29,7 @@ const ServicesPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-neutral-50">
       {/* Breadcrumb */}
       <Breadcrumb
         title="Our Legal Services"
@@ -40,12 +40,12 @@ const ServicesPage = () => {
       />
 
       {/* Hero Section
-      <div className="relative bg-gray-800 text-white">
+      <div className="relative bg-neutral-800 text-white">
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="container mx-auto px-4 py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4">Expert Legal Services</h2>
-            <p className="text-lg text-gray-300 mb-8">
+            <p className="text-lg text-neutral-300 mb-8">
               RTDJ Adv. Mr. Ashok Kumar provides comprehensive legal solutions 
               to individuals and businesses across a wide range of practice areas.
             </p>
@@ -65,11 +65,11 @@ const ServicesPage = () => {
       {/* Introduction Section */}
       <div className="container mx-auto px-4 py-10">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+          <h2 className="text-3xl font-bold mb-4 text-neutral-800">
             Comprehensive Legal Solutions
           </h2>
           <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#ebb661" }}></div>
-          <p className="text-gray-600">
+          <p className="text-neutral-600">
             With over 20 years of experience, our law firm offers a wide range of legal services
             tailored to meet your specific needs. Our team of dedicated lawyers is committed to
             providing personalized attention and effective legal representation.
@@ -83,14 +83,14 @@ const ServicesPage = () => {
         <div className="max-w-md mx-auto mb-10">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <Search size={18} className="text-gray-400" />
+              <Search size={18} className="text-neutral-400" />
             </div>
             <input
               type="text"
               placeholder="Search for services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -105,14 +105,14 @@ const ServicesPage = () => {
         {/* No Results Message */}
         {filteredServices.length === 0 && (
           <div className="text-center py-12">
-            <div className="mb-4 text-gray-400">
+            <div className="mb-4 text-neutral-400">
               <Search size={48} className="mx-auto" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">No services found</h3>
-            <p className="text-gray-500">Try adjusting your search term or browse all services.</p>
+            <h3 className="text-xl font-semibold text-neutral-700 mb-2">No services found</h3>
+            <p className="text-neutral-500">Try adjusting your search term or browse all services.</p>
             <button
               onClick={() => setSearchTerm("")}
-              className="mt-4 px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-50"
+              className="mt-4 px-4 py-2 border border-neutral-300 rounded-md text-neutral-600 hover:bg-neutral-50"
             >
               View All Services
             </button>
@@ -121,13 +121,13 @@ const ServicesPage = () => {
       </div>
       
       {/* Call to Action */}
-      <div className="bg-gray-100 py-16">
+      <div className="bg-neutral-100 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">Need Legal Assistance?</h3>
-                <p className="text-gray-600 mb-6">
+                <h3 className="text-2xl font-bold mb-4 text-neutral-800">Need Legal Assistance?</h3>
+                <p className="text-neutral-600 mb-6">
                   Our experienced team is ready to assist you with any legal matters.
                   Schedule a consultation today and let us help you find the right solution.
                 </p>
@@ -142,14 +142,14 @@ const ServicesPage = () => {
                   </a>
                   <a 
                     href="/about" 
-                    className="px-5 py-3 border rounded-md font-medium text-gray-700 hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center"
+                    className="px-5 py-3 border rounded-md font-medium text-neutral-700 hover:bg-neutral-50 transition-colors duration-300 flex items-center justify-center"
                   >
                     Learn About Us
                   </a>
                 </div>
               </div>
               <div 
-                className="md:w-1/2 bg-gray-800" 
+                className="md:w-1/2 bg-neutral-800" 
                 style={{ 
                   backgroundImage: "url('/api/placeholder/800/600')",
                   backgroundSize: "cover",

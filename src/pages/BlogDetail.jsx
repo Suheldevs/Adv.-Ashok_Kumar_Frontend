@@ -24,7 +24,7 @@ const BlogDetail = () => {
   const relatedBlogs = blogData.filter((item) => item.slug !== blog?.slug);
 
   if (status === "loading")
-    return <div className="text-gray-800 text-xl my-24  font-semibold text-center">Loading...</div>;
+    return <div className="text-neutral-800 text-xl my-24  font-semibold text-center">Loading...</div>;
 
   if (error)
     return <div className="text-red-600 text-xl  my-24 font-semibold text-center">{error}</div>;
@@ -54,13 +54,13 @@ const BlogDetail = () => {
             className="w-full h-[400px] object-cover shadow-md"
           />
           <div className="flex justify-between">
-          <p className="text-gray-700 text-sm mt-4">{formattedDate(blog.updatedAt)}</p>
-          <p className="text-gray-700 text-sm mt-4">{blog.category}</p>
+          <p className="text-neutral-700 text-sm mt-4">{formattedDate(blog.updatedAt)}</p>
+          <p className="text-neutral-700 text-sm mt-4">{blog.category}</p>
 
           </div>
           <h1 className="lg:text-2xl text-xl font-semibold mt-2">{blog.title}</h1>
           <div
-            className="mt-4 lg:text-lg text-gray-950 blog"
+            className="mt-4 lg:text-lg text-neutral-950 blog"
             dangerouslySetInnerHTML={{ __html: blog.description }}
           />
 
@@ -74,7 +74,7 @@ const BlogDetail = () => {
         </div>
 
         {/* Related Blogs */}
-        <div className="lg:col-span-1 border p-2 border-gray-100">
+        <div className="lg:col-span-1 border p-2 border-neutral-100">
           <h2 className="text-2xl font-semibold mb-4 messiri">Other Blogs</h2>
           <div className="space-y-4 overflow-y-auto">
             {relatedBlogs.length === 0 ? (
@@ -84,14 +84,14 @@ const BlogDetail = () => {
                 <Link
                   to={`/blog/${relatedBlog.slug}`}
                   key={relatedBlog.slug}
-                  className="block p-4 bg-white border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300"
+                  className="block p-4 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   <img
                     src={relatedBlog.imageUrl}
                     alt={relatedBlog.title}
                     className="w-full h-28 object-cover"
                   />
-                  <p className="text-gray-500 text-sm mt-2">{formattedDate(relatedBlog.updatedAt)}</p>
+                  <p className="text-neutral-500 text-sm mt-2">{formattedDate(relatedBlog.updatedAt)}</p>
                   <h3 className="text-lg font-semibold mt-1 line-clamp-1">{relatedBlog.title}</h3>
                 </Link>
               ))

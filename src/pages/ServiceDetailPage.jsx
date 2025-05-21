@@ -30,7 +30,7 @@ const FeatureList = ({ features }) => {
           <div className="bg-amber-100 rounded-full p-1 mr-3">
             <Check size={16} className="text-amber-600" />
           </div>
-          <span className="text-gray-700">{feature}</span>
+          <span className="text-neutral-700">{feature}</span>
         </div>
       ))}
     </div>
@@ -41,12 +41,12 @@ const FeatureList = ({ features }) => {
 const FAQSection = ({ faqs }) => {
   return (
     <div className="mt-12">
-      <h3 className="text-2xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h3>
+      <h3 className="text-2xl font-bold mb-6 text-neutral-800">Frequently Asked Questions</h3>
       <div className="space-y-6">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-            <h4 className="text-lg font-semibold mb-2 text-gray-800">{faq.question}</h4>
-            <p className="text-gray-600">{faq.answer}</p>
+          <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
+            <h4 className="text-lg font-semibold mb-2 text-neutral-800">{faq.question}</h4>
+            <p className="text-neutral-600">{faq.answer}</p>
           </div>
         ))}
       </div>
@@ -64,10 +64,10 @@ const ServiceDetail = () => {
   // If service is not found or page is loading
   if (!service) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
         <div className="text-center p-8">
-          <div className="w-16 h-16 border-4 border-t-amber-500 border-gray-200 rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading service details...</p>
+          <div className="w-16 h-16 border-4 border-t-amber-500 border-neutral-200 rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-neutral-600">Loading service details...</p>
         </div>
       </div>
     );
@@ -82,7 +82,7 @@ const ServiceDetail = () => {
           { label: `Services`, link: `/services` },
         ]}
       />
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-neutral-50">
       
 
       {/* Content Section */}
@@ -98,12 +98,12 @@ const ServiceDetail = () => {
           {/* Main Content */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-gray-800">Overview</h2>
+              <h2 className="text-2xl font-bold mb-6 text-neutral-800">Overview</h2>
               <div className="w-20 h-1 mb-6" style={{ backgroundColor: "#ebb661" }}></div>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-neutral-600 mb-8 leading-relaxed">
                 {service.fullDescription}
               </p>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Our Services Include</h3>
+              <h3 className="text-xl font-semibold mb-4 text-neutral-800">Our Services Include</h3>
               <FeatureList features={service.features} />
             </div>
 
@@ -115,8 +115,8 @@ const ServiceDetail = () => {
           <div className="lg:col-span-1">
             {/* Contact Card */}
             <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-              <h3 className="text-xl font-bold mb-4 text-gray-800">Need Assistance?</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-xl font-bold mb-4 text-neutral-800">Need Assistance?</h3>
+              <p className="text-neutral-600 mb-6">
                 Our legal experts are ready to help you with your case. Schedule a consultation today.
               </p>
               <a 
@@ -132,8 +132,8 @@ const ServiceDetail = () => {
                     <Phone size={18} className="text-amber-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Call us at</p>
-                    <p className="font-medium text-gray-800">+91 9876543210</p>
+                    <p className="text-sm text-neutral-500">Call us at</p>
+                    <p className="font-medium text-neutral-800">+91 9876543210</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -141,8 +141,8 @@ const ServiceDetail = () => {
                     <Mail size={18} className="text-amber-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Email us at</p>
-                    <p className="font-medium text-gray-800">info@legalpractice.com</p>
+                    <p className="text-sm text-neutral-500">Email us at</p>
+                    <p className="font-medium text-neutral-800">info@legalpractice.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -150,8 +150,8 @@ const ServiceDetail = () => {
                     <Clock size={18} className="text-amber-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Business Hours</p>
-                    <p className="font-medium text-gray-800">Mon-Fri: 9AM - 6PM</p>
+                    <p className="text-sm text-neutral-500">Business Hours</p>
+                    <p className="font-medium text-neutral-800">Mon-Fri: 9AM - 6PM</p>
                   </div>
                 </div>
               </div>
@@ -159,13 +159,13 @@ const ServiceDetail = () => {
 
             {/* Related Services */}
             <div className="bg-white rounded-xl shadow-sm p-8">
-              <h3 className="text-xl font-bold mb-4 text-gray-800">Related Services</h3>
+              <h3 className="text-xl font-bold mb-4 text-neutral-800">Related Services</h3>
               <div className="space-y-4">
                 {services
                   .filter(s => s.id !== service.id)
                   .slice(0, 3)
                   .map(relatedService => (
-                    <div key={relatedService.id} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                    <div key={relatedService.id} className="border-b border-neutral-100 pb-4 last:border-0 last:pb-0">
                       <a 
                         href={`/services/${relatedService.slug}`}
                         className="flex items-center group"
@@ -176,14 +176,14 @@ const ServiceDetail = () => {
                           </div>
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-medium text-gray-800 group-hover:text-amber-600 transition-colors">
+                          <h4 className="font-medium text-neutral-800 group-hover:text-amber-600 transition-colors">
                             {relatedService.title}
                           </h4>
-                          <p className="text-sm text-gray-500 line-clamp-1">
+                          <p className="text-sm text-neutral-500 line-clamp-1">
                             {relatedService.description.substring(0, 60)}...
                           </p>
                         </div>
-                        <ChevronRight size={18} className="text-gray-400 group-hover:text-amber-600 transition-colors" />
+                        <ChevronRight size={18} className="text-neutral-400 group-hover:text-amber-600 transition-colors" />
                       </a>
                     </div>
                   ))
@@ -195,8 +195,8 @@ const ServiceDetail = () => {
             <div className="bg-amber-50 rounded-xl shadow-sm p-8 mt-8 border border-amber-100">
               <div className="text-center">
                 <Calendar size={32} className="mx-auto text-amber-600 mb-3" />
-                <h3 className="text-xl font-bold mb-2 text-gray-800">Book a Consultation</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold mb-2 text-neutral-800">Book a Consultation</h3>
+                <p className="text-neutral-600 mb-4">
                   Schedule a meeting with our experienced attorneys to discuss your legal needs.
                 </p>
                 <a 
@@ -213,11 +213,11 @@ const ServiceDetail = () => {
       </div>
 
       {/* Testimonials/Call to Action */}
-      <div className="bg-gray-100 py-16">
+      <div className="bg-neutral-100 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-2 text-gray-800">Ready to Get Started?</h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-2 text-neutral-800">Ready to Get Started?</h2>
+            <p className="text-neutral-600 mb-8 max-w-2xl mx-auto">
               Our legal team is committed to providing you with the highest quality legal representation for your {service.title.toLowerCase()} needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -230,7 +230,7 @@ const ServiceDetail = () => {
               </a>
               <a 
                 href="/services" 
-                className="px-8 py-3 border border-gray-300 rounded-md font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-300"
+                className="px-8 py-3 border border-neutral-300 rounded-md font-medium text-neutral-700 bg-white hover:bg-neutral-50 transition-colors duration-300"
               >
                 Explore All Services
               </a>

@@ -10,7 +10,7 @@ const BlogCard = ({ date, category, title, imageUrl, slug }) => {
     });
   };
   return (
-    <div className="relative flex flex-col bg-gray-50 border border-slate-200 p-4 overflow-hidden h-full transition-all duration-300 hover:shadow-xl">
+    <div className="relative flex flex-col bg-neutral-50 border border-slate-200 p-4 overflow-hidden h-full transition-all duration-300 hover:shadow-xl">
       <div className="flex items-center space-x-2 p-4 mt-5 ">
         <span className="text-white p-2 absolute left-0  bg-black">{formattedDate(date)}</span>
         <div className='absolute right-6 '>

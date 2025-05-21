@@ -68,7 +68,7 @@ const BlogSection = () => {
               <span className="relative z-10">Our Latest Insights</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-neutral-600 max-w-2xl mx-auto text-lg">
               Explore the key legal domains where we offer expert representation, rooted in years of judicial wisdom and advocacy excellence.
             </p>
           </div>

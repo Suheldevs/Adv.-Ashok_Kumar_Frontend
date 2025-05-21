@@ -33,7 +33,7 @@ function Breadcrumb({ title, items }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex items-center justify-center flex-wrap text-sm md:text-base text-gray-200 gap-2"
+                className="flex items-center justify-center flex-wrap text-sm md:text-base text-neutral-200 gap-2"
               >
                 {items?.map((item, index) => (
                   <motion.li 
@@ -50,7 +50,7 @@ function Breadcrumb({ title, items }) {
                     </Link>
                     {/* Only show arrow if it's not the last item */}
                     {index < items.length - 1 && (
-                      <FaChevronRight className="mx-2 text-xs text-gray-400" />
+                      <FaChevronRight className="mx-2 text-xs text-neutral-400" />
                     )}
                   </motion.li>
                 ))}

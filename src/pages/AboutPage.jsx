@@ -6,11 +6,11 @@ export default function AboutUs() {
   const goldTheme = "#ebb661";
   
   return (
-    <div className="bg-gray-50">
+    <div className="bg-neutral-50">
       {/* Hero Section */}
-      <section className="relative py-16 pt-36 px-4 md:px-8 bg-gray-900 text-white overflow-hidden">
+      <section className="relative py-16 pt-36 px-4 md:px-8 bg-neutral-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-neutral-900 via-transparent to-transparent"></div>
         <div className="relative max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-white">About</span>
@@ -31,15 +31,15 @@ export default function AboutUs() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/3">
             <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-              <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="h-64 bg-neutral-200 flex items-center justify-center">
                 <img src="/api/placeholder/400/320" alt="Judge Ashok Kumar" className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold" style={{ color: goldTheme }}>Retd. Judge Ashok Kumar</h3>
-                <p className="text-gray-600">Advocate, Lucknow High Court</p>
+                <p className="text-neutral-600">Advocate, Lucknow High Court</p>
                 <div className="mt-4 flex items-center">
                   <Award size={18} style={{ color: goldTheme }} />
-                  <span className="ml-2 text-gray-700">33+ Years in Judiciary</span>
+                  <span className="ml-2 text-neutral-700">33+ Years in Judiciary</span>
                 </div>
               </div>
             </div>
@@ -49,31 +49,31 @@ export default function AboutUs() {
             <h2 className="text-3xl font-bold mb-6">
               <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>Legal Expertise & Mission</span>
             </h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-neutral-700 mb-6 leading-relaxed">
               With more than 33 years of service in the Judiciary, Mr. Ashok Kumar has dedicated himself to helping people navigate complex legal challenges. He believes that timely and accurate legal advice can significantly reduce case duration, saving clients both time and money while minimizing stress.
             </p>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-neutral-700 mb-6 leading-relaxed">
               Working alongside a professional team, Mr. Kumar approaches each case not only as an advocate but as a trusted ally standing with clients throughout their legal journey. His mission is to make quality legal services accessible to every section of society at the most affordable cost possible.
             </p>
             
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start">
-                <div className="p-3 rounded-full bg-gray-100" style={{ color: goldTheme }}>
+                <div className="p-3 rounded-full bg-neutral-100" style={{ color: goldTheme }}>
                   <Clock size={24} />
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg">Efficient Resolution</h4>
-                  <p className="text-gray-600">Focused on timely case completion to reduce client burden</p>
+                  <p className="text-neutral-600">Focused on timely case completion to reduce client burden</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="p-3 rounded-full bg-gray-100" style={{ color: goldTheme }}>
+                <div className="p-3 rounded-full bg-neutral-100" style={{ color: goldTheme }}>
                   <Users size={24} />
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg">Client Partnership</h4>
-                  <p className="text-gray-600">Working as a friend and ally throughout legal proceedings</p>
+                  <p className="text-neutral-600">Working as a friend and ally throughout legal proceedings</p>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function AboutUs() {
       </section>
 
       {/* Areas of Practice */}
-      <section className="py-16 px-4 md:px-8 bg-gray-100">
+      <section className="py-16 px-4 md:px-8 bg-neutral-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
             <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>Areas of Practice</span>
@@ -94,7 +94,7 @@ export default function AboutUs() {
                 <Scale size={24} style={{ color: goldTheme }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Criminal & Civil Cases</h3>
-              <p className="text-gray-600">Comprehensive representation for all criminal and civil legal matters</p>
+              <p className="text-neutral-600">Comprehensive representation for all criminal and civil legal matters</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
@@ -102,7 +102,7 @@ export default function AboutUs() {
                 <Users size={24} style={{ color: goldTheme }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Family Matters</h3>
-              <p className="text-gray-600">Sensitive handling of domestic violence and family-related legal issues</p>
+              <p className="text-neutral-600">Sensitive handling of domestic violence and family-related legal issues</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
@@ -110,7 +110,7 @@ export default function AboutUs() {
                 <Building size={24} style={{ color: goldTheme }} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Service & Writ Petitions</h3>
-              <p className="text-gray-600">Expert guidance on service matters and writ petition procedures</p>
+              <p className="text-neutral-600">Expert guidance on service matters and writ petition procedures</p>
             </div>
           </div>
         </div>
@@ -124,23 +124,23 @@ export default function AboutUs() {
           <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>33+</div>
-              <p className="text-gray-600">Years in Judiciary</p>
+              <p className="text-neutral-600">Years in Judiciary</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>100s</div>
-              <p className="text-gray-600">Cases Resolved</p>
+              <p className="text-neutral-600">Cases Resolved</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>24/7</div>
-              <p className="text-gray-600">Client Support</p>
+              <p className="text-neutral-600">Client Support</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>100%</div>
-              <p className="text-gray-600">Client Dedication</p>
+              <p className="text-neutral-600">Client Dedication</p>
             </div>
           </div>
       {/* Contact CTA */}
-      <section className="py-16 px-4 md:px-8 bg-gray-900 text-white">
+      <section className="py-16 px-4 md:px-8 bg-neutral-900 text-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">
             <span style={{ color: goldTheme }}>Get in Touch</span>
@@ -153,7 +153,7 @@ export default function AboutUs() {
             <div className="flex items-center">
               <Phone size={24} style={{ color: goldTheme }} />
               <div className="ml-3 text-left">
-                <p className="text-sm text-gray-400">Call Us</p>
+                <p className="text-sm text-neutral-400">Call Us</p>
                 <p className="font-medium">7844830212, 9453578200</p>
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function AboutUs() {
             <div className="flex items-center">
               <Mail size={24} style={{ color: goldTheme }} />
               <div className="ml-3 text-left">
-                <p className="text-sm text-gray-400">Email Us</p>
+                <p className="text-sm text-neutral-400">Email Us</p>
                 <p className="font-medium">justiceforallindia25@gmail.com</p>
               </div>
             </div>

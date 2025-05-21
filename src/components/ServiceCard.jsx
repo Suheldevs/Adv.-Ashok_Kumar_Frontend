@@ -16,9 +16,9 @@ const ServiceCard = ({ service }) => {
           </div>
         </div>
       </div>
-      <div className="p-5 flex flex-col flex-grow">
-        <h3 className="text-lg font-bold mb-2 text-gray-800">{service.title}</h3>
-        <div className="mt-auto pt-4 flex justify-between items-center">
+      <div className="p-4 flex flex-col flex-grow">
+        <h3 className="text-lg font-bold mb-2 text-neutral-800">{service.title}</h3>
+        <div className="mt-auto  flex justify-between items-center">
           <Link
             href={`/services/${service.slug}`} 
             className="flex items-center text-sm font-medium transition-colors duration-300"

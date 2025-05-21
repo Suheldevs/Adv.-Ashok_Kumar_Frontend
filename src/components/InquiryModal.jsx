@@ -98,11 +98,11 @@ const InquiryModal = ({ isOpen, closeModal }) => {
       {/* Modal */}
       <div className="relative bg-white rounded-lg shadow-xl w-full max-w-md mx-4 overflow-hidden transform transition-all">
         {/* Modal Header */}
-        <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 relative">
-          <h3 className="text-lg font-semibold text-gray-800">Contact RTDJ Legal</h3>
+        <div className="bg-neutral-50 px-6 py-4 border-b border-neutral-200 relative">
+          <h3 className="text-lg font-semibold text-neutral-800">Contact RTDJ Legal</h3>
           <button 
             onClick={closeModal}
-            className="absolute top-4 right-6 text-gray-400 hover:text-gray-600 transition-colors"
+            className="absolute top-4 right-6 text-neutral-400 hover:text-neutral-600 transition-colors"
           >
             <X size={20} />
           </button>
@@ -117,25 +117,25 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                   <Check size={32} className="text-green-600" />
                 </div>
               </div>
-              <h4 className="text-xl font-medium text-gray-800 mb-2">Thank You!</h4>
-              <p className="text-gray-600">
+              <h4 className="text-xl font-medium text-neutral-800 mb-2">Thank You!</h4>
+              <p className="text-neutral-600">
                 Your inquiry has been received. We will get back to you soon.
               </p>
             </div>
           ) : (
             <div className="space-y-4">
-              <p className="text-gray-600 mb-4">
+              <p className="text-neutral-600 mb-4">
                 Fill out the form below and Adv. Mr. Ashok Kumar's office will contact you shortly.
               </p>
               
               {/* Full Name */}
               <div>
-                <label htmlFor="modal-fullName" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="modal-fullName" className="block text-sm font-medium text-neutral-700 mb-1">
                   Full Name *
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <User size={16} className="text-gray-400" />
+                    <User size={16} className="text-neutral-400" />
                   </div>
                   <input
                     type="text"
@@ -144,7 +144,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                     value={formData.fullName}
                     onChange={handleChange}
                     className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                      errors.fullName ? "border-red-500 bg-red-50" : "border-gray-300"
+                      errors.fullName ? "border-red-500 bg-red-50" : "border-neutral-300"
                     } focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors`}
                     placeholder="Enter your full name"
                   />
@@ -158,12 +158,12 @@ const InquiryModal = ({ isOpen, closeModal }) => {
               
               {/* Phone Number */}
               <div>
-                <label htmlFor="modal-phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="modal-phoneNumber" className="block text-sm font-medium text-neutral-700 mb-1">
                   Phone Number *
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <Phone size={16} className="text-gray-400" />
+                    <Phone size={16} className="text-neutral-400" />
                   </div>
                   <input
                     type="text"
@@ -172,7 +172,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                     value={formData.phoneNumber}
                     onChange={handleChange}
                     className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                      errors.phoneNumber ? "border-red-500 bg-red-50" : "border-gray-300"
+                      errors.phoneNumber ? "border-red-500 bg-red-50" : "border-neutral-300"
                     } focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors`}
                     placeholder="Enter your phone number"
                   />
@@ -186,12 +186,12 @@ const InquiryModal = ({ isOpen, closeModal }) => {
               
               {/* Email */}
               <div>
-                <label htmlFor="modal-email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="modal-email" className="block text-sm font-medium text-neutral-700 mb-1">
                   Email *
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <Mail size={16} className="text-gray-400" />
+                    <Mail size={16} className="text-neutral-400" />
                   </div>
                   <input
                     type="email"
@@ -200,7 +200,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                      errors.email ? "border-red-500 bg-red-50" : "border-gray-300"
+                      errors.email ? "border-red-500 bg-red-50" : "border-neutral-300"
                     } focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors`}
                     placeholder="Enter your email address"
                   />
@@ -214,12 +214,12 @@ const InquiryModal = ({ isOpen, closeModal }) => {
               
               {/* Message */}
               <div>
-                <label htmlFor="modal-message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="modal-message" className="block text-sm font-medium text-neutral-700 mb-1">
                   Message *
                 </label>
                 <div className="relative">
                   <div className="absolute top-2 left-3 pointer-events-none">
-                    <MessageSquare size={16} className="text-gray-400" />
+                    <MessageSquare size={16} className="text-neutral-400" />
                   </div>
                   <textarea
                     id="modal-message"
@@ -228,7 +228,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                     onChange={handleChange}
                     rows="3"
                     className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                      errors.message ? "border-red-500 bg-red-50" : "border-gray-300"
+                      errors.message ? "border-red-500 bg-red-50" : "border-neutral-300"
                     } focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors`}
                     placeholder="How can we help you?"
                   ></textarea>
@@ -245,10 +245,10 @@ const InquiryModal = ({ isOpen, closeModal }) => {
         
         {/* Modal Footer */}
         {!isSubmitted && (
-          <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 flex justify-end">
+          <div className="bg-neutral-50 px-6 py-4 border-t border-neutral-200 flex justify-end">
             <button
               onClick={closeModal}
-              className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md mr-2 hover:bg-gray-100 transition-colors"
+              className="px-4 py-2 border border-neutral-300 text-neutral-700 rounded-md mr-2 hover:bg-neutral-100 transition-colors"
             >
               Cancel
             </button>
@@ -283,18 +283,18 @@ const InquiryModal = ({ isOpen, closeModal }) => {
 // Example usage component that includes the modal
 const ExamplePage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-neutral-100 p-8">
       <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">RTDJ Legal Services</h1>
-        <p className="text-gray-600 mb-4">
+        <h1 className="text-2xl font-bold text-neutral-800 mb-4">RTDJ Legal Services</h1>
+        <p className="text-neutral-600 mb-4">
           Welcome to the official website of RTDJ Adv. Mr. Ashok Kumar. We provide expert legal consultation
           and representation in various areas of law including civil, criminal, corporate, and family law.
         </p>
-        <p className="text-gray-600 mb-4">
+        <p className="text-neutral-600 mb-4">
           Our team of experienced legal professionals is dedicated to providing the highest quality legal
           services to our clients with integrity and commitment.
         </p>
-        <p className="text-gray-600">
+        <p className="text-neutral-600">
           Need legal assistance? Click the inquiry button in the bottom-right corner to get in touch with us.
         </p>
       </div>
