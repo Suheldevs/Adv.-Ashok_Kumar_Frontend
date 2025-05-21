@@ -13,116 +13,12 @@ import {
   Phone
 } from "lucide-react";
 import Breadcrumb from "../components/Breadcrumb";
-
+import ServiceCard from "../components/ServiceCard";
 // Service data with all required fields
-const services = [
-  {
-    id: 1,
-    title: "Criminal to Civil Cases",
-    slug: "criminal-civil-cases",
-    icon: <Scale size={24} />,
-    description: "Expert legal representation for both criminal and civil cases, ensuring your rights are protected through every step of the legal process.",
-    image: "/api/placeholder/600/400",
-    features: ["Criminal defense", "Civil litigation", "Court representation", "Legal consultation", "Case evaluation"]
-  },
-  {
-    id: 2,
-    title: "Domestic Violence to Family Matters",
-    slug: "domestic-violence-family-matters",
-    icon: <Heart size={24} />,
-    description: "Compassionate legal support for sensitive family issues including domestic violence cases, child custody, and other family law matters.",
-    image: "/api/placeholder/600/400",
-    features: ["Restraining orders", "Child custody", "Alimony cases", "Family counseling", "Legal protection"]
-  },
-  {
-    id: 3,
-    title: "Service Matter to Writ Petition",
-    slug: "service-matter-writ-petition",
-    icon: <ScrollText size={24} />,
-    description: "Specialized expertise in service matters and writ petitions, helping you navigate complex administrative and constitutional legal challenges.",
-    image: "/api/placeholder/600/400",
-    features: ["Writ petitions", "Constitutional matters", "Service disputes", "Government appeals", "Administrative law"]
-  },
-  {
-    id: 4,
-    title: "Property Disputes & Documentation",
-    slug: "property-disputes-documentation",
-    icon: <Home size={24} />,
-    description: "Comprehensive legal services for property-related disputes, transactions, and documentation to protect your real estate investments.",
-    image: "/api/placeholder/600/400",
-    features: ["Property litigation", "Title verification", "Real estate contracts", "Boundary disputes", "Property documentation"]
-  },
-  {
-    id: 5,
-    title: "Employment Law & Labor Rights",
-    slug: "employment-law-labor-rights",
-    icon: <Briefcase size={24} />,
-    description: "Dedicated advocacy for employment law matters and labor rights, representing both employers and employees in workplace legal issues.",
-    image: "/api/placeholder/600/400",
-    features: ["Unfair dismissal", "Workplace discrimination", "Wage disputes", "Labor contracts", "Workplace safety"]
-  },
-  {
-    id: 6,
-    title: "Consumer Protection Cases",
-    slug: "consumer-protection-cases",
-    icon: <ShoppingBag size={24} />,
-    description: "Zealous representation for consumer rights violations, helping clients seek compensation for defective products and services.",
-    image: "/api/placeholder/600/400",
-    features: ["Product liability", "Service complaints", "Compensation claims", "False advertising", "Consumer counseling"]
-  },
-  {
-    id: 7,
-    title: "Legal Documentation & Contracts",
-    slug: "legal-documentation-contracts",
-    icon: <FileText size={24} />,
-    description: "Professional drafting and review of legal documents and contracts to ensure your interests are protected in all agreements.",
-    image: "/api/placeholder/600/400",
-    features: ["Contract drafting", "Document review", "Legal agreements", "Terms and conditions", "Legal compliance"]
-  },
-  {
-    id: 8,
-    title: "Court Marriage & Divorce Cases",
-    slug: "court-marriage-divorce-cases",
-    icon: <Users size={24} />,
-    description: "Supportive legal guidance through court marriages and divorce proceedings, ensuring fair outcomes in marital disputes.",
-    image: "/api/placeholder/600/400",
-    features: ["Court marriage", "Divorce proceedings", "Asset division", "Mutual consent", "Contested divorces"]
-  }
-];
+import services from "../Data/ServiceData";
 
 
-// Service Card Component
-const ServiceCard = ({ service }) => {
-  return (
-    <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
-      <div className="relative overflow-hidden">
-        <img 
-          src={service.image} 
-          alt={service.title} 
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute top-0 left-0 m-4 bg-amber-50 p-2 rounded-full border-2" style={{ borderColor: "#ebb661" }}>
-          <div className="text-amber-600">
-            {service.icon}
-          </div>
-        </div>
-      </div>
-      <div className="p-5 flex flex-col flex-grow">
-        <h3 className="text-lg font-bold mb-2 text-gray-800">{service.title}</h3>
-        <div className="mt-auto pt-4 flex justify-between items-center">
-          <a 
-            href={`/services/${service.slug}`} 
-            className="flex items-center text-sm font-medium transition-colors duration-300"
-            style={{ color: "#ebb661" }}
-          >
-            Learn More
-            <ChevronRight size={16} className="ml-1" />
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
+
 
 // Main Services Page Component
 const ServicesPage = () => {

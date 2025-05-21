@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import ServicesPage from './pages/ServicePage'
 import ServiceDetail from './pages/ServiceDetailPage'
 import ScrollToTop from './components/ScrollToTop'
+import AboutPage from './pages/AboutPage'
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
    <Routes>
     <Route path='*' element={<PageNotFound/>}/>
     <Route path='/' element={<Home/>}/>
+    <Route path='/about' element={<AboutPage/>}/>
     <Route path='/gallery' element={<Gallery/>}/>
     <Route path='/blog' element={<BlogPage/>}/>
     {/* <Route path='/blog/:slug' element={<BlogPage/>}/> */}

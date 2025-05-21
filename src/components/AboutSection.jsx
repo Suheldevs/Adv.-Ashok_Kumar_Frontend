@@ -1,5 +1,6 @@
 import { ArrowRight, MapPin, Globe, Phone, Award, CheckCircle, Users } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function AboutSection() {
   const goldColor = "#ebb661";
@@ -149,14 +150,14 @@ export default function AboutSection() {
         
         {/* Discover More Button */}
         <div className="mt-16 flex justify-end">
-          <a 
-            href="#" 
+          <Link 
+            to="/about" 
             className="inline-flex items-center px-6 py-3 rounded-md text-white font-medium transition-all duration-300 hover:shadow-lg"
             style={{ backgroundColor: "#1d1d35" }}
           >
             Discover more
             <ArrowRight size={18} className="ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
