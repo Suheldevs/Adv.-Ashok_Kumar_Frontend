@@ -121,13 +121,13 @@ export default function AboutUs() {
    <WhyChooseUs/>
 
   {/* Stats Section */}
-          <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-6 px-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>33+</div>
               <p className="text-neutral-600">Years in Judiciary</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>100s</div>
+              <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>450+</div>
               <p className="text-neutral-600">Cases Resolved</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
@@ -140,7 +140,7 @@ export default function AboutUs() {
             </div>
           </div>
       {/* Contact CTA */}
-      <section className="py-16 px-4 md:px-8 bg-neutral-900 text-white">
+      <section className="py-16 px-4 md:px-8 bg-neutral-950 text-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">
             <span style={{ color: goldTheme }}>Get in Touch</span>
@@ -154,7 +154,7 @@ export default function AboutUs() {
               <Phone size={24} style={{ color: goldTheme }} />
               <div className="ml-3 text-left">
                 <p className="text-sm text-neutral-400">Call Us</p>
-                <p className="font-medium">7844830212, 9453578200</p>
+                <a href='tel:7844830212' className="font-medium">7844830212, 9453578200</a>
               </div>
             </div>
             
@@ -162,13 +162,13 @@ export default function AboutUs() {
               <Mail size={24} style={{ color: goldTheme }} />
               <div className="ml-3 text-left">
                 <p className="text-sm text-neutral-400">Email Us</p>
-                <p className="font-medium">justiceforallindia25@gmail.com</p>
+                <a href='emailto:justiceforallindia25@gmail.com' className="font-medium">justiceforallindia25@gmail.com</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div className='h-2 w-full bg-white'></div>
+      <div className='h-1 w-full bg-white'></div>
     </div>
   );
 }

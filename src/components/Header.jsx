@@ -1,43 +1,8 @@
 import { Phone, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-// InquiryModal is imported in the original but not shown here
-// We'll assume it exists and works as expected
-function InquiryModal({ isOpen, closeModal }) {
-  if (!isOpen) return null;
-  
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-      <div className="bg-white p-6 rounded-lg max-w-md w-full">
-        <h2 className="text-xl font-bold mb-4">Book Consultation</h2>
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium mb-1">Name</label>
-            <input type="text" className="w-full border rounded p-2" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Phone</label>
-            <input type="tel" className="w-full border rounded p-2" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Email</label>
-            <input type="email" className="w-full border rounded p-2" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Message</label>
-            <textarea className="w-full border rounded p-2 h-24"></textarea>
-          </div>
-          <div className="flex justify-end space-x-2">
-            <button type="button" onClick={closeModal} className="px-4 py-2 bg-neutral-300 rounded">Cancel</button>
-            <button type="submit" className="px-4 py-2 bg-yellow-600 text-white rounded">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-
+import logo from '../assets/logo(2).png'
+import InquiryModal from './InquiryModal'
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,12 +48,12 @@ export default function Header() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="h-10 w-10 md:h-12 md:w-12 border-2 flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
-                <span className="text-white font-bold text-lg md:text-xl">AK</span>
+              <div className="h-10 w-10 md:h-14 md:w-14  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
+               <img src={logo} />
               </div>
               <div>
                 <h1 className="text-white text-lg md:text-xl font-bold">Ashok Kumar</h1>
-                <p className="text-xs md:text-sm" style={{ color: goldColor }}>ADVOCATE & RETIRED JUDGE</p>
+                <p className="text-xs md:text-sm" style={{ color: goldColor }}>ADVOCATE & RETD JUDGE</p>
               </div>
             </div>
             
@@ -111,13 +76,13 @@ export default function Header() {
             
             {/* Right Contact Info */}
             <div className="hidden lg:flex items-center space-x-6">
-              <a href="tel:+919876543210" className="flex items-center text-white group">
+              <a href="tel:7844830212" className="flex items-center text-white group">
                 <div className="p-2 rounded-full mr-2 group-hover:text-neutral-900 transition-all duration-300 group-hover:scale-110" style={{ backgroundColor: goldColor }}>
                   <Phone size={16} className="text-neutral-900" />
                 </div>
                 <div>
                   <p className="text-xs opacity-70">Call us now</p>
-                  <p className="font-bold">+91 9876 543 210</p>
+                  <p className="font-bold">+91-7844830212</p>
                 </div>
               </a>
               
@@ -163,9 +128,9 @@ export default function Header() {
             </ul>
             
             <div className="mt-6 flex flex-col space-y-4">
-              <a href="tel:+919876543210" className="flex items-center text-white">
+              <a href="tel:7844830212" className="flex items-center text-white">
                 <Phone size={16} className="mr-2" style={{ color: goldColor }} />
-                <span>+91 9876 543 210</span>
+                <span>+91 7844830212</span>
               </a>
               
               <button 

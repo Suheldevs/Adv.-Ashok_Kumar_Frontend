@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, User, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, User, MessageSquare, Youtube, Linkedin, Facebook } from "lucide-react";
 import Breadcrumb from "../components/Breadcrumb";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 
@@ -84,12 +85,12 @@ const ContactUs = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-neutral-800">Get in Touch</h2>
             <p className="text-lg text-neutral-600">
               Feel free to contact us for any legal assistance or inquiries
             </p>
-          </div>
+          </div> */}
 
           <div className="flex flex-col md:flex-row gap-12">
             {/* Contact Information */}
@@ -102,7 +103,7 @@ const ContactUs = () => {
                 <div className="space-y-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 p-3 rounded-full bg-amber-100">
-                      <User size={20} className="text-amber-600" />
+                      <User size={20} className="text-[#ebb661]" />
                     </div>
                     <div className="ml-4">
                       <h4 className="font-semibold text-neutral-700">Advocate</h4>
@@ -112,39 +113,69 @@ const ContactUs = () => {
                   
                   <div className="flex items-start">
                     <div className="flex-shrink-0 p-3 rounded-full bg-amber-100">
-                      <Phone size={20} className="text-amber-600" />
+                      <Phone size={20} className="text-[#ebb661]" />
                     </div>
                     <div className="ml-4">
                       <h4 className="font-semibold text-neutral-700">Phone</h4>
-                      <p className="text-neutral-600">+91 98765 43210</p>
+                      <a href="tel:7844830212" target="_blank" className="text-neutral-600">+91-7844830212</a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
                     <div className="flex-shrink-0 p-3 rounded-full bg-amber-100">
-                      <Mail size={20} className="text-amber-600" />
+                      <Mail size={20} className="text-[#ebb661]" />
                     </div>
                     <div className="ml-4">
                       <h4 className="font-semibold text-neutral-700">Email</h4>
-                      <p className="text-neutral-600">ashok.kumar@rtdjlegal.com</p>
+                      <a target="_blank" href="mailto:justiceforallindia25@gmail.com" className="text-neutral-600">justiceforallindia25@gmail.com</a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
                     <div className="flex-shrink-0 p-3 rounded-full bg-amber-100">
-                      <MapPin size={20} className="text-amber-600" />
+                      <MapPin size={20} className="text-[#ebb661]" />
                     </div>
                     <div className="ml-4">
                       <h4 className="font-semibold text-neutral-700">Address</h4>
-                      <p className="text-neutral-600">
-                        123 Legal Avenue, High Court Road
-                        <br />
-                        New Delhi, 110001
-                      </p>
+                      <a  href="https://maps.app.goo.gl/iv7kN1KGFdnksnV66" className="text-neutral-600">
+                        3/141, Vibhav Khand -3, Vibhav Khand, Gomti Nagar, Lucknow,
+                  Uttar Pradesh 226010
+                      </a>
                     </div>
                   </div>
-                </div>
+
                 
+                {/* <div className="flex space-x-3 mt-3">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about"
+                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                target="_blank"
+                href="https://x.com/RetdJudgeAshokK"
+                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
+              >
+                <FaXTwitter size={18} />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/"
+                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ"
+                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
+              >
+                <Youtube size={18} />
+              </a>
+            </div> */}
+            </div>
                 <div className="mt-8 pt-6 border-t border-neutral-100">
                   <h4 className="font-semibold text-neutral-700 mb-4">Working Hours</h4>
                   <ul className="space-y-2 text-neutral-600">
@@ -301,13 +332,17 @@ const ContactUs = () => {
       {/* Map Section */}
       <div className="w-full py-12 bg-neutral-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="bg-white p-4 rounded-lg shadow-md">
               <div className="bg-neutral-200 h-64 rounded flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin size={32} className="mx-auto text-neutral-400 mb-2" />
-                  <p className="text-neutral-600">Map placeholder - Google Maps would be integrated here</p>
-                </div>
+               <iframe
+                className="h-full w-full"
+                title="Location"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1779.6247460399977!2d81.0196432!3d26.8638133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3b1668345a3%3A0xafe19173615e503d!2sRetd%20Judge%20Ashok%20Kumar%2C%20Advocate%20Highcourt%20And%20District%20Court%20in%20Lucknow!5e0!3m2!1sen!2sin!4v1747898940602!5m2!1sen!2sin"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
               </div>
             </div>
           </div>

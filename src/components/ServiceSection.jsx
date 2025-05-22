@@ -117,9 +117,9 @@ export default function ServicesSection() {
     //   </div>
     // </section>
 
-    <div className="bg-neutral-900 lg:py-14 py-10">
+    <div className="bg-neutral-50 lg:py-14 py-10">
       <div className=" container mx-auto px-4 ">
-         <div className="text-center text-white  mb-10">
+         <div className="text-center   mb-10">
             <h2 className="text-4xl font-bold mb-4 relative inline-block">
               <span className="relative z-10">Our Legal Services</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40"
@@ -128,7 +128,7 @@ export default function ServicesSection() {
                 
                </span>
             </h2>
-            <p className="text-neutral-300 max-w-2xl mx-auto text-lg">
+            <p className="text-neutral-800 max-w-2xl mx-auto text-lg">
               Offering expert legal counsel shaped by years on the bench — from litigation to advisory, our services uphold justice with clarity and dedication.
             </p>
           </div>

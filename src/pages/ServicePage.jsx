@@ -64,11 +64,11 @@ const ServicesPage = () => {
 
       {/* Introduction Section */}
       <div className="container mx-auto px-4 py-10">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-4">
           <h2 className="text-3xl font-bold mb-4 text-neutral-800">
             Comprehensive Legal Solutions
           </h2>
-          <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#ebb661" }}></div>
+          {/* <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#ebb661" }}></div> */}
           <p className="text-neutral-600">
             With over 20 years of experience, our law firm offers a wide range of legal services
             tailored to meet your specific needs. Our team of dedicated lawyers is committed to
@@ -148,14 +148,16 @@ const ServicesPage = () => {
                   </a>
                 </div>
               </div>
-              <div 
-                className="md:w-1/2 bg-neutral-800" 
-                style={{ 
-                  backgroundImage: "url('/api/placeholder/800/600')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center"
-                }}
+              <div className="w-1/2"
               >
+                 <iframe
+                className="h-full w-full"
+                title="Location"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1779.6247460399977!2d81.0196432!3d26.8638133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3b1668345a3%3A0xafe19173615e503d!2sRetd%20Judge%20Ashok%20Kumar%2C%20Advocate%20Highcourt%20And%20District%20Court%20in%20Lucknow!5e0!3m2!1sen!2sin!4v1747898940602!5m2!1sen!2sin"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
               </div>
             </div>
           </div>

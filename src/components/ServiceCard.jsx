@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
   return (
-    <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+    <div className="group bg-white border border-neutral-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
       <div className="relative overflow-hidden">
         <img 
           src={service.image} 
@@ -20,7 +20,7 @@ const ServiceCard = ({ service }) => {
         <h3 className="text-lg font-bold mb-2 text-neutral-800">{service.title}</h3>
         <div className="mt-auto  flex justify-between items-center">
           <Link
-            href={`/services/${service.slug}`} 
+            to={`/services/${service.slug}`} 
             className="flex items-center text-sm font-medium transition-colors duration-300"
             style={{ color: "#ebb661" }}
           >

@@ -1,5 +1,7 @@
-import { Play, Facebook, Twitter, Youtube, Linkedin } from "lucide-react";
+import { Play, Facebook, Twitter, Youtube, Linkedin, ChevronsRight } from "lucide-react";
 import { useState } from "react";
+import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,7 +11,7 @@ export default function HeroSection() {
       <div className="container pt-20 mx-auto px-4 py-16 md:py-24 flex flex-col lg:flex-row items-center">
         {/* Left Content Area */}
         <div className="lg:w-1/2 pt-20  z-10 mb-12 lg:mb-0">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 tracking-wide">
             <span style={{ color: "#ebb661" }}>Smart Legal</span> <br />
             <span style={{ color: "#ebb661" }}>Solutions</span> for <br />
             Work and Life
@@ -20,14 +22,18 @@ export default function HeroSection() {
             and professional needs. We stand by your side with trusted
             guidance.
           </p>
-          
-          <button style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 text-neutral-900 font-bold py-3 px-8 rounded-md flex items-center transition duration-300">
+          <div className="flex items-center gap-5">
+         
+
+          <Link to='/services' className="hover:bg-neutral-900 bg-neutral-950 border border-neutral-900 text-neutral-100 font-bold py-3 px-8 rounded-md flex items-center transition duration-300">
+            Explore Our Legal Services
+          </Link>
+
+           <Link to='/about' style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 group text-neutral-900 font-bold py-3 px-6 rounded-md flex items-center transition duration-300">
             Learn More
-            <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <ChevronsRight className="ml-1 group-hover:ml-2 transition-all duration-500 ease-in-out"/>
+          </Link>
+          </div>
         </div>
         
         {/* Right Image Area */}
@@ -57,16 +63,16 @@ export default function HeroSection() {
       
       {/* Social media icons */}
       <div className="absolute bottom-8 bg-transparent right-5 flex flex-col space-y-4 border border-neutral-800 p-2 rounded-2xl">
-        <a href="#" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+        <a target="_black" href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <Facebook size={20} />
         </a>
-        <a href="#" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
-          <Twitter size={20} />
+        <a target="_black" href="https://x.com/RetdJudgeAshokK" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+          <FaXTwitter size={20} />
         </a>
-        <a href="#" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+        <a target="_black" href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <Linkedin size={20} />
         </a>
-        <a href="#" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+        <a target="_black" href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <Youtube size={20} />
         </a>
       </div>
