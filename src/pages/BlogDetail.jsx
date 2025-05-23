@@ -51,7 +51,7 @@ const BlogDetail = () => {
           <img
             src={blog.imageUrl}
             alt={blog.title}
-            className="w-full h-[400px] object-cover shadow-md"
+            className="w-full h-[400px] shadow-md"
           />
           <div className="flex justify-between">
           <p className="text-neutral-700 text-sm mt-4">{formattedDate(blog.updatedAt)}</p>

@@ -6,3 +6,108 @@ body{
    padding:0;
    margin:0;
 }
+
+strong{
+    color: rgb(49, 49, 49);
+    font-weight: 600;
+}
+
+.text-h{
+    color: #2490eb;
+}
+
+.blog ul{
+    list-style: disc !important;
+    /* list-style-position: inside !important; */
+    margin-left:20px;
+}
+.blog ol{
+    list-style: decimal !important;
+    /* list-style-position: inside !important; */
+      margin-left:20px;
+}
+ 
+.blog h1{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    color: rgb(7, 7, 7)
+}
+.blog h2{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    color: rgb(7, 7, 7)
+}
+.blog h3{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    color: rgb(7, 7, 7)
+}
+
+
+@media (max-width: 640px) {
+    .blog h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  
+    .blog h2 {
+      font-size: 20px;
+      line-height: 28px;
+      padding-top: 5px;
+      padding-bottom: 2px;
+    }
+  
+    .blog h3 {
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 4px;
+      padding-bottom: 2px;
+    }
+  }
+
+.blog strong{
+    color: rgb(9, 9, 9) !important;
+}
+.blog{
+    color: rgb(35, 35, 35);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: white;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive Table */
+  @media (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }

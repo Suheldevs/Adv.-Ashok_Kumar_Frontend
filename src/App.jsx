@@ -14,6 +14,7 @@ import ScrollToTop from './components/ScrollToTop'
 import AboutPage from './pages/AboutPage'
 import Disclaimer from './pages/DisclaimerPage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import BlogDetail from './pages/BlogDetail'
 function App() {
   return (
     <>
@@ -26,7 +27,7 @@ function App() {
     <Route path='/about' element={<AboutPage/>}/>
     <Route path='/gallery' element={<Gallery/>}/>
     <Route path='/blog' element={<BlogPage/>}/>
-    {/* <Route path='/blog/:slug' element={<BlogPage/>}/> */}
+    <Route path='/blog/:slug' element={<BlogDetail/>}/>
     <Route path='/contact' element={<ContactUs/>}/>
     <Route path='/services' element={<ServicesPage/>}/>
     <Route path='/services/:slug' element={<ServiceDetail/>}/>

@@ -4,25 +4,16 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL
 
 
 const initialState = {
-    projectData:[],
     blogData:[],
     galleryData:[],
     status: false,
     error:null,
 }
 
-
-export const fetchProjectData = createAsyncThunk('data/fetchProjectData',async()=>{
-    const response = await axios.get(`${backendUrl}/project/getall`)
-   
-    return response.data
-})
-
 export const fetchBlogData = createAsyncThunk('data/fetchBlogData',async()=>{
     const response = await axios.get(`${backendUrl}/blog/getall`)
     return response.data
 })
-
 
 export const fetchGalleryData = createAsyncThunk('data/ftchGalleryData',async()=>{
     const response = await axios.get(`${backendUrl}/gallery/getall`)
@@ -35,16 +26,6 @@ const dataSlice = createSlice({
     reducers:{},
     extraReducers:(builder)=>{
         builder
-        .addCase(fetchProjectData.pending, 
-            (state)=>{state.status = 'loading'; state.error = null})
-
-        .addCase(fetchProjectData.fulfilled,
-             (state, action)=>{state.projectData = action.payload ; state.status = 'success'; state.error = null})
-
-        .addCase(fetchProjectData.rejected,
-             (state, action)=>{ state.status = 'failed'; state.error = 'Error Fetching Project Data'})
-
-//blog 
         .addCase(fetchBlogData.pending, 
             (state)=>{state.status = 'loading'; state.error = null})
 

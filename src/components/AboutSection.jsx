@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import image from '../assets/Home/about.jpg'
 export default function AboutSection() {
   const goldColor = "#ebb661";
   const [isHovered, setIsHovered] = useState(false);
@@ -90,7 +90,7 @@ export default function AboutSection() {
               {/* Main image */}
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="https://picsum.photos/600/400?random=1"
+                  src={image}
                   alt="Legal consultation"
                   className="w-full h-full object-cover"
                 />

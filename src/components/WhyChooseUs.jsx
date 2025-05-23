@@ -1,6 +1,9 @@
 import { Award, Scale, Users } from 'lucide-react'
 import React from 'react'
-
+import img1 from '../assets/whychoose/image1.webp'
+import img2 from '../assets/whychoose/image2.webp'
+import img3 from '../assets/whychoose/image3.webp'
+import user from '../assets/Home/user.webp'
 function WhyChooseUs() {
      const goldTheme = "#ebb661";
   return (
@@ -23,7 +26,7 @@ function WhyChooseUs() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
               <div className="h-48 bg-neutral-100 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/30"></div>
-                <img src="https://picsum.photos/400/320?random=9" alt="Experience" className="w-full h-full object-cover" />
+                <img src={img1} alt="Experience" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Award size={64} className="text-white" />
                 </div>
@@ -64,7 +67,7 @@ function WhyChooseUs() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
               <div className="h-48 bg-neutral-100 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/30 bg-opacity-30"></div>
-                <img src="https://picsum.photos/400/320?random=3" alt="Professional Team" className="w-full h-full object-cover" />
+                <img src={img2} alt="Professional Team" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Users size={64} className="text-white" />
                 </div>
@@ -105,7 +108,7 @@ function WhyChooseUs() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
               <div className="h-48 bg-neutral-100 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/30 bg-opacity-30"></div>
-                <img src="https://picsum.photos/400/320?random=2" alt="Affordable Justice" className="w-full h-full object-cover" />
+                <img src={img3} alt="Affordable Justice" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Scale size={64} className="text-white" />
                 </div>
@@ -144,11 +147,11 @@ function WhyChooseUs() {
           </div>
           
           {/* Testimonial/Quote */}
-          <div className="mt-16 bg-white p-8 rounded-xl shadow-lg border-l-4" style={{ borderColor: goldTheme }}>
+          <div className="mt-10 bg-white p-8 rounded-xl shadow-lg border-l-4" style={{ borderColor: goldTheme }}>
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/4 mb-6 md:mb-0 flex justify-center">
-                <div className="w-24 h-24 rounded-full bg-neutral-200 flex items-center justify-center overflow-hidden">
-                  <img src="https://picsum.photos/200/200?random=2" alt="Justice Symbol" className="w-full h-full object-cover" />
+                <div className="w-24 h-24 rounded-full border border-gray-300  bg-neutral-200 flex items-center justify-center overflow-hidden">
+                  <img src={user} alt="Justice Symbol" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="md:w-3/4 md:pl-8">

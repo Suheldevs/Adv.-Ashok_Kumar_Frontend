@@ -11,6 +11,16 @@ import {
   Search,
   Phone
 } from "lucide-react";
+
+import img1 from '../assets/service/1.webp'
+import img2 from '../assets/service/2.webp'
+import img3 from '../assets/service/3.webp'
+import img4 from '../assets/service/4.webp'
+import img5 from '../assets/service/5.webp'
+import img6 from '../assets/service/6.webp'
+import img7 from '../assets/service/7.webp'
+import img8 from '../assets/service/8.webp'
+
 const serviceData = [
   {
     id: 1,
@@ -20,7 +30,7 @@ const serviceData = [
     icon: <Scale size={24} />,
     description: "Expert legal representation for both criminal and civil cases, ensuring your rights are protected through every step of the legal process.",
     fullDescription: "Our experienced attorneys provide comprehensive legal representation for both criminal and civil cases. We understand that facing legal challenges can be overwhelming, which is why we offer personalized strategies tailored to your specific situation. Our team handles everything from misdemeanors to felonies in criminal law, and from small claims to complex litigation in civil matters. We thoroughly investigate each case, develop strong defense strategies, and work tirelessly to protect your rights and interests throughout the legal process.",
-    image: "https://picsum.photos/1200/600?random=1",
+    image: img1,
     features: ["Criminal defense", "Civil litigation", "Court representation", "Legal consultation", "Case evaluation"],
     faqs: [
       {
@@ -45,7 +55,7 @@ const serviceData = [
     icon: <Heart size={24} />,
     description: "Compassionate legal support for sensitive family issues including domestic violence cases, child custody, and other family law matters.",
     fullDescription: "Our family law practice provides compassionate and effective legal support for a wide range of family matters, with special sensitivity to domestic violence cases. We understand the emotional complexities involved in family legal disputes and offer a supportive environment where clients can discuss their concerns confidentially. Our attorneys are experienced in handling restraining orders, child custody arrangements, divorce proceedings, and other family law matters. We prioritize the safety and well-being of our clients and their children while working toward fair and sustainable legal solutions.",
-    image: "https://picsum.photos/1200/600?random=2",
+    image: img2,
     features: ["Restraining orders", "Child custody", "Alimony cases", "Family counseling", "Legal protection"],
     faqs: [
       {
@@ -70,7 +80,7 @@ const serviceData = [
     icon: <ScrollText size={24} />,
     description: "Specialized expertise in service matters and writ petitions, helping you navigate complex administrative and constitutional legal challenges.",
     fullDescription: "Our specialized legal team excels in handling service matters and writ petitions, offering expert guidance through complex administrative and constitutional legal challenges. We represent clients in disputes involving government services, employment matters, and administrative decisions. Our attorneys are well-versed in constitutional law and have extensive experience filing and arguing writ petitions before various courts. We meticulously prepare each case, conducting thorough research and developing compelling legal arguments to challenge unlawful, arbitrary, or unconstitutional actions by government bodies or officials.",
-    image: "https://picsum.photos/1200/600?random=3",
+    image: img3,
     features: ["Writ petitions", "Constitutional matters", "Service disputes", "Government appeals", "Administrative law"],
     faqs: [
       {
@@ -95,7 +105,7 @@ const serviceData = [
     icon: <Home size={24} />,
     description: "Comprehensive legal services for property-related disputes, transactions, and documentation to protect your real estate investments.",
     fullDescription: "Our property law practice offers comprehensive legal services covering all aspects of real estate transactions and disputes. We handle property documentation, title verification, boundary disputes, lease agreements, and property litigation. Our attorneys conduct thorough due diligence to identify and address potential issues before they become problems. We represent clients in negotiations, mediations, and court proceedings related to property matters. Our goal is to protect your real estate investments and ensure all transactions are legally sound, with proper documentation that safeguards your interests now and in the future.",
-    image: "https://picsum.photos/1200/600?random=4",
+    image: img4,
     features: ["Property litigation", "Title verification", "Real estate contracts", "Boundary disputes", "Property documentation"],
     faqs: [
       {
@@ -120,7 +130,7 @@ const serviceData = [
     icon: <Briefcase size={24} />,
     description: "Dedicated advocacy for employment law matters and labor rights, representing both employers and employees in workplace legal issues.",
     fullDescription: "Our employment law practice provides dedicated advocacy for both employers and employees in a wide range of workplace legal matters. We help clients navigate complex employment regulations, draft and review employment contracts, handle discrimination claims, and represent parties in wrongful termination cases. Our attorneys are well-versed in labor laws and workers' rights, providing guidance on workplace safety, wage disputes, and collective bargaining issues. We work to prevent employment disputes through proper documentation and policies while offering strong representation when litigation becomes necessary.",
-    image: "https://picsum.photos/1200/600?random=5",
+    image: img5,
     features: ["Unfair dismissal", "Workplace discrimination", "Wage disputes", "Labor contracts", "Workplace safety"],
     faqs: [
       {
@@ -145,7 +155,7 @@ const serviceData = [
     icon: <ShoppingBag size={24} />,
     description: "Zealous representation for consumer rights violations, helping clients seek compensation for defective products and services.",
     fullDescription: "Our consumer protection practice is dedicated to defending the rights of consumers who have experienced issues with products or services. We handle cases involving defective products, false advertising, unfair business practices, and violations of consumer protection laws. Our attorneys help clients seek appropriate remedies, which may include compensation for damages, replacement of defective products, or specific performance of service agreements. We represent individuals in consumer forums, negotiations with businesses, and litigation when necessary to ensure fair treatment and appropriate resolution of consumer grievances.",
-    image: "https://picsum.photos/1200/600?random=6",
+    image:img6,
     features: ["Product liability", "Service complaints", "Compensation claims", "False advertising", "Consumer counseling"],
     faqs: [
       {
@@ -170,7 +180,7 @@ const serviceData = [
     icon: <FileText size={24} />,
     description: "Professional drafting and review of legal documents and contracts to ensure your interests are protected in all agreements.",
     fullDescription: "Our legal documentation service provides professional drafting, review, and management of various legal documents and contracts. We ensure that all agreements properly reflect your intentions while protecting your legal interests. Our attorneys have extensive experience creating clear, comprehensive contracts for business transactions, employment relationships, property matters, and personal arrangements. We identify potential issues and ambiguities, advise on legal implications, and suggest modifications to strengthen your position. Our goal is to create documents that prevent disputes through clarity and thoroughness while providing strong legal protection if disagreements arise.",
-    image: "https://picsum.photos/1200/600?random=8",
+    image: img7,
     features: ["Contract drafting", "Document review", "Legal agreements", "Terms and conditions", "Legal compliance"],
     faqs: [
       {
@@ -195,7 +205,7 @@ const serviceData = [
     icon: <Users size={24} />,
     description: "Supportive legal guidance through court marriages and divorce proceedings, ensuring fair outcomes in marital disputes.",
     fullDescription: "Our family law practice provides supportive legal guidance for court marriages and divorce proceedings. We understand that these matters involve significant personal and emotional considerations, and we approach each case with sensitivity and respect. For court marriages, we assist with all necessary documentation and legal requirements to ensure a smooth process. In divorce cases, we help clients navigate either mutual consent or contested proceedings, addressing issues such as asset division, alimony, child custody, and maintenance. Our attorneys strive to achieve fair and sustainable outcomes while minimizing conflict and emotional strain whenever possible.",
-    image: "https://picsum.photos/1200/600?random=7",
+    image: img8,
     features: ["Court marriage", "Divorce proceedings", "Asset division", "Mutual consent", "Contested divorces"],
     faqs: [
       {

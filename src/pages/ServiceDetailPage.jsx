@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { 
   ArrowLeft, 
   Check, 
@@ -7,19 +7,11 @@ import {
   Calendar, 
   Clock, 
   Mail,
-  Scale,
-  Heart,
-  ScrollText,
-  Home,
-  Briefcase,
-  ShoppingBag,
-  FileText,
-  Users
 } from "lucide-react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import services from "../Data/ServiceData";
-
+import InquiryModal from '../components/InquiryModal'
 
 // Component to display service features
 const FeatureList = ({ features }) => {
@@ -72,9 +64,13 @@ const ServiceDetail = () => {
       </div>
     );
   }
-
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
+    
     <>
+    <InquiryModal isOpen={isModalOpen} closeModal={closeModal} />
      <Breadcrumb
         title={service.title}
         items={[
@@ -87,13 +83,13 @@ const ServiceDetail = () => {
 
       {/* Content Section */}
       <div className="container mx-auto px-4 py-12">
-         <button 
-                onClick={() => router.back()} 
+         <Link 
+                to="/services"
                 className="flex items-center  mb-6 hover:underline transition-colors"
               >
                 <ArrowLeft size={20} className="mr-2" />
                 Back to Services
-              </button>
+              </Link>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">
@@ -133,7 +129,7 @@ const ServiceDetail = () => {
                   </div>
                   <div>
                     <p className="text-sm text-neutral-500">Call us at</p>
-                    <p className="font-medium text-neutral-800">+91 9876543210</p>
+                    <a target="_blank" href='tel:7844830212' className="font-medium text-neutral-800">+91-7844830212</a>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -142,7 +138,7 @@ const ServiceDetail = () => {
                   </div>
                   <div>
                     <p className="text-sm text-neutral-500">Email us at</p>
-                    <p className="font-medium text-neutral-800">info@legalpractice.com</p>
+                    <a target="_blank" href='mailto:justiceforallindia25@gmail.com' className="font-medium text-neutral-800">justiceforallindia25@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -199,13 +195,13 @@ const ServiceDetail = () => {
                 <p className="text-neutral-600 mb-4">
                   Schedule a meeting with our experienced attorneys to discuss your legal needs.
                 </p>
-                <a 
-                  href="/appointment" 
+                <button
+                 onClick={openModal}  
                   className="block w-full py-3 px-4 rounded-md font-medium text-white text-center transition-colors duration-300"
                   style={{ backgroundColor: "#ebb661" }}
                 >
                   Book Now
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -221,19 +217,19 @@ const ServiceDetail = () => {
               Our legal team is committed to providing you with the highest quality legal representation for your {service.title.toLowerCase()} needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="px-8 py-3 rounded-md font-medium text-white transition-colors duration-300"
                 style={{ backgroundColor: "#ebb661" }}
               >
                 Contact Us Today
-              </a>
-              <a 
-                href="/services" 
+              </Link>
+              <Link 
+                to="/services" 
                 className="px-8 py-3 border border-neutral-300 rounded-md font-medium text-neutral-700 bg-white hover:bg-neutral-50 transition-colors duration-300"
               >
                 Explore All Services
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ const BlogCard = ({ date, category, title, imageUrl, slug }) => {
     });
   };
   return (
-    <div className="relative flex flex-col bg-neutral-50 border border-slate-200 p-4 overflow-hidden h-full transition-all duration-300 hover:shadow-xl">
+    <div className="relative flex flex-col bg-neutral-50 border border-slate-300 p-4 overflow-hidden h-full transition-all duration-300 hover:shadow-xl">
       <div className="flex items-center space-x-2 p-4 mt-5 ">
         <span className="text-white p-2 absolute left-0  bg-black">{formattedDate(date)}</span>
         <div className='absolute right-6 '>
@@ -27,7 +27,7 @@ const BlogCard = ({ date, category, title, imageUrl, slug }) => {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <Link to={`/blog/${slug}`} className=" hover:bg-white hover:text-black cursor-pointer border hover:rounded-tl-2xl hover:rounded-br-2xl text-white font-semibold py-3 px-6 rounde shadow-md transition-all duration-600 hidden md:block ease-in-out">
+          <Link to={`/blog/${slug}`} className=" hover:bg-white hover:text-black cursor-pointer border text-white font-semibold py-3 px-6 rounde shadow-md transition-all duration-600 md:block ease-in-out">
         Read More
           </Link>
           </div>

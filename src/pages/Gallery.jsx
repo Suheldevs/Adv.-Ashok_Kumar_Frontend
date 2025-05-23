@@ -5,22 +5,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchGalleryData } from '../redux/dataSlice';
 
 // Sample image data - replace with your actual images
-const galleryData = [
-  { id: 1, imageUrl: "https://picsum.photos/800/600?random=1", alt: "Gallery Image 1" },
-  { id: 2, imageUrl: "https://picsum.photos/800/600?random=2", alt: "Gallery Image 2" },
-  { id: 3, imageUrl: "https://picsum.photos/800/600?random=3", alt: "Gallery Image 3" },
-  { id: 4, imageUrl: "https://picsum.photos/800/600?random=4", alt: "Gallery Image 4" },
-  { id: 5, imageUrl: "https://picsum.photos/800/600?random=5", alt: "Gallery Image 5" },
-  { id: 6, imageUrl: "https://picsum.photos/800/600?random=6", alt: "Gallery Image 6" },
-  { id: 7, imageUrl: "https://picsum.photos/800/600?random=7", alt: "Gallery Image 7" },
-  { id: 8, imageUrl: "https://picsum.photos/800/600?random=8", alt: "Gallery Image 8" },
-  { id: 9, imageUrl: "https://picsum.photos/800/600?random=10", alt: "Gallery Image 9" },
-  { id: 9, imageUrl: "https://picsum.photos/800/600?random=11", alt: "Gallery Image 9" },
-  { id: 9, imageUrl: "https://picsum.photos/800/600?random=12", alt: "Gallery Image 9" },
-  { id: 9, imageUrl: "https://picsum.photos/800/600?random=13", alt: "Gallery Image 9" },
-  { id: 9, imageUrl: "https://picsum.photos/800/600?random=14", alt: "Gallery Image 9" },
-  { id: 9, imageUrl: "https://picsum.photos/800/600?random=15", alt: "Gallery Image 9" },
-];
+// const galleryData = [
+//   { id: 1, imageUrl: "https://picsum.photos/800/600?random=1", alt: "Gallery Image 1" },
+//   { id: 2, imageUrl: "https://picsum.photos/800/600?random=2", alt: "Gallery Image 2" },
+//   { id: 3, imageUrl: "https://picsum.photos/800/600?random=3", alt: "Gallery Image 3" },
+//   { id: 4, imageUrl: "https://picsum.photos/800/600?random=4", alt: "Gallery Image 4" },
+//   { id: 5, imageUrl: "https://picsum.photos/800/600?random=5", alt: "Gallery Image 5" },
+//   { id: 6, imageUrl: "https://picsum.photos/800/600?random=6", alt: "Gallery Image 6" },
+//   { id: 7, imageUrl: "https://picsum.photos/800/600?random=7", alt: "Gallery Image 7" },
+//   { id: 8, imageUrl: "https://picsum.photos/800/600?random=8", alt: "Gallery Image 8" },
+//   { id: 9, imageUrl: "https://picsum.photos/800/600?random=10", alt: "Gallery Image 9" },
+//   { id: 9, imageUrl: "https://picsum.photos/800/600?random=11", alt: "Gallery Image 9" },
+//   { id: 9, imageUrl: "https://picsum.photos/800/600?random=12", alt: "Gallery Image 9" },
+//   { id: 9, imageUrl: "https://picsum.photos/800/600?random=13", alt: "Gallery Image 9" },
+//   { id: 9, imageUrl: "https://picsum.photos/800/600?random=14", alt: "Gallery Image 9" },
+//   { id: 9, imageUrl: "https://picsum.photos/800/600?random=15", alt: "Gallery Image 9" },
+// ];
 
 export default function Gallery() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,11 +28,11 @@ export default function Gallery() {
   
   const dispatch = useDispatch()
 
-  // const {galleryData, error, status} = useSelector((state)=>state.data)
+  const {galleryData, error, status} = useSelector((state)=>state.data)
 
-  // useEffect(()=>{
-  //   dispatch(fetchGalleryData())
-  // },[])
+  useEffect(()=>{
+    dispatch(fetchGalleryData())
+  },[])
 
   const openModal = (index) => {
     setCurrentImageIndex(index);

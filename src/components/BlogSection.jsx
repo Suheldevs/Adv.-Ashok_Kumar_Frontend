@@ -13,6 +13,7 @@ const BlogSection = () => {
   useEffect(() => {
     dispatch(fetchBlogData());
   }, [dispatch]);
+console.log(blogData)
 
   const settings = {
     dots: true,

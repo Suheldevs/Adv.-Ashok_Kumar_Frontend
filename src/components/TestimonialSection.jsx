@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
-
+import user from '../assets/Home/user.webp'
 // Testimonial data
 const testimonials = [
   {
@@ -107,14 +107,14 @@ export default function TestimonialSection() {
           key={i}
           size={16}
           className={`${
-            i < rating ? "text-yellow-500 fill-yellow-500" : "text-neutral-300"
+            i < rating ? "text-[#ebb661] fill-[#ebb661]" : "text-neutral-300"
           }`}
         />
       ));
   };
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-neutral-50 py-16">
+    <section className="bg-gradient-to-br from-gray-50 to-neutral-50 lg:py-14 py-10">
       <div className="container mx-auto px-4">
        <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 relative inline-block">
@@ -144,7 +144,7 @@ export default function TestimonialSection() {
         <div className="flex justify-center mt-10 space-x-4">
           <button
             onClick={handlePrev}
-            className="p-2 rounded-full bg-white shadow-md text-amber-600 hover:bg-amber-50 transition-colors"
+            className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebb661] transition-colors"
           >
             <ChevronLeft size={24} />
           </button>
@@ -153,14 +153,14 @@ export default function TestimonialSection() {
               <span
                 key={index}
                 className={`block w-2 h-2 rounded-full ${
-                  index === currentIndex ? "bg-amber-600" : "bg-neutral-300"
+                  index === currentIndex ? "bg-[#ebb661]" : "bg-neutral-300"
                 }`}
               ></span>
             ))}
           </div>
           <button
             onClick={handleNext}
-            className="p-2 rounded-full bg-white shadow-md text-amber-600 hover:bg-amber-50 transition-colors"
+            className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebb661] transition-colors"
           >
             <ChevronRight size={24} />
           </button>
@@ -173,7 +173,7 @@ export default function TestimonialSection() {
 function TestimonialCard({ testimonial, renderStars }) {
   return (
     <div className="bg-white rounded-lg shadow-lg p-8 mb-4 transition-all hover:shadow-xl relative">
-      <div className="absolute -top-5 left-8 bg-amber-600 p-2 rounded-full text-white">
+      <div className="absolute -top-5 left-8 bg-[#ebb661] p-2 rounded-full text-white">
         <Quote size={24} />
       </div>
       <div className="mt-4">
@@ -181,13 +181,13 @@ function TestimonialCard({ testimonial, renderStars }) {
         <p className="text-neutral-600 italic mb-6">"{testimonial.content}"</p>
         <div className="flex items-center">
           <img
-            src={testimonial.image}
+            src={user}
             alt={testimonial.name}
             className="w-12 h-12 rounded-full mr-4 object-cover"
           />
           <div>
             <h4 className="font-bold text-neutral-900">{testimonial.name}</h4>
-            <p className="text-amber-600 text-sm">{testimonial.position}</p>
+            <p className="text-[#ebb661] text-sm">{testimonial.position}</p>
           </div>
         </div>
       </div>
