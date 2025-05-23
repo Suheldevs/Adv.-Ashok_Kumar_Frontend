@@ -1,31 +1,32 @@
 import React, { useState } from "react";
 import { Phone, Mail, User, MessageSquare, X, AlertCircle, Check } from "lucide-react";
-
+import axios from 'axios';
 const InquiryModal = ({ isOpen, closeModal }) => {
   const [formData, setFormData] = useState({
-    fullName: "",
-    phoneNumber: "",
+    name: "",
+    phone: "",
     email: "",
     message: "",
   });
   const [errors, setErrors] = useState({});
+  const [error, setError] = useState();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+const backend_url = import.meta.env.VITE_BACKEND_URL
 
-
+const newErrors = {};
   const validateForm = () => {
-    const newErrors = {};
     
     // Full Name validation
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required";
+    if (!formData.name.trim()) {
+      newErrors.name = "Full name is required";
     }
     
     // Phone Number validation
-    if (!formData.phoneNumber) {
-      newErrors.phoneNumber = "Phone number is required";
-    } else if (!/^[6-9]\d{9}$/.test(formData.phoneNumber)) {
-      newErrors.phoneNumber = "Must be 10 digits and start with 6-9";
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+      newErrors.phone = "Must be 10 digits and start with 6-9";
     }
     
     // Email validation
@@ -60,28 +61,29 @@ const InquiryModal = ({ isOpen, closeModal }) => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     if (validateForm()) {
       setIsSubmitting(true);
-      
-      // Simulate API call
-      setTimeout(() => {
-        console.log("Form submitted:", formData);
-        setIsSubmitting(false);
+      setError(null)
+      try{
+        const response  = await axios.post(`${backend_url}/inquiry/save`,formData)
         setIsSubmitted(true);
-        
-        // Reset form after successful submission
         setTimeout(() => {
           setFormData({
-            fullName: "",
-            phoneNumber: "",
+            name: "",
+            phone: "",
             email: "",
             message: "",
           });
           setIsSubmitted(false);
-          closeModal();
-        }, 2000);
-      }, 1000);
+          closeModal();})
+      }
+      catch(err){
+        setError('Someting went wrorg');
+      }
+      finally{
+         setIsSubmitting(false);
+      }
     }
   };
 
@@ -127,10 +129,16 @@ const InquiryModal = ({ isOpen, closeModal }) => {
               <p className="text-neutral-600 mb-4">
                 Fill out the form below and Adv. Mr. Ashok Kumar's office will contact you shortly.
               </p>
+              {error && (
+ <p className="text-red-600 mb-4">
+                Something Went Wrong! Please Try Later.
+              </p>
+              )}
+             
               
               {/* Full Name */}
               <div>
-                <label htmlFor="modal-fullName" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">
                   Full Name *
                 </label>
                 <div className="relative">
@@ -139,19 +147,19 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                   </div>
                   <input
                     type="text"
-                    id="modal-fullName"
-                    name="fullName"
-                    value={formData.fullName}
+                    id="name"
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
                     className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                      errors.fullName ? "border-red-500 bg-red-50" : "border-neutral-300"
+                      errors.name ? "border-red-500 bg-red-50" : "border-neutral-300"
                     } focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors`}
                     placeholder="Enter your full name"
                   />
                 </div>
-                {errors.fullName && (
+                {errors.name && (
                   <p className="mt-1 text-sm text-red-600 flex items-center">
-                    <AlertCircle size={12} className="mr-1" /> {errors.fullName}
+                    <AlertCircle size={12} className="mr-1" /> {errors.name}
                   </p>
                 )}
               </div>
@@ -168,18 +176,18 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                   <input
                     type="text"
                     id="modal-phoneNumber"
-                    name="phoneNumber"
-                    value={formData.phoneNumber}
+                    name="phone"
+                    value={formData.phone}
                     onChange={handleChange}
                     className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                      errors.phoneNumber ? "border-red-500 bg-red-50" : "border-neutral-300"
+                      errors.phone ? "border-red-500 bg-red-50" : "border-neutral-300"
                     } focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors`}
                     placeholder="Enter your phone number"
                   />
                 </div>
-                {errors.phoneNumber && (
+                {errors.phone && (
                   <p className="mt-1 text-sm text-red-600 flex items-center">
-                    <AlertCircle size={12} className="mr-1" /> {errors.phoneNumber}
+                    <AlertCircle size={12} className="mr-1" /> {errors.phone}
                   </p>
                 )}
               </div>
@@ -255,12 +263,12 @@ const InquiryModal = ({ isOpen, closeModal }) => {
             <button
               onClick={handleSubmit}
               disabled={isSubmitting}
-              className="px-4 py-2 rounded-md text-white font-medium flex items-center justify-center min-w-24 transition-all"
+              className="px-4 py-2 rounded-md text-black font-medium flex items-center justify-center min-w-24 transition-all"
               style={{ backgroundColor: isSubmitting ? "#f0c387" : "#ebb661" }}
             >
               {isSubmitting ? (
                 <>
-                  <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>

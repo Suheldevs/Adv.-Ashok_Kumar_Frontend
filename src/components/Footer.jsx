@@ -196,7 +196,7 @@ export default function Footer() {
                 />
               </Link>
             </div>
-            <div className="flex space-x-8">
+            <div className="flex space-x-6">
               <Link
                 to="/privacy-policy"
                 className="text-neutral-400 hover:text-white text-sm transition-colors"
@@ -210,6 +210,14 @@ export default function Footer() {
               >
                 Legal Disclaimer
               </Link>
+
+              <a
+              target="_blank"
+                href="https://adv-ashok-kumar-admin.netlify.app/"
+                className="text-neutral-400 hover:text-white text-sm transition-colors hover:underline"
+              >
+                Admin Login
+              </a>
             </div>
           </div>
         </div>
