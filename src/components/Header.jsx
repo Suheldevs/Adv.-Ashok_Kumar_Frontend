@@ -43,18 +43,18 @@ export default function Header() {
     <>
       <InquiryModal isOpen={isModalOpen} closeModal={closeModal} />
       
-      <header className={`fixed top-0 left-0 w-full backdrop-blur-2xl z-50 transition-all duration-300 ${scrolled ? 'bg-neutral-950/95' : 'lg:bg-transparent bg-neutral-950/95'}`}>
+      <header className={`fixed top-0 left-0 w-full  z-50 transition-all duration-300 ${scrolled ? 'bg-neutral-950/95' : 'lg:bg-transparent bg-neutral-950/95'}`}>
         <div className="container mx-auto px-4 ">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center">
-              <Link to='/' className="h-10 w-10 md:h-14 md:w-14  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
+            <div className="flex relative items-center">
+              <Link to='/' className=" absolute mt-14  h-10 w-10 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
                <img src={logo} />
               </Link>
-              <div>
+              {/* <div>
                 <h1 className="text-white text-lg md:text-xl font-bold">Ashok Kumar</h1>
                 <p className="text-xs md:text-sm" style={{ color: goldColor }}>ADVOCATE & RETD JUDGE</p>
-              </div>
+              </div> */}
             </div>
             
             {/* Desktop Navigation */}

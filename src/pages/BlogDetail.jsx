@@ -33,7 +33,7 @@ const BlogDetail = () => {
     return <div className="text-red-600 text-xl my-24  font-semibold text-center">Blog Not Found!</div>;
 
   return (
-    <div>
+    <div className="bg-white/90">
       {/* Breadcrumb */}
       <Breadcrumb
         title="Blog Detail"
@@ -45,7 +45,7 @@ const BlogDetail = () => {
       />
 
       {/* Blog Content */}
-      <div className="container mx-auto px-4 pb-4 pt-10 lg:pt-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <div className="container  mx-auto px-4 pb-4 pt-10 lg:pt-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Blog Details */}
         <div className="lg:col-span-3">
           <img

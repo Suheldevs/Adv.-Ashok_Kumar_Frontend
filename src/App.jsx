@@ -15,12 +15,14 @@ import AboutPage from './pages/AboutPage'
 import Disclaimer from './pages/DisclaimerPage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import BlogDetail from './pages/BlogDetail'
+import DisclaimerModal from './components/DisclaimerModal'
 function App() {
   return (
     <>
 
     <Header/>
     <ScrollToTop/>
+    <DisclaimerModal/>
    <Routes>
     <Route path='*' element={<PageNotFound/>}/>
     <Route path='/' element={<Home/>}/>
@@ -30,7 +32,7 @@ function App() {
     <Route path='/blog/:slug' element={<BlogDetail/>}/>
     <Route path='/contact' element={<ContactUs/>}/>
     <Route path='/services' element={<ServicesPage/>}/>
-    <Route path='/services/:slug' element={<ServiceDetail/>}/>
+    {/* <Route path='/services/:slug' element={<ServiceDetail/>}/> */}
     <Route path='/disclaimer' element={<Disclaimer/>}/>
     <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
    </Routes>

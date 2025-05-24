@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Phone, Mail, User, MessageSquare, X, AlertCircle, Check } from "lucide-react";
+import { Phone, Mail, User, MessageSquare, X, AlertCircle, Check, PenTool } from "lucide-react";
 import axios from 'axios';
+import serviceData from "../Data/ServiceData";
 const InquiryModal = ({ isOpen, closeModal }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -126,9 +127,9 @@ const newErrors = {};
             </div>
           ) : (
             <div className="space-y-4">
-              <p className="text-neutral-600 mb-4">
+              {/* <p className="text-neutral-600 mb-4">
                 Fill out the form below and Adv. Mr. Ashok Kumar's office will contact you shortly.
-              </p>
+              </p> */}
               {error && (
  <p className="text-red-600 mb-4">
                 Something Went Wrong! Please Try Later.
@@ -219,7 +220,36 @@ const newErrors = {};
                   </p>
                 )}
               </div>
-              
+                  <div className='w-full'>
+                          <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-neutral-700 mb-1"
+                          >
+                            Services *
+                          </label>
+                          <div className="relative">
+                            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                              <PenTool size={18} className="text-neutral-400" />
+                            </div>
+                            <select
+                              className={`w-full pl-10 pr-3 py-2 border rounded-md ${
+                                errors.email
+                                  ? "border-red-500"
+                                  : "border-neutral-300"
+                              } focus:outline-none focus:ring-2 focus:ring-amber-500`}
+                            >
+                              <option disabled selected>--Select Service--</option>
+                              {serviceData.map((service) => (
+                                <option>{service.title}</option>
+                              ))}
+                            </select>
+                          </div>
+                          {errors.email && (
+                            <p className="mt-1 text-sm text-red-600">
+                              {errors.email}
+                            </p>
+                          )}
+                        </div>
               {/* Message */}
               <div>
                 <label htmlFor="modal-message" className="block text-sm font-medium text-neutral-700 mb-1">

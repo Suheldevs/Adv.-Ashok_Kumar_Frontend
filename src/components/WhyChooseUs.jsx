@@ -1,173 +1,127 @@
-import { Award, Scale, Users } from 'lucide-react'
+import { Award, Scale, Users, Shield, Clock, Heart } from 'lucide-react'
 import React from 'react'
-import img1 from '../assets/whychoose/image1.webp'
-import img2 from '../assets/whychoose/image2.webp'
-import img3 from '../assets/whychoose/image3.webp'
-import user from '../assets/Home/user.webp'
+
 function WhyChooseUs() {
-     const goldTheme = "#ebb661";
+  const goldTheme = "#ebb661";
+  
+  const features = [
+    {
+      icon: <Award size={40} />,
+      title: "Judicial Excellence",
+      description: "With over 33 years in the judiciary, bringing unparalleled insights and expertise to each case."
+    },
+    {
+      icon: <Users size={40} />,
+      title: "Client-Centered Approach", 
+      description: "We stand with our clients as allies, providing guidance and support throughout every step."
+    },
+    {
+      icon: <Scale size={40} />,
+      title: "Accessible Justice",
+      description: "Quality legal representation available to everyone, regardless of financial circumstance."
+    },
+    {
+      icon: <Shield size={40} />,
+      title: "Proven Track Record",
+      description: "Consistent success in complex legal matters with a reputation for thorough preparation."
+    },
+    {
+      icon: <Clock size={40} />,
+      title: "Timely Resolution",
+      description: "Efficient case handling that saves valuable time and reduces unnecessary court proceedings."
+    },
+    {
+      icon: <Heart size={40} />,
+      title: "Compassionate Service",
+      description: "Understanding the human side of legal issues with empathy and professional care."
+    }
+  ];
+
   return (
-    <div>
-           <section className="relative py-14 px-4 md:px-8 bg-white/95">
-            
-        <div className="container px-4 mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 relative inline-block">
-              <span className="relative z-10">Why Choose Us</span>
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldTheme }}></span>
-            </h2>
-            <p className="text-neutral-600 max-w-2xl mx-auto text-base lg:text-lg">
-              With decades of judicial experience and a commitment to accessible justice,
-              we provide exceptional legal services tailored to your needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Card 1 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
-              <div className="h-48 bg-neutral-100 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/30"></div>
-                <img src={img1} alt="Experience" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Award size={64} className="text-white" />
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3" style={{ color: goldTheme }}>Judicial Excellence</h3>
-                <p className="text-neutral-600 mb-4">
-                  With over 33 years in the judiciary, Judge Ashok Kumar brings unparalleled insights and expertise to each case, ensuring thorough legal representation.
-                </p>
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Former High Court Judge</span>
-                </div>
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Profound understanding of law</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Respected legal authority</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Card 2 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
-              <div className="h-48 bg-neutral-100 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/30 bg-opacity-30"></div>
-                <img src={img2} alt="Professional Team" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Users size={64} className="text-white" />
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3" style={{ color: goldTheme }}>Client-Centered Approach</h3>
-                <p className="text-neutral-600 mb-4">
-                  We don't just represent clients—we stand with them as allies, providing guidance and support throughout every step of the legal process.
-                </p>
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Compassionate consultation</span>
-                </div>
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Transparent communication</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Dedicated personal attention</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Card 3 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
-              <div className="h-48 bg-neutral-100 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/30 bg-opacity-30"></div>
-                <img src={img3} alt="Affordable Justice" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Scale size={64} className="text-white" />
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3" style={{ color: goldTheme }}>Accessible Justice</h3>
-                <p className="text-neutral-600 mb-4">
-                  We believe that quality legal representation should be available to everyone, regardless of financial circumstance or social background.
-                </p>
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Affordable fee structure</span>
-                </div>
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Timely case resolution</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: goldTheme }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-neutral-700">Commitment to justice for all</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Testimonial/Quote */}
-          <div className="mt-10 bg-white p-8 rounded-xl shadow-lg border-l-4" style={{ borderColor: goldTheme }}>
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-1/4 mb-6 md:mb-0 flex justify-center">
-                <div className="w-24 h-24 rounded-full border border-gray-300  bg-neutral-200 flex items-center justify-center overflow-hidden">
-                  <img src={user} alt="Justice Symbol" className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <div className="md:w-3/4 md:pl-8">
-                <blockquote className="text-lg italic text-neutral-600">
-                  "I believe that if a person receives the right legal advice at the right time, their case won't be stretched unnecessarily in court. It can be resolved efficiently, reducing pressure on all parties while saving valuable time and money."
-                </blockquote>
-                <p className="mt-4 font-semibold" style={{ color: goldTheme }}>— Retd. Judge Ashok Kumar</p>
-              </div>
-            </div>
-          </div>
-          
-        
+    <section className="relative py-16 px-4 md:px-8 bg-gradient-to-br from-neutral-50/95 to-white/95">
+      <div className="container px-4 mx-auto">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block text-neutral-800">
+            <span className="relative z-10">Why Choose Us</span>
+            <span className="absolute bottom-2 left-0 w-full h-4 bg-opacity-30 " style={{ backgroundColor: goldTheme }}></span>
+          </h2>
+          <p className="text-neutral-600 max-w-3xl mx-auto text-lg  leading-relaxed">
+            With decades of judicial experience and a commitment to accessible justice,
+            we provide exceptional legal services tailored to your unique needs.
+          </p>
         </div>
-      </section>
-    </div>
+        
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-neutral-100"
+            >
+              {/* Icon Container */}
+              <div className="relative mb-6">
+                <div 
+                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
+                  style={{ backgroundColor: goldTheme }}
+                >
+                  {feature.icon}
+                </div>
+                <div 
+                  className="absolute -top-2 -right-2 w-6 h-6 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+                  style={{ backgroundColor: goldTheme }}
+                ></div>
+              </div>
+              
+              {/* Content */}
+              <h3 className="text-2xl font-bold mb-4 text-neutral-800 group-hover:text-neutral-900 transition-colors duration-300">
+                {feature.title}
+              </h3>
+              <p className="text-neutral-600 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
+                {feature.description}
+              </p>
+              
+              {/* Decorative line */}
+              <div className="mt-6 h-1 w-0 group-hover:w-12 rounded-full transition-all duration-500" style={{ backgroundColor: goldTheme }}></div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Quote Section */}
+        <div className="relative">
+          <div 
+            className="bg-gradient-to-r from-neutral-900 to-neutral-800 p-10 lg:p-12 rounded-3xl shadow-2xl relative overflow-hidden"
+          >
+            {/* Background Pattern */}
+            <div className="absolute top-0 right-0 w-64 h-64 opacity-5">
+              <Scale size={256} className="text-white" />
+            </div>
+            
+            <div className="relative z-10">
+              <div className="flex flex-col lg:flex-row items-center">
+                <div className="lg:w-1/6 mb-8 lg:mb-0 flex justify-center">
+                  <div 
+                    className="w-24 h-24 rounded-full flex items-center justify-center border-4 border-white/20"
+                    style={{ backgroundColor: goldTheme }}
+                  >
+                    <Award size={40} className="text-white" />
+                  </div>
+                </div>
+                <div className="lg:w-5/6 lg:pl-10 text-center lg:text-left">
+                  <blockquote className="text-xl lg:text-2xl italic text-white/90 leading-relaxed mb-6">
+                    "I believe that if a person receives the right legal advice at the right time, their case won't be stretched unnecessarily in court. It can be resolved efficiently, reducing pressure on all parties while saving valuable time and money."
+                  </blockquote>
+                  <p className="text-lg font-semibold text-white flex items-center justify-center lg:justify-start">
+                    <span className="w-12 h-0.5 mr-4 rounded-full" style={{ backgroundColor: goldTheme }}></span>
+                    Retd. Judge Ashok Kumar
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

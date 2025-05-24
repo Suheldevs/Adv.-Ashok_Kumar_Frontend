@@ -2,13 +2,14 @@ import React from 'react';
 import { BookOpen, Scale, Clock, Phone, Mail, Award, Users, Building, Shield } from 'lucide-react';
 import WhyChooseUs from '../components/WhyChooseUs';
 import image from '../assets/Home/aboutPage.webp'
+import pattern from '../assets/p5.jpg'
 export default function AboutUs() {
   const goldTheme = "#ebb661";
   
   return (
     <div className="bg-neutral-50">
       {/* Hero Section */}
-      <section className="relative py-16 pt-36 px-4 md:px-8 bg-neutral-900 text-white overflow-hidden">
+      <section className="relative py-16 pt-40 px-4 md:px-8 bg-neutral-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-900 via-transparent to-transparent"></div>
         <div className="relative max-w-6xl mx-auto">
@@ -16,9 +17,7 @@ export default function AboutUs() {
             <span className="text-white">About</span>
             <span style={{ color: goldTheme }}> Judge Ashok Kumar</span>
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
-            Over 33 years of judicial experience now dedicated to providing accessible legal counsel at Lucknow High Court
-          </p>
+          
           <div className="flex items-center space-x-2">
             <Scale style={{ color: goldTheme }} size={28} />
             <span className="text-sm md:text-base font-medium">Justice For All India</span>
@@ -140,10 +139,15 @@ export default function AboutUs() {
             </div>
           </div>
       {/* Contact CTA */}
-      <section className="py-10 lg:py-16 px-4 md:px-8 bg-neutral-950 text-white">
+      <section className="relative py-10 lg:py-16 px-4 md:px-8 bg-neutral-950/90 text-white">
+  <div
+        className="absolute inset-0 z-0 bg-cover bg-center "
+        style={{ backgroundImage: `url('${pattern}')`, zIndex: -1, opacity: 1 }}
+      ></div>
+
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">
-            <span style={{ color: goldTheme }}>Get in Touch</span>
+          <h2 className="text-4xl font-bold mb-4">
+            <span style={{ color: goldTheme }}>Get a Free Consultation</span>
           </h2>
           <p className="text-lg mb-10 max-w-2xl mx-auto">
             For any legal query or to schedule a consultation, feel free to contact us anytime. We're here to help with your legal needs.
@@ -151,20 +155,20 @@ export default function AboutUs() {
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
             <div className="flex items-center">
-              <Phone size={24} style={{ color: goldTheme }} />
+              <Phone size={34} style={{ color: goldTheme }} />
               <div className="ml-3 text-left">
-                <p className="text-sm text-neutral-400">Call Us</p>
-                <a href='tel:7844830212' className="font-medium">7844830212, 9453578200</a>
+                {/* <p className=" text-neutral-400">Call Us</p> */}
+                <a href='tel:7844830212' className="font-medium text-2xl hover:underline">+91-7844830212</a>
               </div>
             </div>
             
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <Mail size={24} style={{ color: goldTheme }} />
               <div className="ml-3 text-left">
                 <p className="text-sm text-neutral-400">Email Us</p>
                 <a href='emailto:justiceforallindia25@gmail.com' className="font-medium">justiceforallindia25@gmail.com</a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

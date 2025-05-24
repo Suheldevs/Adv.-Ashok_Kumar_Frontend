@@ -31,21 +31,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="w-full flex flex-col items-center">
-            <Link to="/" className="">
+            <Link to="/" className="border p-4 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-black">
               <img src={logo} className="lg:h-32 h-28" />
             </Link>
-            <div className="text-center">
+            {/* <div className="text-center">
               <h1 className="text-white text-2xl font-bold">Ashok Kumar</h1>
               <p className="text-xs md:text-sm" style={{ color: goldColor }}>
                 ADVOCATE & RETIRED JUDGE
               </p>
-            </div>
+            </div> */}
             {/* <p className="text-neutral-400 mb-4">
               With over 30 years of judicial experience and legal expertise, 
               Judge Ashok Kumar provides comprehensive legal consultation and 
               representation services across various practice areas.
             </p> */}
-            <div className="flex space-x-3 mt-3">
+            <div className="flex space-x-3 mt-4">
               <a
                 target="_blank"
                 href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about"
@@ -97,7 +97,7 @@ export default function Footer() {
                     to={`/services/${area.slug}`}
                     className="text-neutral-400 hover:text-white transition-colors"
                   >
-                    {area.foter}
+                    {area.title}
                   </Link>
                 </li>
               ))}
@@ -112,7 +112,7 @@ export default function Footer() {
               <li className="flex items-start hover:translate-x-1 group">
                 <MapPin
                   size={20}
-                  className="text-[#ebb661] mr-3 mt-1 flex-shrink-0"
+                  className="text-[#ebb661] mt-1 mr-3 flex-shrink-0"
                 />
                 <a
                   href="https://maps.app.goo.gl/iv7kN1KGFdnksnV66"
@@ -170,7 +170,7 @@ export default function Footer() {
             {/* <div className="h-1 w-12 bg-amber-600 mb-4"></div> */}
             <div className="">
               <iframe
-                className="h-48 lg:mr-4"
+                className="h-48 w-full"
                 title="Location"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1779.6247460399977!2d81.0196432!3d26.8638133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3b1668345a3%3A0xafe19173615e503d!2sRetd%20Judge%20Ashok%20Kumar%2C%20Advocate%20Highcourt%20And%20District%20Court%20in%20Lucknow!5e0!3m2!1sen!2sin!4v1747898940602!5m2!1sen!2sin"
                 allowFullScreen=""

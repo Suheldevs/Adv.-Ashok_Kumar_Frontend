@@ -1,17 +1,9 @@
 import React, { useState } from "react";
 import { 
-  Scale, 
-  Heart, 
-  ScrollText, 
-  Home, 
-  Briefcase, 
-  ShoppingBag, 
-  FileText, 
-  Users,
-  ChevronRight,
   Search,
   Phone
 } from "lucide-react";
+import pattern from '../assets/p5.jpg'
 import Breadcrumb from "../components/Breadcrumb";
 import ServiceCard from "../components/ServiceCard";
 // Service data with all required fields
@@ -27,6 +19,7 @@ const ServicesPage = () => {
   const filteredServices = services.filter(service =>
     service.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+   const goldTheme = "#ebb661";
 
   return (
     <div className="min-h-screen bg-neutral-50">
@@ -96,7 +89,7 @@ const ServicesPage = () => {
         </div>
         
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3   gap-6">
           {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -119,50 +112,41 @@ const ServicesPage = () => {
           </div>
         )}
       </div>
+       <section className="relative py-10 lg:py-16 px-4 md:px-8 bg-neutral-950/90 text-white">
+        <div
+              className="absolute inset-0 z-0 bg-cover bg-center "
+              style={{ backgroundImage: `url('${pattern}')`, zIndex: -1, opacity: 1 }}
+            ></div>
       
-      {/* Call to Action */}
-      <div className="bg-neutral-100 py-10 lg:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2 p-4 md:p-12 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-4 text-neutral-800">Need Legal Assistance?</h3>
-                <p className="text-neutral-600 mb-6">
-                  Our experienced team is ready to assist you with any legal matters.
-                  Schedule a consultation today and let us help you find the right solution.
+              <div className="max-w-6xl mx-auto text-center">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span style={{ color: goldTheme }}>Get a Free Consultation</span>
+                </h2>
+                <p className="text-lg mb-10 max-w-2xl mx-auto">
+                  For any legal query or to schedule a consultation, feel free to contact us anytime. We're here to help with your legal needs.
                 </p>
-                <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
-                  <a 
-                    href="/contact" 
-                    className="px-5 py-3 rounded-md font-medium text-white transition-colors duration-300 flex items-center justify-center"
-                    style={{ backgroundColor: "#ebb661" }}
-                  >
-                    <Phone size={18} className="mr-2" />
-                    Contact Us
-                  </a>
-                  <a 
-                    href="/about" 
-                    className="px-5 py-3 border rounded-md font-medium text-neutral-700 hover:bg-neutral-50 transition-colors duration-300 flex items-center justify-center"
-                  >
-                    Learn About Us
-                  </a>
+                
+                <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+                  <div className="flex items-center">
+                    <Phone size={34} style={{ color: goldTheme }} />
+                    <div className="ml-3 text-left">
+                      {/* <p className=" text-neutral-400">Call Us</p> */}
+                      <a href='tel:7844830212' className="font-medium text-2xl hover:underline">+91-7844830212</a>
+                    </div>
+                  </div>
+                  
+                  {/* <div className="flex items-center">
+                    <Mail size={24} style={{ color: goldTheme }} />
+                    <div className="ml-3 text-left">
+                      <p className="text-sm text-neutral-400">Email Us</p>
+                      <a href='emailto:justiceforallindia25@gmail.com' className="font-medium">justiceforallindia25@gmail.com</a>
+                    </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="md:w-1/2"
-              >
-                 <iframe
-                className="h-full w-full"
-                title="Location"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1779.6247460399977!2d81.0196432!3d26.8638133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3b1668345a3%3A0xafe19173615e503d!2sRetd%20Judge%20Ashok%20Kumar%2C%20Advocate%20Highcourt%20And%20District%20Court%20in%20Lucknow!5e0!3m2!1sen!2sin!4v1747898940602!5m2!1sen!2sin"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </section>
+            <div className='h-1 w-full bg-white'></div>
+     
     </div>
   );
 };

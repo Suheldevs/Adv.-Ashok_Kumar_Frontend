@@ -83,6 +83,7 @@ console.log(blogData)
                   category={post.category}
                   title={post.title}
                   imageUrl={post.imageUrl}
+                  description={post.description}
                 />
               </div>
             ))
