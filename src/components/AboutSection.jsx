@@ -10,12 +10,17 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import image from '../assets/Home/about.jpg'
+import pattern from '../assets/p2.webp'
 export default function AboutSection() {
   const goldColor = "#ebb661";
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="py-10 md:py-12 lg:py-14 bg-white">
+    <section className="relative py-10 md:py-12 lg:py-14 bg-white/95">
+     <div
+        className="absolute inset-0 z-0 bg-cover bg-center "
+        style={{ backgroundImage: `url('${pattern}')`,zIndex:-1 ,opacity:1}}
+      ></div>
       <div className="container mx-auto px-4">
         {/* Small About Us label
         <div className="mb-2">
@@ -23,12 +28,12 @@ export default function AboutSection() {
         </div> */}
 
         {/* Main Headline */}
-        <div className="max-w-4xl mb-12">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">
+        <div className="max-w-4xl lg:mb-10 mb-6">
+          <h2 className="text-2xl md:text-5xl font-serif font-bold text-neutral-900 lg:mb-4 mb-2">
             More Than Just Lawyers
             <span className="block">—Your Legal Partners</span>
           </h2>
-          <p className="text-neutral-600 text-lg">
+          <p className="text-neutral-600 text-base lg:text-lg">
             We're your legal partners, with a deep commitment to justice and a
             client-first approach, we guide individuals, families, and
             businesses.
@@ -43,7 +48,7 @@ export default function AboutSection() {
               {/* Stat 1 */}
               <div>
                 <h3
-                  className="text-6xl font-bold mb-2"
+                  className="text-4xl lg:text-6xl font-bold mb-2"
                   style={{ color: goldColor }}
                 >
                   33+
@@ -57,7 +62,7 @@ export default function AboutSection() {
               {/* Stat 2 */}
               <div>
                 <h3
-                  className="text-6xl font-bold mb-2"
+                  className="text-4xl lg:text-6xl font-bold mb-2"
                   style={{ color: goldColor }}
                 >
                   450+
@@ -71,7 +76,7 @@ export default function AboutSection() {
               {/* Stat 3 */}
               <div>
                 <h3
-                  className="text-6xl font-bold mb-2"
+                  className="text-4xl lg:text-6xl font-bold mb-2"
                   style={{ color: goldColor }}
                 >
                   96%
@@ -124,8 +129,8 @@ export default function AboutSection() {
           <div className="lg:col-span-3">
             <div className="space-y-6">
               {/* Features */}
-              <div className="mb-8">
-                <div className="flex items-start mb-4">
+              <div className="lg:mb-8 mb-4">
+                <div className="flex items-start mb-2 lg:mb-4">
                   <CheckCircle
                     size={20}
                     style={{ color: goldColor }}
@@ -133,7 +138,7 @@ export default function AboutSection() {
                   />
                   <p className="text-neutral-700">Expert Legal Advice</p>
                 </div>
-                <div className="flex items-start mb-4">
+                <div className="flex items-start mb-2 lg:mb-4">
                   <CheckCircle
                     size={20}
                     style={{ color: goldColor }}
@@ -141,7 +146,7 @@ export default function AboutSection() {
                   />
                   <p className="text-neutral-700">Personalized Attention</p>
                 </div>
-                <div className="flex items-start mb-4">
+                <div className="flex items-start mb-2 lg:mb-4">
                   <CheckCircle
                     size={20}
                     style={{ color: goldColor }}
@@ -161,15 +166,15 @@ export default function AboutSection() {
 
               {/* Contact Info */}
               <div className="pt-6 border-t border-neutral-200">
-                <div className="flex items-start mb-4">
+                <div className="flex items-start lg:mb-4 mb-2">
                   <MapPin
                     size={20}
                     style={{ color: goldColor }}
                     className="mr-2 mt-1 flex-shrink-0"
                   />
-                  <p className="text-neutral-700">
-                    KLLG St. No.99, Pku City, ID 28289
-                  </p>
+                  <a href="https://maps.app.goo.gl/iv7kN1KGFdnksnV66" target="_blank" className="text-neutral-700">
+                   3/141, Vibhav Khand -3, Vibhav Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010
+                  </a>
                 </div>
 
                 <div className="flex items-start">
@@ -179,13 +184,13 @@ export default function AboutSection() {
                     className="mr-2 mt-1 flex-shrink-0"
                   />
                   <a
-                    href="tel:+910761852398"
+                    href="tel:7844830212"
                     className="text-neutral-700 hover:text-neutral-900"
                   >
-                    0761-8523-398
+                    +91-7844830212
                   </a>
                 </div>
-                <div className=" flex mt-6">
+                <div className=" flex lg:mt-6 mt-4">
                   <Link
                     to="/about"
                     className="inline-flex bg-neutral-800 items-center px-6 py-3 rounded-md text-white font-medium transition-all duration-300 hover:shadow-lg"

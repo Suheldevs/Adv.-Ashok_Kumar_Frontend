@@ -16,18 +16,23 @@ import serviceData from "../Data/ServiceData";
 import { Link } from "react-router-dom";
 import cclogo from "../assets/cclogo-suhel.webp";
 import { FaXTwitter } from "react-icons/fa6";
+import pattern from '../assets/p1.webp'
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const goldColor = "#ebb661";
   return (
-    <footer className="bg-neutral-950 text-white">
+    <footer className="relative bg-neutral-950/95 text-white">
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center "
+        style={{ backgroundImage: `url('${pattern}')`,zIndex:-1 ,opacity:1}}
+      ></div>
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="w-full flex flex-col items-center">
             <Link to="/" className="">
-              <img src={logo} className="h-32" />
+              <img src={logo} className="lg:h-32 h-28" />
             </Link>
             <div className="text-center">
               <h1 className="text-white text-2xl font-bold">Ashok Kumar</h1>
@@ -178,10 +183,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-neutral-800">
+      <div className="border-t border-neutral-700">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-neutral-400 text-sm mb-4 md:mb-0 flex justify-center items-center gap-1">
+            <div className="text-neutral-400 text-sm mb-4 md:mb-0 flex lg:flex-row flex-col justify-center items-center gap-1">
               © {currentYear} Judge Ashok Kumar. All rights reserved. ||
               Desinged By
               <Link
@@ -191,22 +196,22 @@ export default function Footer() {
               >
                 <img
                   src={cclogo}
-                  className="lg:w-28 md:w-20 w-14 transition transform hover:scale-105"
+                  className="lg:w-28 md:w-20 w-20 transition transform hover:scale-105"
                   alt="CodeCrafter Logo"
                 />
               </Link>
             </div>
-            <div className="flex space-x-6">
+            <div className="flex lg:space-x-6 space-x-3">
               <Link
                 to="/privacy-policy"
-                className="text-neutral-400 hover:text-white text-sm transition-colors"
+                className="text-neutral-400 hover:text-white text-xs lg:text-sm transition-colors"
               >
                 Privacy Policy
               </Link>
 
               <Link
                 to="/disclaimer"
-                className="text-neutral-400 hover:text-white text-sm transition-colors"
+                className="text-neutral-400 hover:text-white text-xs lg:text-sm transition-colors"
               >
                 Legal Disclaimer
               </Link>
@@ -214,7 +219,7 @@ export default function Footer() {
               <a
               target="_blank"
                 href="https://adv-ashok-kumar-admin.netlify.app/"
-                className="text-neutral-400 hover:text-white text-sm transition-colors hover:underline"
+                className="text-neutral-400 hover:text-white text-xs lg:text-sm transition-colors hover:underline"
               >
                 Admin Login
               </a>

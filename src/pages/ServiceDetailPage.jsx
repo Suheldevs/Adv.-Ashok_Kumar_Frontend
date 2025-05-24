@@ -94,9 +94,9 @@ const ServiceDetail = () => {
           {/* Main Content */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-neutral-800">Overview</h2>
+              <h2 className="text-2xl font-bold mb-4 text-neutral-800">Overview</h2>
               <div className="w-20 h-1 mb-6" style={{ backgroundColor: "#ebb661" }}></div>
-              <p className="text-neutral-600 mb-8 leading-relaxed">
+              <p className="text-neutral-600  mb-8 leading-relaxed">
                 {service.fullDescription}
               </p>
               <h3 className="text-xl font-semibold mb-4 text-neutral-800">Our Services Include</h3>

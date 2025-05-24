@@ -8,14 +8,15 @@ function WhyChooseUs() {
      const goldTheme = "#ebb661";
   return (
     <div>
-           <section className="py-14 px-4 md:px-8 bg-gradient-to-b from-white to-neutral-100">
-        <div className="max-w-6xl mx-auto">
+           <section className="relative py-14 px-4 md:px-8 bg-white/95">
+            
+        <div className="container px-4 mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold mb-4 relative inline-block">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 relative inline-block">
               <span className="relative z-10">Why Choose Us</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldTheme }}></span>
             </h2>
-            <p className="text-neutral-600 max-w-2xl mx-auto text-lg">
+            <p className="text-neutral-600 max-w-2xl mx-auto text-base lg:text-lg">
               With decades of judicial experience and a commitment to accessible justice,
               we provide exceptional legal services tailored to your needs.
             </p>

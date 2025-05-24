@@ -70,7 +70,7 @@ const ServicesPage = () => {
           </h2>
           {/* <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#ebb661" }}></div> */}
           <p className="text-neutral-600">
-            With over 20 years of experience, our law firm offers a wide range of legal services
+            With over 33 years of experience, our law firm offers a wide range of legal services
             tailored to meet your specific needs. Our team of dedicated lawyers is committed to
             providing personalized attention and effective legal representation.
           </p>
@@ -121,11 +121,11 @@ const ServicesPage = () => {
       </div>
       
       {/* Call to Action */}
-      <div className="bg-neutral-100 py-16">
+      <div className="bg-neutral-100 py-10 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+              <div className="md:w-1/2 p-4 md:p-12 flex flex-col justify-center">
                 <h3 className="text-2xl font-bold mb-4 text-neutral-800">Need Legal Assistance?</h3>
                 <p className="text-neutral-600 mb-6">
                   Our experienced team is ready to assist you with any legal matters.
@@ -148,7 +148,7 @@ const ServicesPage = () => {
                   </a>
                 </div>
               </div>
-              <div className="w-1/2"
+              <div className="md:w-1/2"
               >
                  <iframe
                 className="h-full w-full"

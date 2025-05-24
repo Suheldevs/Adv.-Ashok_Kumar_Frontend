@@ -8,10 +8,10 @@ export default function HeroSection() {
   
   return (
     <div className="bg-neutral-950 h-screen flex flex-row justify-center items-center text-white relative overflow-hidden">
-      <div className="container pt-20 mx-auto px-4 py-16 md:py-24 flex flex-col lg:flex-row items-center">
+      <div className="container lg:pt-20 mx-auto px-4  md:py-24 flex flex-col lg:flex-row items-center">
         {/* Left Content Area */}
-        <div className="lg:w-1/2 pt-20  z-10 mb-12 lg:mb-0">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 tracking-wide">
+        <div className="lg:w-1/2 pt-20 flex flex-col justify-center items-start z-10">
+          <h1 className="text-[2.5rem] md:text-6xl font-serif font-bold mb-6 leading-none lg:tracking-wide">
             <span style={{ color: "#ebb661" }}>Smart Legal</span> <br />
             <span style={{ color: "#ebb661" }}>Solutions</span> for <br />
             Work and Life
@@ -22,10 +22,10 @@ export default function HeroSection() {
             and professional needs. We stand by your side with trusted
             guidance.
           </p>
-          <div className="flex items-center gap-5">
+          <div className="flex flex-col lg:flex-row items-center gap-5">
          
 
-          <Link to='/services' className="hover:bg-neutral-900 bg-neutral-950 border border-neutral-900 text-neutral-100 font-bold py-3 px-8 rounded-md flex items-center transition duration-300">
+          <Link to='/services' className=" hidden lg:flex hover:bg-neutral-900 bg-neutral-950 border border-neutral-900 text-neutral-100 font-bold py-3 px-8 rounded-md  items-center transition duration-300">
             Explore Our Legal Services
           </Link>
 
@@ -37,7 +37,7 @@ export default function HeroSection() {
         </div>
         
         {/* Right Image Area */}
-        <div className="lg:w-1/2 relative z-10">
+        <div className="lg:w-1/2 hidden lg:block relative z-10">
           <div className="relative ">
             {/* Blurred background circle */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 rounded-full bg-neutral-800  blur-2xl opacity-50"></div>
@@ -45,11 +45,11 @@ export default function HeroSection() {
             <img 
               src="https://kits.rometheme.net/protego/wp-content/uploads/sites/47/2025/05/image-1.webp" 
               alt="Mr. Ashok Kumar" 
-              className="rounded-md mx-auto p-20 pt-72 relative z-10"
+              className="rounded-md mx-auto lg:p-20 lg:pt-80 relative z-10"
             />
             
             {/* Experience Badge */}
-            <div className="absolute  left-10  mt-52 top-1/4 " style={{ backgroundColor: "#ebb661" }}>
+            <div className="absolute  left-14  lg:mt-16 top-2/5 " style={{ backgroundColor: "#ebb661" }}>
               <div className="text-neutral-900 p-4 rounded-md shadow-lg">
                 <div className="text-6xl font-bold">33+</div>
                 <div className="text-sm">Years of Experience</div>
@@ -62,7 +62,7 @@ export default function HeroSection() {
       </div>
       
       {/* Social media icons */}
-      <div className="absolute bottom-8 bg-transparent right-5 flex flex-col space-y-4 border border-neutral-800 p-2 rounded-2xl">
+      <div className="absolute hidden  bottom-8 bg-transparent right-5 lg:flex flex-col space-y-4 border border-neutral-800 p-2 rounded-2xl">
         <a target="_black" href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <Facebook size={20} />
         </a>

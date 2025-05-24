@@ -67,10 +67,10 @@ export default function Gallery() {
               ]}
             // bgImage="/api/placeholder/1920/600"
           />
-    <div className="min-h-screen bg-neutral-100 lg:p-8 p-4">
+    <div className="min-h-screen bg-neutral-50/95 lg:p-8 p-4">
       <div className="max-w-7xl mx-auto">
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {galleryData?.map((image, index) => (
             <div 
               key={image.id} 

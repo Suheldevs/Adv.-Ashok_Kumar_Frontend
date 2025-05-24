@@ -114,14 +114,14 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-neutral-50 lg:py-14 py-10">
+    <section className="bg-neutral-50/95 lg:py-14 py-10">
       <div className="container mx-auto px-4">
-       <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 relative inline-block">
+       <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block">
               <span className="relative z-10">Client Testimonials</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
             </h2>
-            <p className="text-neutral-600 max-w-2xl mx-auto text-lg">
+            <p className="text-neutral-600 max-w-2xl mx-auto text-base lg:text-lg">
             Hear from clients who have benefited from Judge Ashok Kumar's extensive legal expertise and commitment to justice.
             </p>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BookOpen, Scale, Clock, Phone, Mail, Award, Users, Building, Shield } from 'lucide-react';
 import WhyChooseUs from '../components/WhyChooseUs';
-
+import image from '../assets/Home/aboutPage.webp'
 export default function AboutUs() {
   const goldTheme = "#ebb661";
   
@@ -31,8 +31,8 @@ export default function AboutUs() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/3">
             <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-              <div className="h-64 bg-neutral-200 flex items-center justify-center">
-                <img src="/api/placeholder/400/320" alt="Judge Ashok Kumar" className="object-cover" />
+              <div className="h-52 lg:h-64 bg-neutral-200 flex items-center justify-center">
+                <img src={image} alt="Judge Ashok Kumar"  className="object-cover lg:h-64" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold" style={{ color: goldTheme }}>Retd. Judge Ashok Kumar</h3>
@@ -46,13 +46,13 @@ export default function AboutUs() {
           </div>
           
           <div className="md:w-2/3 mt-8 md:mt-0">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-3xl  font-bold mb-6">
               <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>Legal Expertise & Mission</span>
             </h2>
-            <p className="text-neutral-700 mb-6 leading-relaxed">
+            <p className="text-neutral-700 text-justify lg:text-left mb-4 lg:mb-6 leading-relaxed">
               With more than 33 years of service in the Judiciary, Mr. Ashok Kumar has dedicated himself to helping people navigate complex legal challenges. He believes that timely and accurate legal advice can significantly reduce case duration, saving clients both time and money while minimizing stress.
             </p>
-            <p className="text-neutral-700 mb-6 leading-relaxed">
+            <p className="text-neutral-700 text-justify lg:text-left mb-4 lg:mb-6 leading-relaxed">
               Working alongside a professional team, Mr. Kumar approaches each case not only as an advocate but as a trusted ally standing with clients throughout their legal journey. His mission is to make quality legal services accessible to every section of society at the most affordable cost possible.
             </p>
             
@@ -84,11 +84,11 @@ export default function AboutUs() {
       {/* Areas of Practice */}
       <section className="py-16 px-4 md:px-8 bg-neutral-100">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-10">
             <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>Areas of Practice</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
               <div className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" style={{ backgroundColor: `${goldTheme}20` }}>
                 <Scale size={24} style={{ color: goldTheme }} />
@@ -121,26 +121,26 @@ export default function AboutUs() {
    <WhyChooseUs/>
 
   {/* Stats Section */}
-          <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-6 px-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+          <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-6 lg:px-8 px-4">
+            <div className="bg-white p-4 lg:p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>33+</div>
               <p className="text-neutral-600">Years in Judiciary</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-white p-4 lg:p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>450+</div>
               <p className="text-neutral-600">Cases Resolved</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-white p-4 lg:p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>24/7</div>
               <p className="text-neutral-600">Client Support</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-white p-4 lg:p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>100%</div>
               <p className="text-neutral-600">Client Dedication</p>
             </div>
           </div>
       {/* Contact CTA */}
-      <section className="py-16 px-4 md:px-8 bg-neutral-950 text-white">
+      <section className="py-10 lg:py-16 px-4 md:px-8 bg-neutral-950 text-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">
             <span style={{ color: goldTheme }}>Get in Touch</span>

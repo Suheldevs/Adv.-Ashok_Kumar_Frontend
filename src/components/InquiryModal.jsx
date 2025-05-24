@@ -93,7 +93,7 @@ const newErrors = {};
     <div className="fixed inset-0 flex items-center justify-center z-[1100]">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"
         onClick={closeModal}
       ></div>
       
@@ -101,7 +101,7 @@ const newErrors = {};
       <div className="relative bg-white rounded-lg shadow-xl w-full max-w-md mx-4 overflow-hidden transform transition-all">
         {/* Modal Header */}
         <div className="bg-neutral-50 px-6 py-4 border-b border-neutral-200 relative">
-          <h3 className="text-lg font-semibold text-neutral-800">Contact RTDJ Legal</h3>
+          <h3 className="text-lg font-semibold text-neutral-800">Contact Retd. Judge Ashok Kumar</h3>
           <button 
             onClick={closeModal}
             className="absolute top-4 right-6 text-neutral-400 hover:text-neutral-600 transition-colors"
