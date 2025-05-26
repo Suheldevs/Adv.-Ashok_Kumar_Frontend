@@ -1,7 +1,6 @@
-import { ArrowRight } from "lucide-react";
+
 import ServiceCard from "./ServiceCard";
 import serviceData from "../Data/ServiceData";
-import pattern from '../assets/p1.webp'
 export default function ServicesSection() {
   const goldColor = "#ebb661";
 

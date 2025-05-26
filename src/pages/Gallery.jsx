@@ -32,7 +32,7 @@ export default function Gallery() {
 
   useEffect(()=>{
     dispatch(fetchGalleryData())
-  },[])
+  },[dispatch])
 
   const openModal = (index) => {
     setCurrentImageIndex(index);

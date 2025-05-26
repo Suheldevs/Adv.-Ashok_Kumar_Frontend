@@ -4,6 +4,8 @@ import {  FileText, Building2, Heart, Home } from "lucide-react";
 import WhyChooseUs from '../components/WhyChooseUs';
 import image from '../assets/Home/aboutPage.webp'
 import pattern from '../assets/p5.jpg'
+import serviceData from '../Data/ServiceData';
+import ServiceCard from '../components/ServiceCard';
 export default function AboutUs() {
   const goldTheme = "#ebb661";
   return (
@@ -45,17 +47,26 @@ export default function AboutUs() {
           </div>
           
           <div className="md:w-2/3 mt-8 md:mt-0">
-            <h2 className="text-3xl  font-bold mb-6">
-              <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>Legal Expertise & Mission</span>
-            </h2>
-            <p className="text-neutral-700 text-justify lg:text-left mb-4 lg:mb-6 leading-relaxed">
-              With more than 33 years of service in the Judiciary, Mr. Ashok Kumar has dedicated himself to helping people navigate complex legal challenges. He believes that timely and accurate legal advice can significantly reduce case duration, saving clients both time and money while minimizing stress.
-            </p>
-            <p className="text-neutral-700 text-justify lg:text-left mb-4 lg:mb-6 leading-relaxed">
-              Working alongside a professional team, Mr. Kumar approaches each case not only as an advocate but as a trusted ally standing with clients throughout their legal journey. His mission is to make quality legal services accessible to every section of society at the most affordable cost possible.
-            </p>
+           <h2 className="text-3xl font-bold mb-6">
+  <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>
+    Legal Expertise & Mission
+  </span>
+</h2>
+
+<p className="text-neutral-700 text-justify lg:text-left mb-4 lg:mb-6 leading-relaxed">
+  With more than 33 years of service in the Judiciary, Mr. Ashok Kumar has dedicated himself to helping people navigate complex legal challenges. He believes that timely and accurate legal advice can significantly reduce case duration, saving clients both time and money while minimizing stress.
+</p>
+
+<p className="text-neutral-700 text-justify lg:text-left mb-4 lg:mb-6 leading-relaxed">
+  Working alongside a professional team, Mr. Kumar approaches each case not only as an advocate but as a trusted ally standing with clients throughout their legal journey. His mission is to make quality legal services accessible to every section of society at the most affordable cost possible.
+</p>
+
+<p className="text-neutral-700 text-justify lg:text-left mb-4 lg:mb-6 leading-relaxed">
+  His commitment to ethical practices and continuous legal education ensures that every client receives up-to-date advice grounded in both legal precedent and practical wisdom. This approach fosters trust, transparency, and long-term relationships with those he serves.
+</p>
+
             
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start">
                 <div className="p-3 rounded-full bg-neutral-100" style={{ color: goldTheme }}>
                   <Clock size={24} />
@@ -75,7 +86,7 @@ export default function AboutUs() {
                   <p className="text-neutral-600">Working as a friend and ally throughout legal proceedings</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -89,7 +100,12 @@ export default function AboutUs() {
           </span>
         </h2>
        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-6">
+          {serviceData.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
             <div 
               className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" 
@@ -167,13 +183,15 @@ export default function AboutUs() {
               Real estate law, property disputes, documentation, registration, and property transaction guidance
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
 
       {/* Why Choose Us - Enhanced Section */}
+<div className='px-4'>
 
    <WhyChooseUs/>
+</div>
 
   {/* Stats Section */}
           <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-6 lg:px-8 px-4">

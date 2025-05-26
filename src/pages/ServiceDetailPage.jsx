@@ -49,7 +49,9 @@ const FAQSection = ({ faqs }) => {
 // Main ServiceDetail Component
 const ServiceDetail = () => {
   const { slug } = useParams();
-
+const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   // Find the service by slug
   const service = services.find(s => s.slug === slug);
 
@@ -64,9 +66,7 @@ const ServiceDetail = () => {
       </div>
     );
   }
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   return (
     
     <>

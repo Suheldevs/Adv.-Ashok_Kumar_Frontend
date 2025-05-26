@@ -57,7 +57,7 @@ function WhyChooseUs() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-neutral-100"
+              className="group border border-neutral-300 bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 "
             >
               {/* Icon Container */}
               <div className="relative mb-6">
