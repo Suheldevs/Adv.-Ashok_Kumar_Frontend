@@ -1,114 +1,90 @@
 import { useState, useEffect } from "react";
-import { Shield, AlertTriangle, Check, X, Scale } from "lucide-react";
-
+import { ArrowRight } from "lucide-react";
+import logo from '../assets/logo(2).png'
 const DisclaimerModal = () => {
   const [showModal, setShowModal] = useState(true);
-  const goldTheme = "#ebb661";
+useEffect(() => {
+  const hasAgreed = localStorage.getItem('disclaimerAgreed');
+  if (hasAgreed === 'true') {
+    setShowModal(false);
+  }
+}, []);
 
   const handleAgree = () => {
-    setShowModal(false); // Proceed to website
-  };
-
-  const handleCancel = () => {
-    window.history.back(); // Go back
+     localStorage.setItem('disclaimerAgreed', 'true');
+    setShowModal(false);
+    console.log("User agreed to disclaimer"); 
   };
 
   useEffect(() => {
-    // Optional: prevent scrolling when modal is open
     if (showModal) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
+    
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [showModal]);
 
-  if (!showModal) return null;
+  if (!showModal) {
+    return null ;
+  }
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      {/* Background blur effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/50 to-black/50"></div>
-      
-      {/* Modal */}
-      <div className="relative bg-white/95 backdrop-blur-lg border border-white/20 p-8 rounded-3xl shadow-2xl max-w-lg w-full mx-4 text-center space-y-6 transform animate-in">
+    <div className="fixed  inset-0 bg-black/80 backdrop-blur-[5px] flex items-center justify-center z-50">
+      {/* Modal Container */}
+      <div className="bg-neutral-950 max-h-[95vh] border border-white/60 max-w-[39rem] w-full mx-4 p-6 relative">
         
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-t-3xl"></div>
-        
-        {/* Icon */}
-        <div className="relative">
-          <div 
-            className="w-20 h-20 mx-auto rounded-full flex items-center justify-center shadow-lg relative"
-            style={{ backgroundColor: goldTheme }}
-          >
-            <Scale size={40} className="text-white" />
+        {/* Logo and Title */}
+        <div className="text-center mb-4">
+          {/* Logo - Golden scales of justice */}
+          <div className="flex justify-center mb-4">
+            <img src={logo} alt="Logo" className="h-24"/>
           </div>
-          <div className="absolute -top-2 -right-2 w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
-            <AlertTriangle size={16} className="text-amber-600" />
-          </div>
-        </div>
 
-        {/* Header */}
-        <div className="space-y-2">
-          <h2 className="text-2xl font-bold text-neutral-800">Legal Disclaimer</h2>
-          <div className="w-16 h-1 mx-auto rounded-full" style={{ backgroundColor: goldTheme }}></div>
+          <h3 className="text-[#ebb661] text-4xl font-bold mb-4">Disclaimer</h3>
         </div>
 
         {/* Content */}
-        <div className="space-y-4">
-          <div className="bg-neutral-50/80 backdrop-blur-sm p-4 rounded-xl border border-neutral-200/50">
-            <div className="flex items-start space-x-3">
-              <Shield size={20} className="text-neutral-600 mt-1 flex-shrink-0" />
-              <div className="text-left">
-                <p className="text-sm text-neutral-700 leading-relaxed">
-                  This website is dedicated to <span className="font-semibold" style={{ color: goldTheme }}>Retired Judge Ashok Kumar</span> and serves as a professional legal services platform.
-                </p>
-              </div>
+        <div className="text-white/80 text-sm leading-relaxed space-y-4 mb-4">
+          <p className="mb-2">
+            The Bar Council of India does not permit the solicitation of work and advertising by legal practitioners/advocates. By accessing our website, the user acknowledges that:
+          </p>
+          
+          <div className="space-y-2 pl-4">
+            <div className="flex items-start">
+              <span className="text-[#ebb661] mr-3 mt-1 text-lg font-bold">1.</span>
+              <p>The user wishes to gain more information about us for his/her information and use. He/she also acknowledges that there has been no attempt by us to advertise or solicit work.</p>
             </div>
-          </div>
-
-          <div className="text-xs text-neutral-600 space-y-2">
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-1 h-1 bg-neutral-400 rounded-full"></div>
-              <span>Content is for informational purposes only</span>
+            
+            <div className="flex items-start">
+              <span className="text-[#ebb661] mr-3 mt-1 text-lg font-bold">2.</span>
+              <p>Any information obtained or downloaded from our website does not lead to the creation of the Advocate – Client relationship between our Law Firm and the User.</p>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-1 h-1 bg-neutral-400 rounded-full"></div>
-              <span>Professional legal consultation and services available</span>
+            
+            <div className="flex items-start">
+              <span className="text-[#ebb661] mr-3 mt-1 text-lg font-bold">3.</span>
+              <p>None of the information contained in our website amounts to any form of legal opinion or legal advice.</p>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-1 h-1 bg-neutral-400 rounded-full"></div>
-              <span>By proceeding, you acknowledge these terms</span>
+            
+            <div className="flex items-start">
+              <span className="text-[#ebb661] mr-3 mt-1 text-lg font-bold">4.</span>
+              <p>Our website uses cookies to improve your user experience. By using our site, you agree to our use of cookies. To find out more, please see our Cookies Policy & Privacy Policy.</p>
             </div>
           </div>
         </div>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+        {/* Button */}
+        <div className="flex justify-center">
           <button
             onClick={handleAgree}
-            className="group relative overflow-hidden px-6 py-3 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2"
-            style={{ backgroundColor: goldTheme }}
+            className="bg-transparent border border-[#ebb661] text-[#ebb661] px-8 py-3 hover:bg-[#ebb661] hover:text-black transition-all duration-300 flex items-center space-x-2 font-medium"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <Check size={18} className="relative z-10" />
-            <span className="relative z-10">I Understand & Proceed</span>
+            <span>I AGREE</span>
+            <ArrowRight size={16} />
           </button>
-          
-          <button
-            onClick={handleCancel}
-            className="group relative overflow-hidden bg-neutral-200 hover:bg-neutral-300 text-neutral-700 px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2"
-          >
-            <X size={18} />
-            <span>Go Back</span>
-          </button>
-        </div>
-
-        {/* Footer note */}
-        <div className="pt-4 border-t border-neutral-200/50">
-          <p className="text-xs text-neutral-500">
-            Professional legal services • Confidential consultation • Experienced representation
-          </p>
         </div>
       </div>
     </div>

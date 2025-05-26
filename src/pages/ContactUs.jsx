@@ -10,6 +10,7 @@ import {
   Linkedin,
   Facebook,
   PenTool,
+  Tornado,
 } from "lucide-react";
 import {} from "lucide-react";
 import Breadcrumb from "../components/Breadcrumb";
@@ -172,28 +173,28 @@ const ContactUs = () => {
                     <a
                       target="_blank"
                       href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about"
-                      className=" text-[#ebb661] flex-shrink-0 p-3 rounded-full bg-amber-100"
+                      className=" text-amber-600 flex-shrink-0 p-3 rounded-full bg-amber-100"
                     >
                       <Facebook size={18} />
                     </a>
                     <a
                       target="_blank"
                       href="https://x.com/RetdJudgeAshokK"
-                      className="text-[#ebb661] flex-shrink-0 p-3 rounded-full bg-amber-100"
+                      className="text-amber-600 flex-shrink-0 p-3 rounded-full bg-amber-100"
                     >
                       <FaXTwitter size={18} />
                     </a>
                     <a
                       target="_blank"
                       href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/"
-                      className="text-[#ebb661] flex-shrink-0 p-3 rounded-full bg-amber-100"
+                      className="text-amber-600 flex-shrink-0 p-3 rounded-full bg-amber-100"
                     >
                       <Linkedin size={18} />
                     </a>
                     <a
                       target="_blank"
                       href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ"
-                      className="text-[#ebb661] flex-shrink-0 p-3 rounded-full bg-amber-100"
+                      className="text-amber-600 flex-shrink-0 p-3 rounded-full bg-amber-100"
                     >
                       <Youtube size={18} />
                     </a>
@@ -236,14 +237,14 @@ const ContactUs = () => {
                   </h4>
                   <ul className="space-y-2 text-neutral-600">
                     <li className="flex justify-between">
-                      <span>Monday - Saturday:</span>
+                      <span>Monday - Sunday:</span>
                       <span>8:00 AM - 11:30 PM</span>
                     </li>
-
+{/* 
                     <li className="flex justify-between">
                       <span>Sunday:</span>
                       <span>Closed</span>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -385,7 +386,7 @@ const ContactUs = () => {
                           </label>
                           <div className="relative">
                             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                              <PenTool size={18} className="text-neutral-400" />
+                              <Tornado size={18} className="text-neutral-400" />
                             </div>
                             <select
                               className={`w-full pl-10 pr-3 py-2 border rounded-md ${
@@ -426,7 +427,7 @@ const ContactUs = () => {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            rows="5"
+                            rows="4"
                             className={`w-full pl-10 pr-3 py-2 border rounded-md ${
                               errors.message
                                 ? "border-red-500"

@@ -1,13 +1,13 @@
 import React from 'react';
 import { BookOpen, Scale, Clock, Phone, Mail, Award, Users, Building, Shield } from 'lucide-react';
+import {  FileText, Building2, Heart, Home } from "lucide-react";
 import WhyChooseUs from '../components/WhyChooseUs';
 import image from '../assets/Home/aboutPage.webp'
 import pattern from '../assets/p5.jpg'
 export default function AboutUs() {
   const goldTheme = "#ebb661";
-  
   return (
-    <div className="bg-neutral-50">
+    <div className="bg-neutral-100/95">
       {/* Hero Section */}
       <section className="relative py-16 pt-40 px-4 md:px-8 bg-neutral-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -81,39 +81,95 @@ export default function AboutUs() {
       </section>
 
       {/* Areas of Practice */}
-      <section className="py-16 px-4 md:px-8 bg-neutral-100">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10">
-            <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>Areas of Practice</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" style={{ backgroundColor: `${goldTheme}20` }}>
-                <Scale size={24} style={{ color: goldTheme }} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Criminal & Civil Cases</h3>
-              <p className="text-neutral-600">Comprehensive representation for all criminal and civil legal matters</p>
+     <section className="py-16 px-4 md:px-8 bg-neutral-100">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          <span className="border-b-4 pb-2" style={{ borderColor: goldTheme }}>
+            Areas of Practice
+          </span>
+        </h2>
+       
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+            <div 
+              className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" 
+              style={{ backgroundColor: `${goldTheme}20` }}
+            >
+              <Scale size={24} style={{ color: goldTheme }} />
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" style={{ backgroundColor: `${goldTheme}20` }}>
-                <Users size={24} style={{ color: goldTheme }} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Family Matters</h3>
-              <p className="text-neutral-600">Sensitive handling of domestic violence and family-related legal issues</p>
+            <h3 className="text-xl font-semibold mb-2">Family Court</h3>
+            <p className="text-neutral-600">
+              Comprehensive family law services including matrimonial disputes, custody matters, and domestic relations
+            </p>
+          </div>
+         
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+            <div 
+              className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" 
+              style={{ backgroundColor: `${goldTheme}20` }}
+            >
+              <Shield size={24} style={{ color: goldTheme }} />
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
-              <div className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" style={{ backgroundColor: `${goldTheme}20` }}>
-                <Building size={24} style={{ color: goldTheme }} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Service & Writ Petitions</h3>
-              <p className="text-neutral-600">Expert guidance on service matters and writ petition procedures</p>
+            <h3 className="text-xl font-semibold mb-2">Criminal Lawyer</h3>
+            <p className="text-neutral-600">
+              Expert defense representation for criminal cases, bail applications, and criminal litigation
+            </p>
+          </div>
+         
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+            <div 
+              className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" 
+              style={{ backgroundColor: `${goldTheme}20` }}
+            >
+              <FileText size={24} style={{ color: goldTheme }} />
             </div>
+            <h3 className="text-xl font-semibold mb-2">Civil Law Disputes</h3>
+            <p className="text-neutral-600">
+              Resolution of civil disputes, contract disputes, property matters, and civil litigation services
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+            <div 
+              className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" 
+              style={{ backgroundColor: `${goldTheme}20` }}
+            >
+              <Building2 size={24} style={{ color: goldTheme }} />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Corporate Lawyer</h3>
+            <p className="text-neutral-600">
+              Corporate legal services, business compliance, contracts, mergers, and commercial law matters
+            </p>
+          </div>
+         
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+            <div 
+              className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" 
+              style={{ backgroundColor: `${goldTheme}20` }}
+            >
+              <Heart size={24} style={{ color: goldTheme }} />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Divorce Lawyer</h3>
+            <p className="text-neutral-600">
+              Sensitive handling of divorce proceedings, alimony, child custody, and marital dispute resolution
+            </p>
+          </div>
+         
+          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-105">
+            <div 
+              className="mb-4 rounded-full w-12 h-12 flex items-center justify-center" 
+              style={{ backgroundColor: `${goldTheme}20` }}
+            >
+              <Home size={24} style={{ color: goldTheme }} />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Property Lawyer</h3>
+            <p className="text-neutral-600">
+              Real estate law, property disputes, documentation, registration, and property transaction guidance
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Why Choose Us - Enhanced Section */}
 
@@ -139,13 +195,15 @@ export default function AboutUs() {
             </div>
           </div>
       {/* Contact CTA */}
-      <section className="relative py-10 lg:py-16 px-4 md:px-8 bg-neutral-950/90 text-white">
+     <section className="relative z-10 py-10 lg:py-16 px-4 md:px-8  text-white">
   <div
-        className="absolute inset-0 z-0 bg-cover bg-center "
-        style={{ backgroundImage: `url('${pattern}')`, zIndex: -1, opacity: 1 }}
-      ></div>
+    className="absolute inset-0 bg-cover bg-center z-[-1]"
+    style={{ backgroundImage: `url(${pattern})`, opacity: 1 }}
+  ></div>
 
-        <div className="max-w-6xl mx-auto text-center">
+  <div className='absolute z-[-1] inset-0 bg-neutral-950/90'></div>
+
+        <div className="max-w-6xl  mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">
             <span style={{ color: goldTheme }}>Get a Free Consultation</span>
           </h2>

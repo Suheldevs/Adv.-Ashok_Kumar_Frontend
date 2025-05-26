@@ -112,13 +112,15 @@ const ServicesPage = () => {
           </div>
         )}
       </div>
-       <section className="relative py-10 lg:py-16 px-4 md:px-8 bg-neutral-950/90 text-white">
+      <section className="relative mt-6 z-10 py-10 lg:py-16 px-4 md:px-8  text-white">
         <div
-              className="absolute inset-0 z-0 bg-cover bg-center "
-              style={{ backgroundImage: `url('${pattern}')`, zIndex: -1, opacity: 1 }}
-            ></div>
+          className="absolute inset-0 bg-cover bg-center z-[-1]"
+          style={{ backgroundImage: `url(${pattern})`, opacity: 1 }}
+        ></div>
       
-              <div className="max-w-6xl mx-auto text-center">
+        <div className='absolute z-[-1] inset-0 bg-neutral-950/90'></div>
+      
+              <div className="max-w-6xl  mx-auto text-center">
                 <h2 className="text-4xl font-bold mb-4">
                   <span style={{ color: goldTheme }}>Get a Free Consultation</span>
                 </h2>

@@ -94,7 +94,7 @@ export default function Footer() {
                     className="text-[#ebb661] mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                   <Link
-                    to={`/services/${area.slug}`}
+                    to={`/services`}
                     className="text-neutral-400 hover:text-white transition-colors"
                   >
                     {area.title}

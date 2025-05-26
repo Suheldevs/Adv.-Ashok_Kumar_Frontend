@@ -47,7 +47,7 @@ import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
   return (
-    <div className="group relative bg-white rounded-2xl  overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-64">
+    <div className="group relative bg-white rounded-2xl h-44  overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

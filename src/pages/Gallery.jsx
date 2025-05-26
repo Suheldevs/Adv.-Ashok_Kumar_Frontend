@@ -57,6 +57,52 @@ export default function Gallery() {
     );
   };
 
+
+  if(status=='loading'){
+  return(
+    <>
+     <Breadcrumb
+            title="Gallery"
+            items={[
+                { label: "Home", link: "/" },
+                { label: "Gallery", link: "/gallery" },
+              ]}
+            // bgImage="/api/placeholder/1920/600"
+          />
+     <div className='text-xl h-[50vh] justify-center items-center flex font-medium textx-center shadow-2xl rounded p-2'>Loading..</div>
+    </>
+  )
+}
+if(galleryData.length == 0){
+  return(
+    <>
+     <Breadcrumb
+            title="Gallery"
+            items={[
+                { label: "Home", link: "/" },
+                { label: "Gallery", link: "/gallery" },
+              ]}
+            // bgImage="/api/placeholder/1920/600"
+          />
+    <div className='text-red-600 text-lg h-[50vh] justify-center items-center flex font-medium textx-center shadow-2xl rounded p-2'>Gallery Data Not Found!</div>
+    </>
+  )
+}
+if(error){
+  return(
+    <>
+     <Breadcrumb
+            title="Gallery"
+            items={[
+                { label: "Home", link: "/" },
+                { label: "Gallery", link: "/gallery" },
+              ]}
+            // bgImage="/api/placeholder/1920/600"
+          />
+    <div className='text-red-600 text-lg h-[50vh] justify-center items-center flex font-medium textx-center shadow-2xl rounded p-2'>{error}</div>
+    </>
+  )
+}
   return (
     <>
      <Breadcrumb
