@@ -56,22 +56,12 @@ const ServicesPage = () => {
       </div> */}
 
       {/* Introduction Section */}
-      <div className="container mx-auto px-4 py-10">
-        <div className="max-w-3xl mx-auto text-center mb-4">
-          <h2 className="text-3xl font-bold mb-4 text-neutral-800">
-            Comprehensive Legal Solutions
-          </h2>
-          {/* <div className="w-24 h-1 mx-auto mb-6" style={{ backgroundColor: "#ebb661" }}></div> */}
-          <p className="text-neutral-600">
-            With over 33 years of experience, our law firm offers a wide range of legal services
-            tailored to meet your specific needs. Our team of dedicated lawyers is committed to
-            providing personalized attention and effective legal representation.
-          </p>
-        </div>
-      </div>
+      {/* <div className="container mx-auto px-4 py-10">
+        
+      </div> */}
       
       {/* Services List Section */}
-      <div id="service-list" className="container mx-auto px-4 pb-10">
+      <div id="service-list" className="container lg:pt-14 pt-10 mx-auto px-4 pb-10">
         {/* Search Bar */}
         <div className="max-w-md mx-auto mb-10">
           <div className="relative">
@@ -118,7 +108,7 @@ const ServicesPage = () => {
           style={{ backgroundImage: `url(${pattern})`, opacity: 1 }}
         ></div>
       
-        <div className='absolute z-[-1] inset-0 bg-neutral-950/90'></div>
+        <div className='absolute z-[-1] inset-0 bg-neutral-950/70'></div>
       
               <div className="max-w-6xl  mx-auto text-center">
                 <h2 className="text-4xl font-bold mb-4">
@@ -129,13 +119,15 @@ const ServicesPage = () => {
                 </p>
                 
                 <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-                  <div className="flex items-center">
-                    <Phone size={34} style={{ color: goldTheme }} />
-                    <div className="ml-3 text-left">
-                      {/* <p className=" text-neutral-400">Call Us</p> */}
-                      <a href='tel:7844830212' className="font-medium text-2xl hover:underline">+91-7844830212</a>
-                    </div>
-                  </div>
+                  <div className="ml-3 text-left">
+                               {/* <p className=" text-neutral-400">Call Us</p> */}
+                               <a
+                                 href="tel:7844830212"
+                                 className="font-medium text-2xl flex items-center gap-2 tracking-wide border border-[#ebb661] rounded-xl px-4 py-2 shadow-md hover:shadow-lg hover:border-[#fdff9f] transition"
+                               >
+                                 <Phone size={34} style={{ color: goldTheme }} /> +91-7844830212
+                               </a>
+                             </div>
                   
                   {/* <div className="flex items-center">
                     <Mail size={24} style={{ color: goldTheme }} />

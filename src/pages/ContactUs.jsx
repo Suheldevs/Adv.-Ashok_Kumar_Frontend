@@ -17,6 +17,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import { FaXTwitter } from "react-icons/fa6";
 import axios from "axios";
 import serviceData from "../Data/ServiceData";
+import { FaWhatsapp } from "react-icons/fa";
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -89,6 +90,9 @@ const ContactUs = () => {
           });
           setIsSubmitted(true);
         });
+        setTimeout(()=>{
+          window.location.reload();
+        },1000)
       } catch (err) {
         setError("Someting went wrorg");
       } finally {
@@ -197,6 +201,13 @@ const ContactUs = () => {
                       className="text-amber-600 flex-shrink-0 p-3 rounded-full bg-amber-100"
                     >
                       <Youtube size={18} />
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://web.whatsapp.com/send?phone=7844830212"
+                      className="text-amber-600 flex-shrink-0 p-3 rounded-full bg-amber-100"
+                    >
+                      <FaWhatsapp size={18} />
                     </a>
                   </div>
 

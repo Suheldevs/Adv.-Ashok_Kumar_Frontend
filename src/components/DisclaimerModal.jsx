@@ -35,13 +35,13 @@ useEffect(() => {
   return (
     <div className="fixed  inset-0 bg-black/80 backdrop-blur-[5px] flex items-center justify-center z-50">
       {/* Modal Container */}
-      <div className="bg-neutral-950 max-h-[95vh] border border-white/60 max-w-[39rem] w-full mx-4 p-6 relative">
+      <div className="bg-neutral-950 lg:max-h-[100vh] border border-white/60 max-w-[45rem] w-full mx-4 p-6 relative">
         
         {/* Logo and Title */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-2">
           {/* Logo - Golden scales of justice */}
-          <div className="flex justify-center mb-4">
-            <img src={logo} alt="Logo" className="h-24"/>
+          <div className="flex justify-center mb-2">
+            <img src={logo} alt="Logo" className="h-24 border p-2 rounded-full border-[#ebb661] "/>
           </div>
 
           <h3 className="text-[#ebb661] text-4xl font-bold mb-4">Disclaimer</h3>

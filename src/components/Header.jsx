@@ -87,7 +87,7 @@ export default function Header() {
               </a>
               
               <button 
-                className="px-6 py-2 text-neutral-900 font-semibold rounded-md"
+                className="px-6 py-2 cursor-pointer text-neutral-900 font-semibold rounded-md"
                 onClick={openModal}
                 style={{ backgroundColor: goldColor }}
               >

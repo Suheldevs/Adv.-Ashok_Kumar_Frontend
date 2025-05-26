@@ -31,8 +31,7 @@ export default function AboutSection() {
           <div className="flex gap-10 w-full">
             <div className="w-8/12">
               <p className="  text-neutral-600 text-base lg:text-lg">
-                With more than 33 years of service in the Judiciary, Mr. Ashok
-                Kumar has dedicated himself to helping people navigate complex
+                With more than 33 years of service in the Judiciary, Retd. Judge Ashok Kumar has dedicated himself to helping people navigate complex
                 legal challenges. He believes that timely and accurate legal
                 advice can significantly reduce case duration, saving clients
                 both time and money while minimizing stress. Working alongside a

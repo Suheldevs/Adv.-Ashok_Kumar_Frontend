@@ -12,7 +12,7 @@ function WhyChooseUs() {
     },
     {
       icon: <Users size={40} />,
-      title: "Client-Centered Approach", 
+      title: "Client-Centric Approach", 
       description: "We stand with our clients as allies, providing guidance and support throughout every step."
     },
     {

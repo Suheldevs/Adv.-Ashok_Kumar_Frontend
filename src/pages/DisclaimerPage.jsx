@@ -13,10 +13,7 @@ const Disclaimer = () => {
       />
     <div className="min-h-screen bg-neutral-50 flex items-center justify-center px-4 py-12">
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-2xl p-8 md:p-12 border border-neutral-200">
-        <div className="flex items-center gap-4 mb-6">
-          <ShieldAlert className="text-red-600 w-8 h-8" />
-          <h1 className="text-2xl font-bold text-neutral-800">Legal Disclaimer</h1>
-        </div>
+   
         <p className="text-neutral-700 mb-4">
           By visiting this website, you acknowledge that you on your own accord wish to know more
           about <strong>Retd. Judge Ashok Kumar</strong> for your own information and that there

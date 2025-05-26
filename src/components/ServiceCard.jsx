@@ -60,16 +60,22 @@ const ServiceCard = ({ service }) => {
       <div className="absolute inset-0 bg-neutral-900/80 group-hover:bg-[#ebb661]/80 transition-all duration-500" />
       
       {/* Icon */}
-      <div className="absolute top-4 left-4 bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30">
+      {/* <div className="absolute top-4 left-4 bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30">
+        <div className="text-white text-xl">
+          {service.icon}
+        </div>
+      </div> */}
+      
+      {/* Content */}
+      <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center p-6">
+        <h3 className="text-3xl flex justify-center items-center gap-4 font-bold mb-3 mt-16 group-hover:mt-0 text-white group-hover:text-black transition-all duration-600">
+          <div className="inline-block bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30">
         <div className="text-white text-xl">
           {service.icon}
         </div>
       </div>
-      
-      {/* Content */}
-      <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center p-6">
-        <h3 className="text-3xl font-bold mb-3 mt-14 group-hover:mt-0 text-white group-hover:text-black transition-all duration-600">
-          {service.title}
+      <p>{service.title}
+        </p>
         </h3>
         
         {/* Description - shows on hover */}
