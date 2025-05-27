@@ -95,7 +95,6 @@ export default function Header() {
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button 
-              aria-level="menu"
                 className="p-2 text-white focus:outline-none"
                 onClick={toggleMobileMenu}
                 aria-label="Toggle mobile menu"

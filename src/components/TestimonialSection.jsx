@@ -178,7 +178,7 @@ function TestimonialCard({ testimonial, renderStars }) {
       </div>
       <div className="mt-4">
         <div className="flex mb-4">{renderStars(testimonial.rating)}</div>
-        <p className="text-neutral-600 italic mb-6">"{testimonial.content}"</p>
+        <p className="text-neutral-800 italic mb-6">"{testimonial.content}"</p>
         <div className="flex items-center">
           <img
             src={user}

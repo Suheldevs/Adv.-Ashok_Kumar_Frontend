@@ -29,7 +29,7 @@ export default function HeroSection() {
             Explore Our Legal Services
           </Link>
 
-           <Link aria-label="Learn More" to='/about' style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 group text-neutral-900 font-bold py-3 px-6 rounded-md flex items-center transition duration-300">
+           <Link aria-label="Learn More ABout us" to='/about' style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 group text-neutral-900 font-bold py-3 px-6 rounded-md flex items-center transition duration-300">
             Learn More
           <ChevronsRight className="ml-1 group-hover:ml-2 transition-all duration-500 ease-in-out"/>
           </Link>
@@ -63,16 +63,16 @@ export default function HeroSection() {
       
       {/* Social media icons */}
       <div className="absolute hidden  bottom-8 bg-transparent right-5 lg:flex flex-col space-y-4 border border-neutral-800 p-2 rounded-2xl">
-        <a target="_black" href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+        <a aria-label="Facebook" target="_black" href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <Facebook size={20} />
         </a>
-        <a target="_black" href="https://x.com/RetdJudgeAshokK" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+        <a aria-label="twitter" target="_black" href="https://x.com/RetdJudgeAshokK" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <FaXTwitter size={20} />
         </a>
-        <a target="_black" href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+        <a aria-label="Linkedin" target="_black" href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <Linkedin size={20} />
         </a>
-        <a target="_black" href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
+        <a aria-label="Youtube" target="_black" href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ" className="bg-neutral-800 p-3 hover:scale-90 cursor-pointer z-20 rounded-full hover:bg-neutral-900  transition-colors duration-300">
           <Youtube size={20} />
         </a>
       </div>

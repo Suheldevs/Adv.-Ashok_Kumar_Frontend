@@ -36,7 +36,7 @@ export default function Footer() {
             </Link>
             <div className="flex space-x-3 mt-4">
               <a 
-              aria-lavel="Social Media Link"
+              aria-lavel="Facebook"
                 target="_blank"
                 href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
@@ -44,7 +44,7 @@ export default function Footer() {
                 <Facebook size={18} />
               </a>
               <a 
-              aria-lavel="Social Media Link"
+              aria-lavel="Twitter"
                 target="_blank"
                 href="https://x.com/RetdJudgeAshokK"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
@@ -52,7 +52,7 @@ export default function Footer() {
                 <FaXTwitter size={18} />
               </a>
               <a 
-              aria-lavel="Social Media Link"
+              aria-lavel="Linkedin"
                 target="_blank"
                 href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
@@ -60,7 +60,7 @@ export default function Footer() {
                 <Linkedin size={18} />
               </a>
               <a 
-              aria-lavel="Social Media Link"
+              aria-lavel="Youtube"
                 target="_blank"
                 href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
