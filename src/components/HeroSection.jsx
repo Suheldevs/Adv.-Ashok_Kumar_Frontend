@@ -25,11 +25,11 @@ export default function HeroSection() {
           <div className="flex flex-col lg:flex-row items-center gap-5">
          
 
-          <Link to='/services' className=" hidden lg:flex hover:bg-neutral-900 bg-neutral-950 border border-neutral-900 text-neutral-100 font-bold py-3 px-8 rounded-md  items-center transition duration-300">
+          <Link aria-label="Our Services" to='/services' className=" hidden lg:flex hover:bg-neutral-900 bg-neutral-950 border border-neutral-900 text-neutral-100 font-bold py-3 px-8 rounded-md  items-center transition duration-300">
             Explore Our Legal Services
           </Link>
 
-           <Link to='/about' style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 group text-neutral-900 font-bold py-3 px-6 rounded-md flex items-center transition duration-300">
+           <Link aria-label="Learn More" to='/about' style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 group text-neutral-900 font-bold py-3 px-6 rounded-md flex items-center transition duration-300">
             Learn More
           <ChevronsRight className="ml-1 group-hover:ml-2 transition-all duration-500 ease-in-out"/>
           </Link>

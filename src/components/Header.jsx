@@ -49,7 +49,7 @@ export default function Header() {
             {/* Logo */}
             <div className="flex relative items-center">
               <Link to='/' className=" absolute lg:mt-14  h-14 w-14 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
-               <img src={logo} />
+               <img src={logo} alt='Logo'/>
               </Link>
             </div>
             
@@ -83,6 +83,7 @@ export default function Header() {
               </a>
               
               <button 
+              aria-label="Book Consultation"
                 className="px-6 py-2 cursor-pointer text-neutral-900 font-semibold rounded-md"
                 onClick={openModal}
                 style={{ backgroundColor: goldColor }}
@@ -94,6 +95,7 @@ export default function Header() {
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button 
+              aria-level="menu"
                 className="p-2 text-white focus:outline-none"
                 onClick={toggleMobileMenu}
                 aria-label="Toggle mobile menu"
@@ -130,6 +132,7 @@ export default function Header() {
               </a>
               
               <button 
+              aria-label="Book Consultation"
                 className="w-full px-4 py-2 text-center text-neutral-900 font-semibold rounded-md"
                 style={{ backgroundColor: goldColor }}
                 onClick={() => {

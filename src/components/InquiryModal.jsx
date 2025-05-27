@@ -112,6 +112,7 @@ const newErrors = {};
         <div className="bg-neutral-50 px-6 py-4 border-b border-neutral-200 relative">
           <h3 className="text-lg font-semibold text-neutral-800">Contact Retd. Judge Ashok Kumar</h3>
           <button 
+          aria-label="Close modal"
             onClick={closeModal}
             className="absolute top-4 right-6 text-neutral-400 hover:text-neutral-600 transition-colors"
           >
@@ -296,12 +297,14 @@ const newErrors = {};
         {!isSubmitted && (
           <div className="bg-neutral-50 px-6 py-4 border-t border-neutral-200 flex justify-end">
             <button
+            aria-label="Cancel"
               onClick={closeModal}
               className="px-4 py-2 border border-neutral-300 text-neutral-700 rounded-md mr-2 hover:bg-neutral-100 transition-colors"
             >
               Cancel
             </button>
             <button
+             aria-label="Submit"
               onClick={handleSubmit}
               disabled={isSubmitting}
               className="px-4 py-2 rounded-md text-black font-medium flex items-center justify-center min-w-24 transition-all"

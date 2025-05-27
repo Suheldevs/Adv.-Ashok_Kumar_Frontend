@@ -4,7 +4,7 @@ import logo from '../assets/logo(2).png'
 const DisclaimerModal = () => {
   const [showModal, setShowModal] = useState(true);
 useEffect(() => {
-  const hasAgreed = localStorage.getItem('disclaimerAgreed');
+  const hasAgreed = localStorage.getItem('isclaimerAgreed');
   if (hasAgreed === 'true') {
     setShowModal(false);
   }
@@ -35,7 +35,7 @@ useEffect(() => {
   return (
     <div className="fixed  inset-0 bg-black/80 backdrop-blur-[5px] flex items-center justify-center z-50">
       {/* Modal Container */}
-      <div className="bg-neutral-950 lg:max-h-[100vh] border border-white/60 max-w-[45rem] w-full mx-4 p-6 relative">
+      <div className="bg-neutral-950 lg:max-h-[100vh] max-h-[95vh] overflow-y-auto  border border-white/60 max-w-[45rem] w-full lg:mx-4 mx-2 lg:p-6 p-2 relative">
         
         {/* Logo and Title */}
         <div className="text-center mb-2">
@@ -78,7 +78,7 @@ useEffect(() => {
 
         {/* Button */}
         <div className="flex justify-center">
-          <button
+          <button aria-label="Agree"
             onClick={handleAgree}
             className="bg-transparent border border-[#ebb661] text-[#ebb661] px-8 py-3 hover:bg-[#ebb661] hover:text-black transition-all duration-300 flex items-center space-x-2 font-medium"
           >

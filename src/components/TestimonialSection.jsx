@@ -142,7 +142,7 @@ export default function TestimonialSection() {
 
         {/* Navigation */}
         <div className="flex justify-center mt-10 space-x-4">
-          <button
+          <button aria-label="Privious"
             onClick={handlePrev}
             className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebec82]transition-colors"
           >
@@ -158,7 +158,7 @@ export default function TestimonialSection() {
               ></span>
             ))}
           </div>
-          <button
+          <button aria-label="Next"
             onClick={handleNext}
             className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebec82] transition-colors"
           >
@@ -186,7 +186,7 @@ function TestimonialCard({ testimonial, renderStars }) {
             className="w-12 h-12 rounded-full mr-4 object-cover"
           />
           <div>
-            <h4 className="font-bold text-neutral-900">{testimonial.name}</h4>
+            <div className="font-bold text-neutral-900">{testimonial.name}</div>
             <p className="text-[#ebb661] text-sm">{testimonial.position}</p>
           </div>
         </div>

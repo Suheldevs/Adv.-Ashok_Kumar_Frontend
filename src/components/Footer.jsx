@@ -31,32 +31,36 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="w-full flex flex-col items-center">
-            <Link to="/" className="border p-4 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-black">
-              <img src={logo} className="lg:h-32 h-28" />
+            <Link to="/" aria-label="Logo" className="border p-4 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-black">
+              <img src={logo} className="lg:h-32 h-28" alt="Logo" />
             </Link>
             <div className="flex space-x-3 mt-4">
-              <a
+              <a 
+              aria-lavel="Social Media Link"
                 target="_blank"
                 href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
               >
                 <Facebook size={18} />
               </a>
-              <a
+              <a 
+              aria-lavel="Social Media Link"
                 target="_blank"
                 href="https://x.com/RetdJudgeAshokK"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
               >
                 <FaXTwitter size={18} />
               </a>
-              <a
+              <a 
+              aria-lavel="Social Media Link"
                 target="_blank"
                 href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
               >
                 <Linkedin size={18} />
               </a>
-              <a
+              <a 
+              aria-lavel="Social Media Link"
                 target="_blank"
                 href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ"
                 className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
