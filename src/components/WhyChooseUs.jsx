@@ -39,7 +39,7 @@ function WhyChooseUs() {
 
   return (
     <section className="relative py-16 px-4 md:px-8 bg-gradient-to-br from-neutral-50/95 to-white/95">
-      <div className="container px-4 mx-auto">
+      <div className="container lg:px-4 mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block text-neutral-800">

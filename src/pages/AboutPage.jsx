@@ -41,10 +41,10 @@ export default function AboutUs() {
 
       {/* Profile Section */}
       <section className="py-16 px-4 md:px-8 max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center lg:gap-12 gap-4">
           <div className="md:w-1/3">
             <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-              <div className="h-52 lg:h-64 bg-neutral-200 flex items-center justify-center">
+              <div className="lg:h-64 bg-neutral-200 flex items-center justify-center">
                 <img
                   src={image}
                   alt="Judge Ashok Kumar"

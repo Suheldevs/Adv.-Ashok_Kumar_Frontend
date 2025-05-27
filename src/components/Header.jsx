@@ -32,7 +32,7 @@ export default function Header() {
   
   const navItems = [
     { label: 'Home', link: '/' },
-    { label: 'About', link: '/about' },
+    { label: 'About Us', link: '/about' },
     { label: 'Services', link: '/services' },
     { label: 'Gallery', link: '/gallery' },
     { label: 'Blog', link: '/blog' },
@@ -48,13 +48,9 @@ export default function Header() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex relative items-center">
-              <Link to='/' className=" absolute mt-14  h-10 w-10 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
+              <Link to='/' className=" absolute lg:mt-14  h-14 w-14 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
                <img src={logo} />
               </Link>
-              {/* <div>
-                <h1 className="text-white text-lg md:text-xl font-bold">Ashok Kumar</h1>
-                <p className="text-xs md:text-sm" style={{ color: goldColor }}>ADVOCATE & RETD JUDGE</p>
-              </div> */}
             </div>
             
             {/* Desktop Navigation */}

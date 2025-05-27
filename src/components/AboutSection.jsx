@@ -28,8 +28,8 @@ export default function AboutSection() {
             More Than Just Lawyers
             <span className="block">—Your Legal Partners</span>
           </h2>
-          <div className="flex gap-10 w-full">
-            <div className="w-8/12">
+          <div className="flex lg:flex-row flex-col gap-10 w-full">
+            <div className="lg:w-8/12 w-full text-justify">
               <p className="  text-neutral-600 text-base lg:text-lg">
                 With more than 33 years of service in the Judiciary, Retd. Judge Ashok Kumar has dedicated himself to helping people navigate complex
                 legal challenges. He believes that timely and accurate legal
@@ -87,7 +87,7 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <div className="w-4/12">
+            <div className="lg:w-4/12 w-full">
               <div className="space-y-6">
                 {/* Features */}
                 <div className="lg:mb-8 mb-4">

@@ -144,7 +144,7 @@ export default function TestimonialSection() {
         <div className="flex justify-center mt-10 space-x-4">
           <button
             onClick={handlePrev}
-            className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebb661] transition-colors"
+            className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebec82]transition-colors"
           >
             <ChevronLeft size={24} />
           </button>
@@ -160,7 +160,7 @@ export default function TestimonialSection() {
           </div>
           <button
             onClick={handleNext}
-            className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebb661] transition-colors"
+            className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebec82] transition-colors"
           >
             <ChevronRight size={24} />
           </button>

@@ -63,7 +63,7 @@ console.log(blogData)
 
   return (
     <div className="lg:py-14 md:py-12 py-10 bg-white/95">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:px-4">
         <div className="text-center mb-10">
             <h2 className="text-4xl font-bold mb-6 relative inline-block">
               <span className="relative z-10">Our Latest Insights</span>

@@ -8,6 +8,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
     phone: "",
     email: "",
     message: "",
+    service:""
   });
   const [errors, setErrors] = useState({});
   const [error, setError] = useState();
@@ -41,6 +42,10 @@ const newErrors = {};
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     }
+
+    if (!formData.service.trim()) {
+      newErrors.service = "Please Select a Service";
+    }
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -52,7 +57,7 @@ const newErrors = {};
       ...formData,
       [name]: value,
     });
-    
+    console.log(formData)
     // Clear error for this field when user starts typing
     if (errors[name]) {
       setErrors({
@@ -68,6 +73,7 @@ const newErrors = {};
       setError(null)
       try{
         const response  = await axios.post(`${backend_url}/inquiry/save`,formData)
+        
         setIsSubmitted(true);
         setTimeout(() => {
           setFormData({
@@ -75,9 +81,11 @@ const newErrors = {};
             phone: "",
             email: "",
             message: "",
+            service:""
           });
+          closeModal();
           setIsSubmitted(false);
-          closeModal();})
+        },2000)
       }
       catch(err){
         setError('Someting went wrorg');
@@ -91,7 +99,7 @@ const newErrors = {};
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-[1100]">
+    <div className="fixed inset-0 flex items-center justify-center z-[100]">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"
@@ -99,7 +107,7 @@ const newErrors = {};
       ></div>
       
       {/* Modal */}
-      <div className="relative bg-white rounded-lg shadow-xl w-full max-w-md mx-4 overflow-hidden transform transition-all">
+      <div className="relative max-h-[99vh] overflow-y-auto bg-white rounded-lg shadow-xl w-full max-w-md mx-4 overflow-hidden transform transition-all">
         {/* Modal Header */}
         <div className="bg-neutral-50 px-6 py-4 border-b border-neutral-200 relative">
           <h3 className="text-lg font-semibold text-neutral-800">Contact Retd. Judge Ashok Kumar</h3>
@@ -222,7 +230,7 @@ const newErrors = {};
               </div>
                   <div className='w-full'>
                           <label
-                            htmlFor="email"
+                            htmlFor="service"
                             className="block text-sm font-medium text-neutral-700 mb-1"
                           >
                             Services *
@@ -232,21 +240,24 @@ const newErrors = {};
                               <PenTool size={18} className="text-neutral-400" />
                             </div>
                             <select
+                            name="service"
+                            value={formData.service}
+                    onChange={handleChange}
                               className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                                errors.email
+                                errors.service
                                   ? "border-red-500"
                                   : "border-neutral-300"
                               } focus:outline-none focus:ring-2 focus:ring-amber-500`}
                             >
-                              <option disabled selected>--Select Service--</option>
+                              <option value='' selected>--Select Service--</option>
                               {serviceData.map((service) => (
-                                <option>{service.title}</option>
+                                <option value={service.title}>{service.title}</option>
                               ))}
                             </select>
                           </div>
-                          {errors.email && (
+                          {errors.service && (
                             <p className="mt-1 text-sm text-red-600">
-                              {errors.email}
+                              {errors.service}
                             </p>
                           )}
                         </div>

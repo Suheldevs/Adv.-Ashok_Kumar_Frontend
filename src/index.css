@@ -8,7 +8,10 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
 body::before {
   content: "";
   position: fixed;

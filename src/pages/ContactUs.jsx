@@ -24,6 +24,7 @@ const ContactUs = () => {
     phone: "",
     email: "",
     message: "",
+    service:""
   });
 
   const [errors, setErrors] = useState({});
@@ -58,6 +59,10 @@ const ContactUs = () => {
       newErrors.message = "Message is required";
     }
 
+    if (!formData.service.trim()) {
+      newErrors.service = "Please Select a Service";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -80,19 +85,19 @@ const ContactUs = () => {
           `${backend_url}/inquiry/save`,
           formData
         );
-
         setTimeout(() => {
           setFormData({
             name: "",
-            phone: "",
+            phone: "", 
             email: "",
             message: "",
+            service:""
           });
           setIsSubmitted(true);
         });
         setTimeout(()=>{
           window.location.reload();
-        },1000)
+        },2000)
       } catch (err) {
         setError("Someting went wrorg");
       } finally {
@@ -390,7 +395,7 @@ const ContactUs = () => {
                         </div>
                         <div className='w-1/2'>
                           <label
-                            htmlFor="email"
+                            htmlFor="service"
                             className="block text-sm font-medium text-neutral-700 mb-1"
                           >
                             Services *
@@ -400,21 +405,24 @@ const ContactUs = () => {
                               <Tornado size={18} className="text-neutral-400" />
                             </div>
                             <select
+                            name="service"
+                            onChange={handleChange}
+                            value={formData.service}
                               className={`w-full pl-10 pr-3 py-2 border rounded-md ${
-                                errors.email
+                                errors.service
                                   ? "border-red-500"
                                   : "border-neutral-300"
                               } focus:outline-none focus:ring-2 focus:ring-amber-500`}
                             >
-                              <option disabled selected>--Select Service--</option>
+                              <option selected value='' >--Select Service--</option>
                               {serviceData.map((service) => (
-                                <option>{service.title}</option>
+                                <option value={service.title}>{service.title}</option>
                               ))}
                             </select>
                           </div>
-                          {errors.email && (
+                          {errors.service && (
                             <p className="mt-1 text-sm text-red-600">
-                              {errors.email}
+                              {errors.service}
                             </p>
                           )}
                         </div>
@@ -458,7 +466,7 @@ const ContactUs = () => {
                         <button
                           type="submit"
                           onClick={handleSubmit}
-                          className="w-full bg-amber-500 hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out flex items-center justify-center"
+                          className="w-full cursor-pointer bg-amber-500 hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out flex items-center justify-center"
                           style={{ backgroundColor: "#ebb661" }}
                         >
                           {isSubmitting ? (
