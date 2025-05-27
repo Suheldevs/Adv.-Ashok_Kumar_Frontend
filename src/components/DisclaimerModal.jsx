@@ -4,7 +4,7 @@ import logo from '../assets/logo(2).png'
 const DisclaimerModal = () => {
   const [showModal, setShowModal] = useState(true);
 useEffect(() => {
-  const hasAgreed = localStorage.getItem('isclaimerAgreed');
+  const hasAgreed = localStorage.getItem('disclaimerAgreed');
   if (hasAgreed === 'true') {
     setShowModal(false);
   }

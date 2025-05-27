@@ -7,7 +7,7 @@ export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
-    <div className="bg-neutral-950 h-screen flex flex-row justify-center items-center text-white relative overflow-hidden">
+    <div className="bg-neutral-950 lg:h-screen h-[80vh] flex flex-row justify-center items-center text-white relative overflow-hidden">
       <div className="container lg:pt-20 mx-auto px-4  md:py-24 flex flex-col lg:flex-row items-center">
         {/* Left Content Area */}
         <div className="lg:w-1/2 pt-20 flex flex-col justify-center items-start z-10">
