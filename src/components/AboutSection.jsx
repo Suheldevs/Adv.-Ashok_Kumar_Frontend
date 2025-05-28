@@ -24,18 +24,18 @@ export default function AboutSection() {
       <div className="container mx-auto px-4">
         {/* Main Headline */}
         <div className="">
-          <h2 className="text-2xl max-w-4xl md:text-5xl font-serif font-bold text-neutral-900 lg:mb-4 mb-2">
+          <h2 className="text-2xl max-w-4xl md:text-5xl play font-bold text-neutral-900 lg:mb-4 mb-2">
             More Than Just Lawyers
             <span className="block">—Your Legal Partners</span>
           </h2>
           <div className="flex lg:flex-row flex-col gap-10 w-full">
             <div className="lg:w-8/12 w-full text-justify">
               <p className="  text-neutral-600 text-base lg:text-lg">
-                With more than 33 years of service in the Judiciary, Retd. Judge Ashok Kumar has dedicated himself to helping people navigate complex
+                With more than 33 years of service in the Judiciary, <strong>Retd. Judge Ashok Kumar</strong> has dedicated himself to helping people navigate complex
                 legal challenges. He believes that timely and accurate legal
                 advice can significantly reduce case duration, saving clients
                 both time and money while minimizing stress. Working alongside a
-                professional team, Mr. Kumar approaches each case not only as an
+                professional team, <strong>Retd. Judge Ashok Kumar</strong> approaches each case not only as an
                 advocate but as a trusted ally standing with clients throughout
                 their legal journey. His mission is to make quality legal
                 services accessible to every section of society at the most

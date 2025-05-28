@@ -27,7 +27,7 @@ export default function AboutUs() {
         <div className="relative max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-white">About</span>
-            <span style={{ color: goldTheme }}> Judge Ashok Kumar</span>
+            <span style={{ color: goldTheme }}> <strong>Retd. Judge Ashok Kumar</strong></span>
           </h1>
 
           <div className="flex items-center space-x-2">
@@ -56,7 +56,7 @@ export default function AboutUs() {
                   className="text-xl font-semibold"
                   style={{ color: goldTheme }}
                 >
-                  Retd. Judge Ashok Kumar
+                  <strong>Retd. Judge Ashok Kumar</strong>
                 </h3>
                 <p className="text-neutral-600">Advocate, Lucknow High Court</p>
                 <div className="mt-4 flex items-center">
@@ -259,10 +259,10 @@ export default function AboutUs() {
       </div>
 
       {/* Contact CTA */}
-      <section className="relative z-10 py-10 lg:py-16 px-4 md:px-8  text-white">
+      <section className="relative z-10 py-10 lg:py-16 xl:py-20 px-4 md:px-8  text-white">
         <div
           className="absolute inset-0 bg-cover bg-center z-[-1]"
-          style={{ backgroundImage: `url(${pattern})`, opacity: 1 }}
+          style={{ backgroundImage: `url(${pattern})`, opacity: 1, backgroundPosition:'top' }}
         ></div>
 
         <div className="absolute z-[-1] inset-0 bg-neutral-950/70"></div>

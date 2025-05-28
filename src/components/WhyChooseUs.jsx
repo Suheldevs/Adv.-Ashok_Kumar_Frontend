@@ -38,13 +38,13 @@ function WhyChooseUs() {
   ];
 
   return (
-    <section className="relative py-16 px-4 md:px-8 bg-gradient-to-br from-neutral-50/95 to-white/95">
+    <section className="relative py-14 px-4 md:px-8 bg-gradient-to-br from-neutral-50/95 to-white/95">
       <div className="container lg:px-4 mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block text-neutral-800">
-            <span className="relative z-10">Why Choose Us</span>
-            <span className="absolute bottom-2 left-0 w-full h-4 bg-opacity-30 " style={{ backgroundColor: goldTheme }}></span>
+            <span className="relative play z-10">Why Choose Us</span>
+            <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-30 " style={{ backgroundColor: goldTheme }}></span>
           </h2>
           <p className="text-neutral-600 max-w-3xl mx-auto text-lg  leading-relaxed">
             With decades of judicial experience and a commitment to accessible justice,
@@ -111,9 +111,9 @@ function WhyChooseUs() {
                   <blockquote className="text-xl lg:text-2xl italic text-white/90 leading-relaxed mb-6">
                     "I believe that if a person receives the right legal advice at the right time, their case won't be stretched unnecessarily in court. It can be resolved efficiently, reducing pressure on all parties while saving valuable time and money."
                   </blockquote>
-                  <p className="text-lg font-semibold text-white flex items-center justify-center lg:justify-start">
+                  <p className="text-lg font-semibold text-white z-50 flex items-center justify-center lg:justify-start">
                     <span className="w-12 h-0.5 mr-4 rounded-full" style={{ backgroundColor: goldTheme }}></span>
-                    Retd. Judge Ashok Kumar
+                    <strong className='text-white'>Retd. Judge Ashok Kumar</strong>
                   </p>
                 </div>
               </div>

@@ -58,7 +58,7 @@ const openModal = () => setIsModalOpen(true);
   // If service is not found or page is loading
   if (!service) {
     return (
-      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+      <div className="min-h-screen bg-neutral-50/95 flex items-center justify-center">
         <div className="text-center p-8">
           <div className="w-16 h-16 border-4 border-t-amber-500 border-neutral-200 rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-neutral-600">Loading service details...</p>
@@ -78,7 +78,7 @@ const openModal = () => setIsModalOpen(true);
           { label: `Services`, link: `/services` },
         ]}
       />
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-neutral-50/95">
       
 
       {/* Content Section */}
@@ -94,8 +94,10 @@ const openModal = () => setIsModalOpen(true);
           {/* Main Content */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-              <h2 className="text-2xl font-bold mb-4 text-neutral-800">Overview</h2>
-              <div className="w-20 h-1 mb-6" style={{ backgroundColor: "#ebb661" }}></div>
+              <div className="">
+                <img src={service.image} alt='service image' className="lg:h-80 h-52 rounded-2xl w-full object-cover"/>
+              </div>
+              <h2 className="text-3xl font-semibold play pt-4 pb-2 text-neutral-800">Overview</h2>
               <p className="text-neutral-600  mb-8 leading-relaxed">
                 {service.fullDescription}
               </p>
@@ -115,13 +117,13 @@ const openModal = () => setIsModalOpen(true);
               <p className="text-neutral-600 mb-6">
                 Our legal experts are ready to help you with your case. Schedule a consultation today.
               </p>
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="block w-full py-3 px-4 rounded-md font-medium text-white text-center transition-colors duration-300 mb-4"
                 style={{ backgroundColor: "#ebb661" }}
               >
                 Contact Us
-              </a>
+              </Link>
               <div className="space-y-4 mt-6">
                 <div className="flex items-start">
                   <div className="bg-amber-50 p-2 rounded-full mr-3">
@@ -147,7 +149,7 @@ const openModal = () => setIsModalOpen(true);
                   </div>
                   <div>
                     <p className="text-sm text-neutral-500">Business Hours</p>
-                    <p className="font-medium text-neutral-800">Mon-Fri: 9AM - 6PM</p>
+                    <p className="font-medium text-neutral-800">Mon-Sun: 8:00 AM - 11:30 PM</p>
                   </div>
                 </div>
               </div>
@@ -162,8 +164,9 @@ const openModal = () => setIsModalOpen(true);
                   .slice(0, 3)
                   .map(relatedService => (
                     <div key={relatedService.id} className="border-b border-neutral-100 pb-4 last:border-0 last:pb-0">
-                      <a 
-                        href={`/services/${relatedService.slug}`}
+                      <Link 
+                      aria-label="Services"
+                        to={`/services/${relatedService.slug}`}
                         className="flex items-center group"
                       >
                         <div className="bg-amber-50 p-2 rounded-full mr-3">
@@ -180,7 +183,7 @@ const openModal = () => setIsModalOpen(true);
                           </p>
                         </div>
                         <ChevronRight size={18} className="text-neutral-400 group-hover:text-amber-600 transition-colors" />
-                      </a>
+                      </Link>
                     </div>
                   ))
                 }
@@ -191,7 +194,7 @@ const openModal = () => setIsModalOpen(true);
             <div className="bg-amber-50 rounded-xl shadow-sm p-8 mt-8 border border-amber-100">
               <div className="text-center">
                 <Calendar size={32} className="mx-auto text-amber-600 mb-3" />
-                <h3 className="text-xl font-bold mb-2 text-neutral-800">Book a Consultation</h3>
+                <h3 className="text-xl font-bold mb-2 text-neutral-800">Book Free a Consultation</h3>
                 <p className="text-neutral-600 mb-4">
                   Schedule a meeting with our experienced attorneys to discuss your legal needs.
                 </p>
@@ -208,32 +211,7 @@ const openModal = () => setIsModalOpen(true);
         </div>
       </div>
 
-      {/* Testimonials/Call to Action */}
-      <div className="bg-neutral-100 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-2 text-neutral-800">Ready to Get Started?</h2>
-            <p className="text-neutral-600 mb-8 max-w-2xl mx-auto">
-              Our legal team is committed to providing you with the highest quality legal representation for your {service.title.toLowerCase()} needs.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link 
-                to="/contact" 
-                className="px-8 py-3 rounded-md font-medium text-white transition-colors duration-300"
-                style={{ backgroundColor: "#ebb661" }}
-              >
-                Contact Us Today
-              </Link>
-              <Link 
-                to="/services" 
-                className="px-8 py-3 border border-neutral-300 rounded-md font-medium text-neutral-700 bg-white hover:bg-neutral-50 transition-colors duration-300"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
     </>
   );

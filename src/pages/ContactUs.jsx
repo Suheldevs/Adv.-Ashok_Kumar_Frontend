@@ -11,6 +11,8 @@ import {
   Facebook,
   PenTool,
   Tornado,
+  WorkflowIcon,
+  CalendarClock,
 } from "lucide-react";
 import {} from "lucide-react";
 import Breadcrumb from "../components/Breadcrumb";
@@ -24,7 +26,7 @@ const ContactUs = () => {
     phone: "",
     email: "",
     message: "",
-    service:""
+    service: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -88,16 +90,16 @@ const ContactUs = () => {
         setTimeout(() => {
           setFormData({
             name: "",
-            phone: "", 
+            phone: "",
             email: "",
             message: "",
-            service:""
+            service: "",
           });
           setIsSubmitted(true);
         });
-        setTimeout(()=>{
+        setTimeout(() => {
           window.location.reload();
-        },2000)
+        }, 2000);
       } catch (err) {
         setError("Someting went wrorg");
       } finally {
@@ -128,7 +130,7 @@ const ContactUs = () => {
                   Contact Information
                 </h3>
 
-                <div className="space-y-8">
+                <div className="space-y-7">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 p-3 rounded-full bg-amber-100">
                       <Phone size={20} className="text-[#ebb661]" />
@@ -178,6 +180,18 @@ const ContactUs = () => {
                       </a>
                     </div>
                   </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 p-3 rounded-full bg-amber-100">
+                      <CalendarClock size={20} className="text-[#ebb661]" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="font-semibold text-neutral-700">Working Hours</h4>
+                      <li className=" text-neutral-700 flex justify-between">
+                      <span>Mon - Sun: &nbsp;  8:00 AM - 11:30 PM</span>
+                    </li>
+                    </div>
+                  </div>
+
                   <div className="flex items-start space-x-4">
                     <a
                       target="_blank"
@@ -216,53 +230,8 @@ const ContactUs = () => {
                     </a>
                   </div>
 
-                  {/* <div className="flex space-x-3 mt-3">
-              <a
-                target="_blank"
-                href="https://www.facebook.com/people/RetdJudge-Ashok-Kumar/pfbid0L8V9WY5cwsKtLfKzB6xhNS3f6iwRZqsu3m8FL5ZwZCWwUXEoeoXroEdW8TdYR6ZTl/?sk=about"
-                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                target="_blank"
-                href="https://x.com/RetdJudgeAshokK"
-                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
-              >
-                <FaXTwitter size={18} />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/retd-judge-ashok-kumar-advocate-high-court-882621258/"
-                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.youtube.com/channel/UChYcMgKaKiYQPtOCSADyKUQ"
-                className="bg-neutral-800 hover:bg-neutral-600 transition-colors p-2 rounded-full"
-              >
-                <Youtube size={18} />
-              </a>
-            </div> */}
                 </div>
-                <div className="pt-4 border-neutral-100">
-                  <h4 className="font-semibold text-neutral-700 mb-4">
-                    Working Hours
-                  </h4>
-                  <ul className="space-y-2 text-neutral-600">
-                    <li className="flex justify-between">
-                      <span>Monday - Sunday:</span>
-                      <span>8:00 AM - 11:30 PM</span>
-                    </li>
-{/* 
-                    <li className="flex justify-between">
-                      <span>Sunday:</span>
-                      <span>Closed</span>
-                    </li> */}
-                  </ul>
-                </div>
+                
               </div>
             </div>
 
@@ -297,7 +266,7 @@ const ContactUs = () => {
                   <form>
                     <div className="space-y-6">
                       <div className="flex justify-between items-center gap-4">
-                        <div className='w-1/2'>
+                        <div className="w-1/2">
                           <label
                             htmlFor="fullName"
                             className="block text-sm font-medium text-neutral-700 mb-1"
@@ -329,7 +298,7 @@ const ContactUs = () => {
                           )}
                         </div>
 
-                        <div className='w-1/2'>
+                        <div className="w-1/2">
                           <label
                             htmlFor="phoneNumber"
                             className="block text-sm font-medium text-neutral-700 mb-1"
@@ -362,7 +331,7 @@ const ContactUs = () => {
                         </div>
                       </div>
                       <div className="flex justify-between items-center gap-4">
-                        <div className='w-1/2'>
+                        <div className="w-1/2">
                           <label
                             htmlFor="email"
                             className="block text-sm font-medium text-neutral-700 mb-1"
@@ -393,7 +362,7 @@ const ContactUs = () => {
                             </p>
                           )}
                         </div>
-                        <div className='w-1/2'>
+                        <div className="w-1/2">
                           <label
                             htmlFor="service"
                             className="block text-sm font-medium text-neutral-700 mb-1"
@@ -405,18 +374,22 @@ const ContactUs = () => {
                               <Tornado size={18} className="text-neutral-400" />
                             </div>
                             <select
-                            name="service"
-                            onChange={handleChange}
-                            value={formData.service}
-                              className={`w-full pl-10 pr-3 py-2 border rounded-md ${
+                              name="service"
+                              onChange={handleChange}
+                              value={formData.service}
+                              className={`w-full pl-10  pr-3 py-2 border border-gray-200 bg-white  rounded-md ${
                                 errors.service
                                   ? "border-red-500"
                                   : "border-neutral-300"
                               } focus:outline-none focus:ring-2 focus:ring-amber-500`}
                             >
-                              <option selected value='' >--Select Service--</option>
+                              <option selected value="">
+                                --Select Service--
+                              </option>
                               {serviceData.map((service) => (
-                                <option value={service.title}>{service.title}</option>
+                                <option className="bg-neutral-800 text-[#ebb661] border focus:text-black" value={service.title}>
+                                  {service.title}
+                                </option>
                               ))}
                             </select>
                           </div>

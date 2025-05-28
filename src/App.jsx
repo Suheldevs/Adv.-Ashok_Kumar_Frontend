@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import DisclaimerModal from './components/DisclaimerModal'
 import Loader from './components/Loader' // golden spinner
+import ServiceDetail from './pages/ServiceDetailPage'
 
 // Lazy-loaded pages
 const Home = lazy(() => import('./pages/Home'))
@@ -35,6 +36,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<PageNotFound />} />

@@ -121,7 +121,7 @@ export default function ServicesSection() {
       <div className=" container mx-auto px-4 ">
          <div className="text-center  mb-10">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 relative inline-block">
-              <span className="relative z-10">Our Legal Services</span>
+              <span className="relative play z-10">Our Legal Services</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40"
                style={{ backgroundColor: goldColor }}
                >

@@ -29,8 +29,8 @@
 //     foter:"Civil Litigation",
 //     icon: <Scale size={24} />,
 //     description: "Expert legal representation for both criminal and civil cases, ensuring your rights are protected through every step of the legal process.",
-//     fullDescription: "Our experienced attorneys provide comprehensive legal representation for both criminal and civil cases. We understand that facing legal challenges can be overwhelming, which is why we offer personalized strategies tailored to your specific situation. Our team handles everything from misdemeanors to felonies in criminal law, and from small claims to complex litigation in civil matters. We thoroughly investigate each case, develop strong defense strategies, and work tirelessly to protect your rights and interests throughout the legal process.",
 //     image: img1,
+//     fullDescription: "Our experienced attorneys provide comprehensive legal representation for both criminal and civil cases. We understand that facing legal challenges can be overwhelming, which is why we offer personalized strategies tailored to your specific situation. Our team handles everything from misdemeanors to felonies in criminal law, and from small claims to complex litigation in civil matters. We thoroughly investigate each case, develop strong defense strategies, and work tirelessly to protect your rights and interests throughout the legal process.",
 //     features: ["Criminal defense", "Civil litigation", "Court representation", "Legal consultation", "Case evaluation"],
 //     faqs: [
 //       {
@@ -54,8 +54,8 @@
 //     foter:"Family Law",
 //     icon: <Heart size={24} />,
 //     description: "Compassionate legal support for sensitive family issues including domestic violence cases, child custody, and other family law matters.",
-//     fullDescription: "Our family law practice provides compassionate and effective legal support for a wide range of family matters, with special sensitivity to domestic violence cases. We understand the emotional complexities involved in family legal disputes and offer a supportive environment where clients can discuss their concerns confidentially. Our attorneys are experienced in handling restraining orders, child custody arrangements, divorce proceedings, and other family law matters. We prioritize the safety and well-being of our clients and their children while working toward fair and sustainable legal solutions.",
 //     image: img2,
+//     fullDescription: "Our family law practice provides compassionate and effective legal support for a wide range of family matters, with special sensitivity to domestic violence cases. We understand the emotional complexities involved in family legal disputes and offer a supportive environment where clients can discuss their concerns confidentially. Our attorneys are experienced in handling restraining orders, child custody arrangements, divorce proceedings, and other family law matters. We prioritize the safety and well-being of our clients and their children while working toward fair and sustainable legal solutions.",
 //     features: ["Restraining orders", "Child custody", "Alimony cases", "Family counseling", "Legal protection"],
 //     faqs: [
 //       {
@@ -228,25 +228,95 @@
 
 
 
-import { 
-  Scale, 
-  Heart, 
-  ScrollText, 
-  Home, 
-  Briefcase, 
-  ShoppingBag, 
-  FileText, 
+// import { 
+//   Scale, 
+//   Heart, 
+//   ScrollText, 
+//   Home, 
+//   Briefcase, 
+//   ShoppingBag, 
+//   FileText, 
+//   Users,
+// } from "lucide-react";
+
+// import img1 from '../assets/service/1.webp'
+// import img2 from '../assets/service/2.webp'
+// import img3 from '../assets/service/3.webp'
+// import img4 from '../assets/service/4.webp'
+// import img5 from '../assets/service/5.webp'
+// import img6 from '../assets/service/6.webp'
+// import img7 from '../assets/service/7.webp'
+// import img8 from '../assets/service/8.webp'
+
+// const serviceData = [
+//   {
+//     id: 1,
+//     title: "Family Court",
+//     icon: <Heart size={24} />,
+//     image: img2,
+//     description: "Compassionate legal support for sensitive family issues including domestic violence cases, child custody, and other family law matters.",
+  
+//   },
+//   {
+//     id: 2,
+//     title: "Criminal Lawyer",
+//     icon: <Scale size={24} />,
+//     description: "Expert legal representation for both criminal and civil cases, ensuring your rights are protected through every step of the legal process.",
+//     image: img1,
+//   },
+//   {
+//     id: 4,
+//     title: "Civil Law Disputes",
+//     icon: <Home size={24} />,
+//     description: "Comprehensive legal services for property-related disputes, transactions, and documentation to protect your real estate investments.",
+//     image: img4,
+   
+//   },
+//   {
+//     id: 5,
+//     title: "Corporate Lawyer",
+//     icon: <Briefcase size={24} />,
+//     description: "Dedicated advocacy for employment law matters and labor rights, representing both employers and employees in workplace legal issues.",
+//     image: img5,
+   
+//   },
+//   {
+//     id: 7,
+//     title: "Divorce Lawyer",
+//     icon: <Users size={24} />,
+//     description: "Supportive legal guidance through court marriages and divorce proceedings, ensuring fair outcomes in marital disputes.",
+//     image: img8,
+//   },
+//   {
+//     id: 8,
+//     title: "Property Lawyer",
+//     icon: <FileText size={24} />,
+//     description: "Professional drafting and review of legal documents and contracts to ensure your interests are protected in all agreements.",
+//     image: img7,
+//   }
+// ];
+
+// export default serviceData
+
+
+
+
+
+import {
+  Scale,
+  Heart,
+  Home,
+  Briefcase,
+  FileText,
   Users,
 } from "lucide-react";
 
-import img1 from '../assets/service/1.webp'
-import img2 from '../assets/service/2.webp'
-import img3 from '../assets/service/3.webp'
-import img4 from '../assets/service/4.webp'
-import img5 from '../assets/service/5.webp'
-import img6 from '../assets/service/6.webp'
-import img7 from '../assets/service/7.webp'
-import img8 from '../assets/service/8.webp'
+import img1 from "../assets/service/1.webp";
+import img2 from "../assets/service/2.webp";
+import img4 from "../assets/service/4.webp";
+import img5 from "../assets/service/5.webp";
+import img7 from "../assets/service/7.webp";
+import img8 from "../assets/service/8.webp";
 
 const serviceData = [
   {
@@ -254,46 +324,133 @@ const serviceData = [
     title: "Family Court",
     icon: <Heart size={24} />,
     image: img2,
-    description: "Compassionate legal support for sensitive family issues including domestic violence cases, child custody, and other family law matters.",
-  
+    description:
+      "Compassionate legal support for sensitive family issues including domestic violence cases, child custody, and other family law matters.",
+    slug: "family-court",
+    fullDescription:
+      "We provide legal services in family matters such as domestic violence, custody, and more. Our aim is to support families through compassionate and effective legal care.",
+    features: ["Domestic violence", "Child custody", "Alimony", "Court marriage", "Family mediation"],
+    faqs: [
+      {
+        question: "Do you handle child custody cases?",
+        answer: "Yes, we provide complete support and representation in child custody cases based on the best interest of the child."
+      },
+      {
+        question: "Can I get legal help for domestic violence?",
+        answer: "Absolutely. We help clients file for protection and represent them throughout the legal process."
+      }
+    ]
   },
   {
     id: 2,
     title: "Criminal Lawyer",
     icon: <Scale size={24} />,
-    description: "Expert legal representation for both criminal and civil cases, ensuring your rights are protected through every step of the legal process.",
     image: img1,
+    description:
+      "Expert legal representation for both criminal and civil cases, ensuring your rights are protected through every step of the legal process.",
+    slug: "criminal-lawyer",
+    fullDescription:
+      "We offer strong representation in criminal law cases, ensuring due process and the protection of your constitutional rights in all phases of your legal matter.",
+    features: ["Bail support", "Trial defense", "FIR quashing", "Anticipatory bail", "Appeals"],
+    faqs: [
+      {
+        question: "Can I apply for anticipatory bail?",
+        answer: "Yes, our team can help you file a petition for anticipatory bail and represent you in court."
+      },
+      {
+        question: "Do you handle criminal appeals?",
+        answer: "Yes, we take on appeals and revisional matters across various courts."
+      }
+    ]
   },
   {
     id: 4,
     title: "Civil Law Disputes",
     icon: <Home size={24} />,
-    description: "Comprehensive legal services for property-related disputes, transactions, and documentation to protect your real estate investments.",
     image: img4,
-   
+    description:
+      "Comprehensive legal services for property-related disputes, transactions, and documentation to protect your real estate investments.",
+    slug: "civil-law-disputes",
+    fullDescription:
+      "Our civil law team offers end-to-end services in property matters, tenant disputes, partition suits, and more, focusing on timely and just outcomes.",
+    features: ["Property disputes", "Contract enforcement", "Injunctions", "Document vetting", "Partition suits"],
+    faqs: [
+      {
+        question: "Do you handle property dispute cases?",
+        answer: "Yes, we assist in all types of civil property disputes including title suits, encroachments, and tenancy matters."
+      },
+      {
+        question: "What documents are required for a civil case?",
+        answer: "It depends on the case type, but generally ownership proofs, agreements, and identity proofs are needed."
+      }
+    ]
   },
   {
     id: 5,
     title: "Corporate Lawyer",
     icon: <Briefcase size={24} />,
-    description: "Dedicated advocacy for employment law matters and labor rights, representing both employers and employees in workplace legal issues.",
     image: img5,
-   
+    description:
+      "Dedicated advocacy for employment law matters and labor rights, representing both employers and employees in workplace legal issues.",
+    slug: "corporate-lawyer",
+    fullDescription:
+      "Our corporate legal services help businesses with compliance, labor laws, dispute resolution, and contracts to ensure smooth operations and legal safety.",
+    features: ["Employment law", "Business compliance", "HR policy", "M&A support", "Labor disputes"],
+    faqs: [
+      {
+        question: "Can you help with drafting employee contracts?",
+        answer: "Yes, we create comprehensive, legally sound contracts tailored for your organization."
+      },
+      {
+        question: "What if my company is facing a labor dispute?",
+        answer: "We represent both employers and employees in resolving labor-related issues legally and effectively."
+      }
+    ]
   },
   {
     id: 7,
     title: "Divorce Lawyer",
     icon: <Users size={24} />,
-    description: "Supportive legal guidance through court marriages and divorce proceedings, ensuring fair outcomes in marital disputes.",
     image: img8,
+    description:
+      "Supportive legal guidance through court marriages and divorce proceedings, ensuring fair outcomes in marital disputes.",
+    slug: "divorce-lawyer",
+    fullDescription:
+      "We help clients navigate court marriages, divorce filings, mutual consent divorces, and legal separation with dignity and minimal conflict.",
+    features: ["Mutual divorce", "Contested divorce", "Court marriage", "Child custody", "Maintenance"],
+    faqs: [
+      {
+        question: "How long does a mutual divorce take?",
+        answer: "It usually takes 6 months if both parties agree and necessary paperwork is submitted."
+      },
+      {
+        question: "Do you assist in NRI divorce cases?",
+        answer: "Yes, we handle NRI divorce and family law cases involving cross-border issues."
+      }
+    ]
   },
   {
     id: 8,
     title: "Property Lawyer",
     icon: <FileText size={24} />,
-    description: "Professional drafting and review of legal documents and contracts to ensure your interests are protected in all agreements.",
     image: img7,
-  }
+    description:
+      "Professional drafting and review of legal documents and contracts to ensure your interests are protected in all agreements.",
+    slug: "property-lawyer",
+    fullDescription:
+      "We provide specialized services in property documentation, lease agreements, due diligence, and registration to ensure smooth property transactions.",
+    features: ["Sale deed", "Title check", "Agreement drafting", "Registry support", "Lease documents"],
+    faqs: [
+      {
+        question: "Can you verify property ownership?",
+        answer: "Yes, we conduct thorough due diligence to verify property title and ownership history."
+      },
+      {
+        question: "Do you help with property registration?",
+        answer: "Yes, we assist with drafting, stamp duty calculation, and registration at sub-registrar offices."
+      }
+    ]
+  },
 ];
 
-export default serviceData
+export default serviceData;

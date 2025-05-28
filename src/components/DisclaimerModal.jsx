@@ -3,17 +3,17 @@ import { ArrowRight } from "lucide-react";
 import logo from '../assets/logo(2).png'
 const DisclaimerModal = () => {
   const [showModal, setShowModal] = useState(true);
-useEffect(() => {
-  const hasAgreed = localStorage.getItem('disclaimerAgreed');
-  if (hasAgreed === 'true') {
-    setShowModal(false);
-  }
-}, []);
+// useEffect(() => {
+//   const hasAgreed = localStorage.getItem('disclaimerAgreed');
+//   if (hasAgreed === 'true') {
+//     setShowModal(false);
+//   }
+// }, []);
 
   const handleAgree = () => {
-     localStorage.setItem('disclaimerAgreed', 'true');
+    //  localStorage.setItem('disclaimerAgreed', 'true');
     setShowModal(false);
-    console.log("User agreed to disclaimer"); 
+    // console.log("User agreed to disclaimer"); 
   };
 
   useEffect(() => {
@@ -35,7 +35,7 @@ useEffect(() => {
   return (
     <div className="fixed  inset-0 bg-black/80 backdrop-blur-[5px] flex items-center justify-center z-50">
       {/* Modal Container */}
-      <div className="bg-neutral-950 lg:max-h-[100vh] max-h-[95vh] overflow-y-auto  border border-white/60 max-w-[45rem] w-full lg:mx-4 mx-2 lg:p-6 p-2 relative">
+      <div className="bg-neutral-950 lg:max-h-[100vh] max-h-[95vh] overflow-y-auto  border border-white/60 max-w-6xl w-full lg:mx-4 mx-2 lg:p-6 p-2 relative">
         
         {/* Logo and Title */}
         <div className="text-center mb-2">

@@ -48,12 +48,13 @@ export default function Header() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex relative items-center">
-              <Link to='/' className=" absolute lg:mt-14  h-14 w-14 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
+              <Link to='/' className=" absolute md:mt-14  h-14 w-14 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
                <img src={logo} alt='Logo'/>
               </Link>
             </div>
             
             {/* Desktop Navigation */}
+            <div className="flex lg:gap-8 gap-4">
             <nav className="hidden md:flex items-center">
               <ul className="flex space-x-4 lg:space-x-6">
                 {navItems.map((item, index) => (
@@ -72,7 +73,7 @@ export default function Header() {
             
             {/* Right Contact Info */}
             <div className="hidden lg:flex items-center space-x-6">
-              <a href="tel:7844830212" className="flex items-center text-white group">
+              <a href="tel:7844830212" className="hidden xl:flex items-center text-white group">
                 <div className="p-2 rounded-full mr-2 group-hover:text-neutral-900 transition-all duration-300 group-hover:scale-110" style={{ backgroundColor: goldColor }}>
                   <Phone size={16} className="text-neutral-900" />
                 </div>
@@ -91,7 +92,7 @@ export default function Header() {
                 BOOK CONSULTATION
               </button>
             </div>
-            
+            </div>
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button 

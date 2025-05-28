@@ -72,7 +72,7 @@ export default function Footer() {
 
           {/* Practice Areas */}
           <div>
-            <h3 className="text-xl font-bold mb-4 tracking-wide">
+            <h3 className="text-xl play  font-semibold mb-4 tracking-wide">
               Practice Areas
             </h3>
             {/* <div className="h-1 w-12 bg-amber-600 mb-4"></div> */}
@@ -87,7 +87,7 @@ export default function Footer() {
                     className="text-[#ebb661] mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                   <Link
-                    to={`/services`}
+                    to={`/services/${area.slug}`}
                     className="text-neutral-400 hover:text-white transition-colors"
                   >
                     {area.title}
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Information</h3>
+            <h3 className="text-xl play tracking-wide font-semibold mb-4">Contact Information</h3>
             {/* <div className="h-1 w-12 bg-amber-600 mb-4"></div> */}
             <ul className="space-y-4">
               <li className="flex items-start hover:translate-x-1 group">
@@ -159,7 +159,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl w-full font-bold mb-4">Our Location</h3>
+            <h3 className="text-xl play tracking-wide font-semibold mb-4">Our Location</h3>
             {/* <div className="h-1 w-12 bg-amber-600 mb-4"></div> */}
             <div className="">
               <iframe
@@ -180,7 +180,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-neutral-400 text-sm mb-4 md:mb-0 flex lg:flex-row flex-col justify-center items-center gap-1">
-              © {currentYear} Judge Ashok Kumar. All rights reserved. ||
+              © {currentYear} <strong>Retd. Judge Ashok Kumar</strong>. All rights reserved. ||
               Desinged By
               <Link
                 aria-label="Code Crafter"
