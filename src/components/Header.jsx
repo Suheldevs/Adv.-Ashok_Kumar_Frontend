@@ -44,7 +44,7 @@ export default function Header() {
       <InquiryModal isOpen={isModalOpen} closeModal={closeModal} />
       
       <header className={`fixed top-0 left-0 w-full  z-50 transition-all duration-300 ${scrolled ? 'bg-neutral-950/95' : 'lg:bg-transparent bg-neutral-950/95'}`}>
-        <div className="container mx-auto px-4 ">
+        <div className="container mx-auto px-4 lg:px-8 ">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex relative items-center">
