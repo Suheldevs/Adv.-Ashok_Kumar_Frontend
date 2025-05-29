@@ -48,7 +48,7 @@ export default function Header() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex relative items-center">
-              <Link to='/' className=" absolute md:mt-14  h-14 w-14 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
+              <Link aria-label="home" to='/' className=" absolute md:mt-14  h-14 w-14 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
                <img src={logo} alt='Logo'/>
               </Link>
             </div>
@@ -60,6 +60,7 @@ export default function Header() {
                 {navItems.map((item, index) => (
                   <li key={index}>
                     <Link 
+                    aria-label={item.label}
                       to={item.link} 
                       className="text-white text-sm font-medium uppercase tracking-wider hover:text-opacity-70 transition-all duration-300 hover:border-b-2 pb-1"
                       style={{ borderColor: goldColor }}

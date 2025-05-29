@@ -136,6 +136,7 @@ export default function AboutSection() {
                       className="mr-2 mt-1 flex-shrink-0"
                     />
                     <a
+                    aria-label='Google map'
                       href="https://maps.app.goo.gl/iv7kN1KGFdnksnV66"
                       target="_blank"
                       className="text-neutral-700"

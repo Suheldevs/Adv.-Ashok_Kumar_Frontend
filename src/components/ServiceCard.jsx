@@ -54,7 +54,7 @@ const ServiceCard = ({ service }) => {
           <div className="inline-block bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30">
             <div className="text-white text-xl">{service.icon}</div>
           </div>
-          <Link to={`/services/${service.slug}`} className="hover:underline " >{service.title}</Link>
+          <Link aria-label={service.title} to={`/services/${service.slug}`} className="hover:underline " >{service.title}</Link>
         </h3>
 
         <p className="text-black/90 text-sm mb-6 opacity-0 hidden group-hover:block group-hover:opacity-100 transition-all duration-300 max-w-xs">
