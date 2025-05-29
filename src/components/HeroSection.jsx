@@ -31,7 +31,7 @@ export default function HeroSection() {
             Explore Our Legal Services
           </Link>
 
-           <Link aria-label="Learn More ABout us" to='/about' style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 group text-neutral-900 font-bold py-3 px-6 rounded-md flex items-center transition duration-300">
+           <Link aria-label="More about us" to='/about' style={{ backgroundColor: "#ebb661" }} className="hover:bg-amber-500 group text-neutral-900 font-bold py-3 px-6 rounded-md flex items-center transition duration-300">
             Learn More
           <ChevronsRight className="ml-1 group-hover:ml-2 transition-all duration-500 ease-in-out"/>
           </Link>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
-import user from '../assets/Home/user.webp'
+import user from "../assets/Home/user.webp";
 // Testimonial data
 const testimonials = [
   {
@@ -8,7 +8,7 @@ const testimonials = [
     name: "Rajesh Patel",
     position: "Business Owner",
     content:
-      "Advocate Ashok Kumar's extensive legal expertise and strategic approach were instrumental in resolving our complex commercial dispute. His methodical preparation and persuasive arguments in court secured a favorable outcome for our business.",
+      "Advocate Ashok Kumar's extensive legal expertise  in resolving our complex commercial dispute. His methodical preparation and persuasive arguments in court secured a favorable outcome for our business.",
     rating: 5,
     image: "/api/placeholder/64/64",
   },
@@ -45,27 +45,27 @@ export default function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
- const goldColor = "#ebb661";
+  const goldColor = "#ebb661";
   // Check screen size on mount and window resize
   useEffect(() => {
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
     };
-    
+
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
-    
+
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   // Autoplay functionality
   useEffect(() => {
     if (!autoplay) return;
-    
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     }, 5000);
-    
+
     return () => clearInterval(interval);
   }, [autoplay]);
 
@@ -88,7 +88,7 @@ export default function TestimonialSection() {
 
   const handlePrev = () => {
     setAutoplay(false);
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
@@ -116,33 +116,45 @@ export default function TestimonialSection() {
   return (
     <section className="bg-neutral-50/95 lg:py-14 py-10">
       <div className="container mx-auto px-4">
-       <div className="text-center mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block">
-              <span className="relative play z-10">Client Testimonials</span>
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
-            </h2>
-            <p className="text-neutral-600 max-w-2xl mx-auto text-base lg:text-lg">
-            Hear from clients who have benefited from Judge Ashok Kumar's extensive legal expertise and commitment to justice.
-            </p>
-          </div>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block">
+            <span className="relative play z-10">Client Testimonials</span>
+            <span
+              className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40"
+              style={{ backgroundColor: goldColor }}
+            ></span>
+          </h2>
+          <p className="text-neutral-600 max-w-2xl mx-auto text-base lg:text-lg">
+            Hear from clients who have benefited from Judge Ashok Kumar's
+            extensive legal expertise and commitment to justice.
+          </p>
+        </div>
 
         {/* Desktop view with multiple testimonials */}
         <div className="hidden lg:block">
           <div className="grid grid-cols-3 gap-8">
             {visibleTestimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} renderStars={renderStars} />
+              <TestimonialCard
+                key={testimonial.id}
+                testimonial={testimonial}
+                renderStars={renderStars}
+              />
             ))}
           </div>
         </div>
 
         {/* Mobile view with single testimonials */}
         <div className="lg:hidden">
-          <TestimonialCard testimonial={visibleTestimonials[0]} renderStars={renderStars} />
+          <TestimonialCard
+            testimonial={visibleTestimonials[0]}
+            renderStars={renderStars}
+          />
         </div>
 
         {/* Navigation */}
         <div className="flex justify-center mt-10 space-x-4">
-          <button aria-label="Privious"
+          <button
+            aria-label="Privious"
             onClick={handlePrev}
             className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebec82]transition-colors"
           >
@@ -158,7 +170,8 @@ export default function TestimonialSection() {
               ></span>
             ))}
           </div>
-          <button aria-label="Next"
+          <button
+            aria-label="Next"
             onClick={handleNext}
             className="p-2 rounded-full bg-white shadow-md text-[#ebb661] hover:bg-[#ebec82] transition-colors"
           >
@@ -187,7 +200,7 @@ function TestimonialCard({ testimonial, renderStars }) {
           />
           <div>
             <div className="font-bold text-neutral-900">{testimonial.name}</div>
-            <p className="text-[#ebb661] text-sm">{testimonial.position}</p>
+            <p className=" text-sm">{testimonial.position}</p>
           </div>
         </div>
       </div>

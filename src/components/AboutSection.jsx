@@ -160,6 +160,7 @@ export default function AboutSection() {
                   </div>
                   <div className=" flex lg:mt-6 mt-4">
                     <Link
+                    aria-label="About us"
                       to="/about"
                       className="inline-flex bg-neutral-800 items-center px-6 py-3 rounded-md text-white font-medium transition-all duration-300 hover:shadow-lg"
                     >
