@@ -49,8 +49,8 @@ const ServiceCard = ({ service }) => {
 
       <div className="absolute inset-0 bg-neutral-900/80 group-hover:bg-[#ebb661]/80 transition-all duration-500" />
 
-      <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center p-6">
-        <h3 className="lg:text-3xl text-xl h-full flex justify-center items-center gap-4 font-bold mb-3  group-hover:mt-0 text-white group-hover:text-black transition-all duration-600">
+      <div className="relative  z-10 h-full flex flex-col justify-center lg:items-center lg:text-center p-6">
+        <h3 className="lg:text-3xl text-xl h-full flex lg:justify-center items-center gap-4 font-bold mb-3  group-hover:mt-0 text-white group-hover:text-black transition-all duration-600">
           <div className="inline-block bg-white/20 backdrop-blur-sm p-2 rounded-full border border-white/30">
             <div className="text-white text-2xl">{service.icon2}</div>
           </div>

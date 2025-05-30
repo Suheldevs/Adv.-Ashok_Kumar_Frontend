@@ -359,7 +359,7 @@ const serviceData = [
 
   {
     id: 5,
-    title: "Corporate & Business Law",
+    title: "Corporate Legal Advisory",
     icon: <Briefcase size={24} />,
     icon2: "🏢",
     slog: "Strategic Corporate Law Solutions by Retd. Judge Ashok Kumar",

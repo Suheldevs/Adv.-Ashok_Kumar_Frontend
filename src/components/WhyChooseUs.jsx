@@ -90,7 +90,7 @@ function WhyChooseUs() {
         {/* Quote Section */}
         <div className="relative">
           <div 
-            className="bg-gradient-to-r from-neutral-900 to-neutral-800 p-10 lg:p-12 rounded-3xl shadow-2xl relative overflow-hidden"
+            className="bg-gradient-to-r from-neutral-900 to-neutral-800 p-4 lg:p-10 rounded-3xl shadow-2xl relative overflow-hidden"
           >
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-64 h-64 opacity-5">
@@ -108,10 +108,10 @@ function WhyChooseUs() {
                   </div>
                 </div>
                 <div className="lg:w-5/6 lg:pl-10 text-center lg:text-left">
-                  <blockquote className="text-xl lg:text-2xl italic text-white/90 leading-relaxed mb-6">
+                  <blockquote className="text-base lg:text-2xl italic text-white/90 leading-relaxed mb-6">
                     "I believe that if a person receives the right legal advice at the right time, their case won't be stretched unnecessarily in court. It can be resolved efficiently, reducing pressure on all parties while saving valuable time and money."
                   </blockquote>
-                  <p className="text-lg font-semibold text-white z-50 flex items-center justify-center lg:justify-start">
+                  <p className="lg:text-lg text-base font-semibold text-white z-50 flex items-center justify-center lg:justify-start">
                     <span className="w-12 h-0.5 mr-4 rounded-full" style={{ backgroundColor: goldTheme }}></span>
                     <strong className='text-white'>Retd. Judge Ashok Kumar</strong>
                   </p>
