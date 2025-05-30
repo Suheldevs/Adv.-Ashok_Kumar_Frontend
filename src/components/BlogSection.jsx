@@ -21,6 +21,7 @@ console.log(blogData)
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+     arrows: false, 
     responsive: [
       {
         breakpoint: 1024,
@@ -62,10 +63,10 @@ console.log(blogData)
   }
 
   return (
-    <div className="lg:py-14 md:py-12 py-10 bg-white/95">
+    <div className="lg:py-14 md:py-12 py-10 bg-white/95 ">
       <div className="container mx-auto lg:px-4">
         <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold mb-6 relative inline-block">
+            <h2 className="lg:text-4xl text-3xl font-bold mb-6 relative inline-block">
               <span className="relative play z-10">Our Latest Insights</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-opacity-40" style={{ backgroundColor: goldColor }}></span>
             </h2>
@@ -73,7 +74,7 @@ console.log(blogData)
               Explore the key legal domains where we offer expert representation, rooted in years of judicial wisdom and advocacy excellence.
             </p>
           </div>
-        <Slider {...settings}>
+        <Slider {...settings} className="">
           {Array.isArray(blogData) && blogData.length > 0 ? (
             blogData.map((post) => (
               <div key={post._id} className="px-2">

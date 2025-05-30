@@ -74,7 +74,7 @@ function WhyChooseUs() {
               </div>
               
               {/* Content */}
-              <h3 className="text-2xl font-bold mb-4 text-neutral-800 group-hover:text-neutral-900 transition-colors duration-300">
+              <h3 className="lg:text-2xl text-xl font-bold mb-4 text-neutral-800 group-hover:text-neutral-900 transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-neutral-600 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">

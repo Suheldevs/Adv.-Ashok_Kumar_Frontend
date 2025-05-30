@@ -179,7 +179,7 @@ export default function Footer() {
       <div className="border-t border-neutral-700">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-neutral-400 text-sm mb-4 md:mb-0 flex lg:flex-row flex-col justify-center items-center gap-1">
+            <div className="text-neutral-400 lg:text-sm text-xs mb-4 md:mb-0 flex lg:flex-row flex-col justify-center items-center gap-1">
               <div >© {currentYear} <strong>Retd. Judge Ashok Kumar</strong>. All rights reserved. || </div>
              <div className="justify-center items-center flex gap-2">
 <div>Desinged By</div>

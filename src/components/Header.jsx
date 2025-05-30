@@ -48,7 +48,7 @@ export default function Header() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex relative items-center">
-              <Link aria-label="home" to='/' className=" absolute md:mt-14  h-14 w-14 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
+              <Link aria-label="home" to='/' className=" absolute md:mt-14  h-16 w-16 md:h-24 md:w-24 border p-1 rounded-2xl border-neutral-500 backdrop-blur-2xl bg-neutral-950  flex items-center justify-center mr-2" style={{ borderColor: goldColor }}>
                <img src={logo} alt='Logo'/>
               </Link>
             </div>

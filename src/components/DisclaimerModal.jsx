@@ -35,7 +35,7 @@ const DisclaimerModal = () => {
   return (
     <div className="fixed  inset-0 bg-black/80 backdrop-blur-[5px] flex items-center justify-center z-50">
       {/* Modal Container */}
-      <div className="bg-neutral-950 lg:max-h-[98vh] max-h-[95vh] overflow-y-auto  border border-white/60 max-w-6xl w-full lg:mx-4 mx-2 lg:p-6 p-2 relative">
+      <div className="bg-neutral-950 lg:max-h-[98vh] max-h-[90vh] overflow-y-auto  border border-white/60 max-w-6xl w-full lg:mx-4 mx-2 lg:p-6 p-2 relative">
         
         {/* Logo and Title */}
         <div className="text-center mb-2">
