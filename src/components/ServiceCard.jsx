@@ -52,7 +52,7 @@ const ServiceCard = ({ service }) => {
       <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center p-6">
         <h3 className="lg:text-3xl text-xl h-full flex justify-center items-center gap-4 font-bold mb-3  group-hover:mt-0 text-white group-hover:text-black transition-all duration-600">
           <div className="inline-block bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30">
-            <div className="text-white text-xl">{service.icon}</div>
+            <div className="text-white text-xl">{service.icon2}</div>
           </div>
           <Link aria-label={service.title} to={`/services/${service.slug}`} className="hover:underline " >{service.title}</Link>
         </h3>

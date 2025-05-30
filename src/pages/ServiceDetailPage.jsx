@@ -20,8 +20,9 @@ const FeatureList = ({ features }) => {
       {features.map((feature, index) => (
         <div key={index} className="bg-amber-50/50 rounded-lg p-4 border border-amber-100">
           <div className="flex items-start">
-            <div className="bg-amber-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
-              <Check size={16} className="text-amber-600" />
+            <div className="bg-amber-100 flex justify-center itesm-center  rounded-full p-2 mr-3 h-12 w-12 mt-1 flex-shrink-0">
+              {/* <Check size={16} className="text-amber-600" /> */}
+              <div className="">{feature.icon}</div>
             </div>
             <div>
               <h4 className="font-semibold text-neutral-800 mb-2">{feature.title}</h4>
@@ -149,7 +150,8 @@ const openModal = () => setIsModalOpen(true);
               <div className="">
                 <img src={service.image} alt='service image' className="lg:h-80 h-52 rounded-2xl w-full object-cover"/>
               </div>
-              <h2 className="text-3xl font-semibold play pt-4 pb-2 text-neutral-800">Overview</h2>
+              <div className="text-neutral-800  my-2 leading-relaxed play font-semibold text-[1.3rem]">{service.icon2} {service.slog}</div>
+              <h2 className="text-3xl font-semibold play pt-2 pb-2 text-neutral-800">Overview</h2>
               <p className="text-neutral-600  mb-8 leading-relaxed">
                 {service.fullDescription}
               </p>
@@ -232,7 +234,7 @@ const openModal = () => setIsModalOpen(true);
                             {relatedService.title}
                           </h4>
                           <p className="text-sm text-neutral-500 line-clamp-1">
-                            {relatedService.description.substring(0, 60)}...
+                            {relatedService.fullDescription.substring(0, 60)}...
                           </p>
                         </div>
                         <ChevronRight size={18} className="text-neutral-400 group-hover:text-amber-600 transition-colors" />

@@ -70,7 +70,7 @@ export default function AboutUs() {
           </div>
 
           <div className="md:w-2/3 mt-8 md:mt-0">
-            <h2 className="lg:text-3xl text-xl font-bold mb-6">
+            <h2 className="lg:text-3xl text-2xl font-bold mb-6">
               <span
                 className="border-b-4 pb-2"
                 style={{ borderColor: goldTheme }}
@@ -157,7 +157,7 @@ export default function AboutUs() {
       {/* Areas of Practice */}
       <section className="py-16 px-4 md:px-12 bg-neutral-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="lg:text-3xl text-xl font-bold text-center mb-10">
+          <h2 className="lg:text-3xl text-2xl font-bold text-center mb-10">
             <span
               className="border-b-4 pb-2"
               style={{ borderColor: goldTheme }}

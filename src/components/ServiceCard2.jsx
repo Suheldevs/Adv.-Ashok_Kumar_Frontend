@@ -21,7 +21,7 @@ const ServiceCard = ({ service }) => {
         <div className="flex items-center mb-3">
           <div className="bg-amber-50 p-2 rounded-full mr-3">
             <div className="text-amber-600">
-              {service.icon}
+              {service.icon2}
             </div>
           </div>
           <h3 className="lg:text-xl text-lg font-semibold text-neutral-800 group-hover:text-amber-600 transition-colors duration-200">
@@ -31,7 +31,7 @@ const ServiceCard = ({ service }) => {
 
         {/* Description */}
         <p className="text-neutral-600 mb-6 leading-relaxed line-clamp-3">
-          {service.description}
+          {service.fullDescription}
         </p>
 
         {/* Button */}
