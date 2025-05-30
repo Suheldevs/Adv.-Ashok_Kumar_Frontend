@@ -88,7 +88,7 @@ const FAQSection = ({ faqs }) => {
               />
             </button>
             {openItems[index] && (
-              <div className="px-6 pb-6 bg-gray-50">
+              <div className="px-6 py-3 bg-gray-50">
                 <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
               </div>
             )}
@@ -147,14 +147,15 @@ const openModal = () => setIsModalOpen(true);
           {/* Main Content */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-sm p-8">
-              <div className="">
-                <img src={service.image} alt='service image' className="lg:h-80 h-52 rounded-2xl w-full object-cover"/>
-              </div>
-              <div className="text-neutral-800  my-2 leading-relaxed play font-semibold text-[1.3rem]">{service.icon2} {service.slog}</div>
-              <h2 className="text-3xl font-semibold play pt-2 pb-2 text-neutral-800">Overview</h2>
-              <p className="text-neutral-600  mb-8 leading-relaxed">
+             
+              <div className="text-neutral-800  my-2 leading-relaxed play font-semibold text-lg lg:text-[1.4rem]">{service.icon2} {service.slog}</div>
+              {/* <h2 className="text-3xl font-semibold play pt-2 pb-2 text-neutral-800">Overview</h2> */}
+              <p className="text-neutral-600  leading-relaxed">
                 {service.fullDescription}
               </p>
+               <div className="">
+                <img src={service.image} alt='service image' className="lg:h-80 h-52 my-6 rounded-2xl w-full object-cover"/>
+              </div>
               <h3 className="text-xl font-semibold mb-6 text-neutral-800">Our Services Include</h3>
               <FeatureList features={service.features} />
                  <h3 className="text-xl font-semibold mb-4 mt-6 text-neutral-800">Why Clients Trust Retd. Judge Ashok Kumar
