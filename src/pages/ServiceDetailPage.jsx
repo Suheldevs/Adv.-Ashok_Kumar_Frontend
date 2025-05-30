@@ -16,29 +16,81 @@ import InquiryModal from '../components/InquiryModal'
 // Component to display service features
 const FeatureList = ({ features }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div className=" grid lg:grid-cols-2 gap-3">
       {features.map((feature, index) => (
-        <div key={index} className="flex items-center">
-          <div className="bg-amber-100 rounded-full p-1 mr-3">
-            <Check size={16} className="text-amber-600" />
+        <div key={index} className="bg-amber-50/50 rounded-lg p-4 border border-amber-100">
+          <div className="flex items-start">
+            <div className="bg-amber-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+              <Check size={16} className="text-amber-600" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-neutral-800 mb-2">{feature.title}</h4>
+              <p className="text-neutral-600 text-sm leading-relaxed">{feature.detail}</p>
+            </div>
           </div>
-          <span className="text-neutral-700">{feature}</span>
         </div>
       ))}
     </div>
   );
 };
 
+
+//whychose
+
+const WhyChoose = ({items})=>{
+  return(
+<div>
+  {items.map((item)=>(
+    <div>
+      <div className="flex items-center mt-1">
+            <div className="bg-amber-100 rounded-full p-1 mr-3  flex-shrink-0">
+              <Check size={16} className="text-amber-600" />
+            </div>
+            <div>
+              <p className="text-neutral-600  leading-relaxed">{item}</p>
+            </div>
+          </div>
+      </div>
+  ))}
+  </div>
+  )
+}
+
+
 // Component to display FAQ items
 const FAQSection = ({ faqs }) => {
+  const [openItems, setOpenItems] = useState({});
+
+  const toggleItem = (index) => {
+    setOpenItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   return (
     <div className="mt-12">
-      <h3 className="text-2xl font-bold mb-6 text-neutral-800">Frequently Asked Questions</h3>
-      <div className="space-y-6">
+      <h3 className="text-3xl play font-bold mb-6 text-neutral-800">Frequently Asked Questions</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100">
-            <h4 className="text-lg font-semibold mb-2 text-neutral-800">{faq.question}</h4>
-            <p className="text-neutral-600">{faq.answer}</p>
+          <div key={index} className="bg-white border-l-2 border-l-amber-600 self-start rounded-lg shadow-sm border border-neutral-100 overflow-hidden">
+            <button 
+              onClick={() => toggleItem(index)}
+              className="w-full p-6 text-left hover:bg-amber-50/50 transition-colors duration-200 flex justify-between items-center"
+            >
+              <h4 className="text-lg font-semibold text-neutral-800 pr-4">{faq.question}</h4>
+              <ChevronRight 
+                size={20} 
+                className={`text-amber-600 transition-transform duration-200 flex-shrink-0 ${
+                  openItems[index] ? 'rotate-90' : ''
+                }`} 
+              />
+            </button>
+            {openItems[index] && (
+              <div className="px-6 pb-6 bg-gray-50">
+                <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -93,7 +145,7 @@ const openModal = () => setIsModalOpen(true);
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
+            <div className="bg-white rounded-xl shadow-sm p-8">
               <div className="">
                 <img src={service.image} alt='service image' className="lg:h-80 h-52 rounded-2xl w-full object-cover"/>
               </div>
@@ -101,12 +153,14 @@ const openModal = () => setIsModalOpen(true);
               <p className="text-neutral-600  mb-8 leading-relaxed">
                 {service.fullDescription}
               </p>
-              <h3 className="text-xl font-semibold mb-4 text-neutral-800">Our Services Include</h3>
+              <h3 className="text-xl font-semibold mb-6 text-neutral-800">Our Services Include</h3>
               <FeatureList features={service.features} />
+                 <h3 className="text-xl font-semibold mb-4 mt-6 text-neutral-800">Why Clients Trust Retd. Judge Ashok Kumar
+</h3>
+           {/* Why Choose  */}
+<WhyChoose items={service.whyChoose}/>
             </div>
 
-            {/* FAQ Section */}
-            <FAQSection faqs={service.faqs} />
           </div>
 
           {/* Sidebar */}
@@ -161,7 +215,6 @@ const openModal = () => setIsModalOpen(true);
               <div className="space-y-4">
                 {services
                   .filter(s => s.id !== service.id)
-                  .slice(0, 3)
                   .map(relatedService => (
                     <div key={relatedService.id} className="border-b border-neutral-100 pb-4 last:border-0 last:pb-0">
                       <Link 
@@ -208,6 +261,10 @@ const openModal = () => setIsModalOpen(true);
               </div>
             </div>
           </div>
+        </div>
+        <div>
+           {/* FAQ Section */}
+            <FAQSection faqs={service.faqs} />
         </div>
       </div>
 

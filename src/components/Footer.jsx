@@ -21,7 +21,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const goldColor = "#ebb661";
   return (
-    <footer className="relative bg-neutral-950/95 text-white">
+    <footer className="relative bg-neutral-950/95 overflow-hidden w-full text-white">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center "
         style={{ backgroundImage: `url('${pattern}')`,zIndex:-1 ,opacity:1}}
@@ -163,7 +163,7 @@ export default function Footer() {
             {/* <div className="h-1 w-12 bg-amber-600 mb-4"></div> */}
             <div className="">
               <iframe
-                className="h-48 w-52"
+                className="h-48 lg:w-52 w-full"
                 title="Location"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1779.6247460399977!2d81.0196432!3d26.8638133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3b1668345a3%3A0xafe19173615e503d!2sRetd%20Judge%20Ashok%20Kumar%2C%20Advocate%20Highcourt%20And%20District%20Court%20in%20Lucknow!5e0!3m2!1sen!2sin!4v1747898940602!5m2!1sen!2sin"
                 allowFullScreen=""
@@ -180,8 +180,9 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-neutral-400 text-sm mb-4 md:mb-0 flex lg:flex-row flex-col justify-center items-center gap-1">
-              © {currentYear} <strong>Retd. Judge Ashok Kumar</strong>. All rights reserved. ||
-              Desinged By
+              <div >© {currentYear} <strong>Retd. Judge Ashok Kumar</strong>. All rights reserved. || </div>
+             <div className="justify-center items-center flex gap-2">
+<div>Desinged By</div>
               <Link
                 aria-label="Code Crafter"
                 to="https://www.codecrafter.co.in/"
@@ -193,6 +194,8 @@ export default function Footer() {
                   alt="CodeCrafter Logo"
                 />
               </Link>
+             </div>
+              
             </div>
             <div className="flex lg:space-x-6 space-x-3">
               <Link

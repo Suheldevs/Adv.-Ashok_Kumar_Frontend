@@ -50,16 +50,16 @@ const ServiceCard = ({ service }) => {
       <div className="absolute inset-0 bg-neutral-900/80 group-hover:bg-[#ebb661]/80 transition-all duration-500" />
 
       <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center p-6">
-        <h3 className="text-3xl h-full flex justify-center items-center gap-4 font-bold mb-3  group-hover:mt-0 text-white group-hover:text-black transition-all duration-600">
+        <h3 className="lg:text-3xl text-xl h-full flex justify-center items-center gap-4 font-bold mb-3  group-hover:mt-0 text-white group-hover:text-black transition-all duration-600">
           <div className="inline-block bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30">
             <div className="text-white text-xl">{service.icon}</div>
           </div>
           <Link aria-label={service.title} to={`/services/${service.slug}`} className="hover:underline " >{service.title}</Link>
         </h3>
 
-        <p className="text-black/90 text-sm mb-6 opacity-0 hidden group-hover:block group-hover:opacity-100 transition-all duration-300 max-w-xs">
+        {/* <p className="text-black/90 text-sm mb-6 opacity-0 hidden group-hover:block group-hover:opacity-100 transition-all duration-300 max-w-xs">
           {service.description}
-        </p>
+        </p> */}
       </div>
     </div>
   );

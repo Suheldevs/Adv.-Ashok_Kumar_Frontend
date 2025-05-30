@@ -70,7 +70,7 @@ export default function AboutUs() {
           </div>
 
           <div className="md:w-2/3 mt-8 md:mt-0">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="lg:text-3xl text-xl font-bold mb-6">
               <span
                 className="border-b-4 pb-2"
                 style={{ borderColor: goldTheme }}
@@ -157,7 +157,7 @@ export default function AboutUs() {
       {/* Areas of Practice */}
       <section className="py-16 px-4 md:px-12 bg-neutral-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="lg:text-3xl text-xl font-bold text-center mb-10">
             <span
               className="border-b-4 pb-2"
               style={{ borderColor: goldTheme }}
@@ -268,10 +268,10 @@ export default function AboutUs() {
         <div className="absolute z-[-1] inset-0 bg-neutral-950/70"></div>
 
         <div className="max-w-6xl  mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="lg:text-4xl text-2xl font-bold mb-4">
             <span style={{ color: goldTheme }}>Get a Free Consultation</span>
           </h2>
-          <p className="text-lg mb-10 max-w-2xl mx-auto">
+          <p className="lg:text-lg text-base mb-10 max-w-2xl mx-auto">
             For any legal query or to schedule a consultation, feel free to
             contact us anytime. We're here to help with your legal needs.
           </p>

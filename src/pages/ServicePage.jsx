@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 import pattern from '../assets/p5.jpg'
 import Breadcrumb from "../components/Breadcrumb";
-import ServiceCard from "../components/ServiceCard";
+import ServiceCard from "../components/ServiceCard2";
 // Service data with all required fields
 import services from "../Data/ServiceData";
 
@@ -53,10 +53,10 @@ const ServicesPage = () => {
         <div className='absolute z-[-1] inset-0 bg-neutral-950/70'></div>
       
               <div className="max-w-6xl  mx-auto text-center">
-                <h2 className="text-4xl font-bold mb-4">
+                <h2 className="lg:text-4xl text-2xl font-bold mb-4">
                   <span style={{ color: goldTheme }}>Get a Free Consultation</span>
                 </h2>
-                <p className="text-lg mb-10 max-w-2xl mx-auto">
+                <p className="lg:text-lg text-base mb-10 max-w-2xl mx-auto">
                   For any legal query or to schedule a consultation, feel free to contact us anytime. We're here to help with your legal needs.
                 </p>
                 

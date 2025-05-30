@@ -121,7 +121,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
       ></div>
 
       {/* Modal */}
-      <div className="relative max-h-[99vh] overflow-y-auto bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 overflow-hidden transform transition-all">
+      <div className="relative max-h-[98vh] overflow-y-auto bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 overflow-hidden transform transition-all">
         {/* Modal Header */}
         <div className="bg-neutral-50 px-6 py-4 border-b border-neutral-200 relative">
           <h3 className="text-lg font-semibold text-neutral-800">
@@ -162,8 +162,8 @@ const InquiryModal = ({ isOpen, closeModal }) => {
               
               <form onSubmit={handleSubmit}>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center gap-4">
-                    <div className="w-1/2">
+                  <div className="flex lg:flex-row flex-col justify-between items-center gap-4">
+                    <div className="lg:w-1/2 w-full">
                       <label
                         htmlFor="fullName"
                         className="block text-sm font-medium text-neutral-700 mb-1"
@@ -195,7 +195,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                       )}
                     </div>
 
-                    <div className="w-1/2">
+                    <div className="lg:w-1/2 w-full">
                       <label
                         htmlFor="phoneNumber"
                         className="block text-sm font-medium text-neutral-700 mb-1"
@@ -229,7 +229,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                   </div>
                   
                   <div className="flex justify-between items-center gap-4">
-                    <div className="w-1/2">
+                    <div className="lg:w-1/2 w-full">
                       <label
                         htmlFor="email"
                         className="block text-sm font-medium text-neutral-700 mb-1"
@@ -261,7 +261,7 @@ const InquiryModal = ({ isOpen, closeModal }) => {
                       )}
                     </div>
                     
-                    <div className="w-1/2">
+                    <div className="lg:w-1/2 w-full">
                       <label
                         htmlFor="service"
                         className="block text-sm font-medium text-neutral-700 mb-1"

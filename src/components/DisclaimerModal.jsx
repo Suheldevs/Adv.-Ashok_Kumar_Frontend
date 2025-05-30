@@ -35,7 +35,7 @@ const DisclaimerModal = () => {
   return (
     <div className="fixed  inset-0 bg-black/80 backdrop-blur-[5px] flex items-center justify-center z-50">
       {/* Modal Container */}
-      <div className="bg-neutral-950 lg:max-h-[100vh] max-h-[95vh] overflow-y-auto  border border-white/60 max-w-6xl w-full lg:mx-4 mx-2 lg:p-6 p-2 relative">
+      <div className="bg-neutral-950 lg:max-h-[98vh] max-h-[95vh] overflow-y-auto  border border-white/60 max-w-6xl w-full lg:mx-4 mx-2 lg:p-6 p-2 relative">
         
         {/* Logo and Title */}
         <div className="text-center mb-2">
@@ -77,7 +77,7 @@ const DisclaimerModal = () => {
         </div>
 
         {/* Button */}
-        <div className="flex justify-center">
+        <div className="flex justify-center cursor-pointer">
           <button aria-label="Agree"
             onClick={handleAgree}
             className="bg-transparent border border-[#ebb661] text-[#ebb661] px-8 py-3 hover:bg-[#ebb661] hover:text-black transition-all duration-300 flex items-center space-x-2 font-medium"

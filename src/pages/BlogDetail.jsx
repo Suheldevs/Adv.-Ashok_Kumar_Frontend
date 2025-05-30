@@ -48,11 +48,14 @@ const BlogDetail = () => {
       <div className="container  mx-auto px-4 pb-4 pt-10 lg:pt-14 grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Blog Details */}
         <div className="lg:col-span-3">
+          <div className="border rounded-2xl border-gray-300 p-4 bg-gray-50">
+
           <img
             src={blog.imageUrl}
             alt={blog.title}
-            className="w-full h-[400px] shadow-md"
-          />
+            className="w-full h-[380px]  rounded-2xl shadow-md"
+            />
+            </div>
           <div className="flex justify-between">
           <p className="text-neutral-700 text-sm mt-4">{formattedDate(blog.updatedAt)}</p>
           <p className="text-neutral-700 text-sm mt-4">{blog.category}</p>
@@ -60,7 +63,7 @@ const BlogDetail = () => {
           </div>
           <h1 className="lg:text-2xl text-xl font-semibold mt-2">{blog.title}</h1>
           <div
-            className="mt-4 lg:text-lg text-neutral-950 blog"
+            className="mt-4 text-justify lg:text-lg text-neutral-950 blog"
             dangerouslySetInnerHTML={{ __html: blog.description }}
           />
 
@@ -84,12 +87,12 @@ const BlogDetail = () => {
                 <Link
                   to={`/blog/${relatedBlog.slug}`}
                   key={relatedBlog.slug}
-                  className="block p-4 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-300"
+                  className="block p-4  border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   <img
                     src={relatedBlog.imageUrl}
                     alt={relatedBlog.title}
-                    className="w-full h-28 object-cover"
+                    className="w-full h-28 object-contain bg-white border border-gray-100"
                   />
                   <p className="text-neutral-500 text-sm mt-2">{formattedDate(relatedBlog.updatedAt)}</p>
                   <h3 className="text-lg font-semibold mt-1 line-clamp-1">{relatedBlog.title}</h3>
