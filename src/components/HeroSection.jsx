@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="container md:mt-28 md:py-0 py-20 mt-14  mx-auto px-4 lg:px-8  flex flex-col lg:flex-row items-center">
         {/* Left Content Area */}
         <div className="lg:w-2/3  flex flex-col justify-center items-start z-10 ">
-        <div className=" border border-neutral-800/90 flex justify-center items-center gap-2 mb-2 bg-neutral-950 p-2 px-4 rounded-full text-base lg:text-lg"><div className=" bg-[#ebb661] h-2 w-2 rounded-full animate-pulse"></div> 33+ Years Legal Excellence</div>
+        <div className=" border border-neutral-800/90 flex justify-center items-center gap-2 mb-2 bg-neutral-950 p-2 px-4 rounded-full text-base lg:text-lg"><div className=" bg-[#ebb661] h-2 w-2 rounded-full animate-pulse"></div> 38+ Years Legal Excellence</div>
           <h1 className="text-2xl md:text-5xl xl:text-6xl play font-bold lg:mb-6 mb-4 tracking-wide">
             <span style={{ color: "#ebb661" }}>Smart Legal </span> 
             <span style={{ color: "#ebb661" }}>Solutions</span> for 

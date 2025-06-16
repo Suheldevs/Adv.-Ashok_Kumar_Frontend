@@ -31,7 +31,7 @@ export default function AboutSection() {
           <div className="flex lg:flex-row flex-col gap-10 w-full">
             <div className="lg:w-8/12 w-full text-justify">
               <p className="  text-neutral-600 text-base lg:text-lg">
-                With more than 33 years of service in the Judiciary, <strong>Retd. Judge Ashok Kumar</strong> has dedicated himself to helping people navigate complex
+                With more than 38 years of service in the Judiciary, <strong>Retd. Judge Ashok Kumar</strong> has dedicated himself to helping people navigate complex
                 legal challenges. He believes that timely and accurate legal
                 advice can significantly reduce case duration, saving clients
                 both time and money while minimizing stress. Working alongside a
@@ -49,7 +49,7 @@ export default function AboutSection() {
                     className="text-4xl lg:text-6xl font-bold mb-2"
                     style={{ color: goldColor }}
                   >
-                    33+
+                    38+
                   </h3>
                   <div className="w-20 h-1 bg-neutral-300 mb-3"></div>
                   <p className="text-neutral-700 font-medium">
@@ -63,11 +63,11 @@ export default function AboutSection() {
                     className="text-4xl lg:text-6xl font-bold mb-2"
                     style={{ color: goldColor }}
                   >
-                    450+
+                    99.9%
                   </h3>
                   <div className="w-20 h-1 bg-neutral-300 mb-3"></div>
                   <p className="text-neutral-700 font-medium">
-                    Completed Legal Matters
+                    Solved Legal Matters
                   </p>
                 </div>
 

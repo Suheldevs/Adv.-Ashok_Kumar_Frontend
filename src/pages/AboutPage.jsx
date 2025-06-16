@@ -62,7 +62,7 @@ export default function AboutUs() {
                 <div className="mt-4 flex items-center">
                   <Award size={18} style={{ color: goldTheme }} />
                   <span className="ml-2 text-neutral-700">
-                    33+ Years in Judiciary
+                    38+ Years in Judiciary
                   </span>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default function AboutUs() {
             </h2>
 
             <p className="text-neutral-700 text-justify mb-4 lg:mb-6 leading-relaxed">
-              With more than 33 years of service in the Judiciary, Mr. Ashok
+              With more than 38 years of service in the Judiciary, Mr. Ashok
               Kumar has dedicated himself to helping people navigate complex
               legal challenges. He believes that timely and accurate legal
               advice can significantly reduce case duration, saving clients both
@@ -131,15 +131,15 @@ export default function AboutUs() {
       <div className=" container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 lg:px-8 px-4">
         <div className="bg-white p-4 lg:p-6 rounded-lg shadow-md text-center border border-gray-200">
           <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>
-            33+
+            38+
           </div>
           <p className="text-neutral-600">Years in Judiciary</p>
         </div>
         <div className="bg-white p-4 lg:p-6 rounded-lg shadow-md text-center border border-gray-200">
           <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>
-            450+
+            99.9%
           </div>
-          <p className="text-neutral-600">Cases Resolved</p>
+          <p className="text-neutral-600">Solved Legal Matters</p>
         </div>
         <div className="bg-white p-4 lg:p-6 rounded-lg shadow-md text-center border border-gray-200">
           <div className="text-4xl font-bold mb-2" style={{ color: goldTheme }}>

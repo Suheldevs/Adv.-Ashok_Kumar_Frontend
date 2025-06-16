@@ -8,7 +8,7 @@ function WhyChooseUs() {
     {
       icon: <Award size={40} />,
       title: "Judicial Excellence",
-      description: "With over 33 years in the judiciary, bringing unparalleled insights and expertise to each case."
+      description: "With over 38 years in the judiciary, bringing unparalleled insights and expertise to each case."
     },
     {
       icon: <Users size={40} />,
